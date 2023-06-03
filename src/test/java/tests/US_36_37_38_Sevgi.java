@@ -88,6 +88,7 @@ public class US_36_37_38_Sevgi {
            adminDashboard.adminAdmin25Profile.click();
         }
 
+        //tamamla
     //   @AfterMethod
     //   public void tearDown() {
     //       Driver.closeDriver();
