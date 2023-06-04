@@ -1,4 +1,5 @@
 package utilities;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
@@ -15,19 +16,20 @@ public abstract class TestBaseRapor {
     protected static ExtentReports extentReports; //extent report'a ilk atamayi yapar
     protected static ExtentTest extentTest; // test pass veya failed gibi bilgileri kaydeder. Ayrica ekran resmi icin de kullaniriz
     protected static ExtentHtmlReporter extentHtmlReporter; // Html raporu duzenler
+
     // Test işlemine başlamadan hemen önce (test methodundan önce değil, tüm test işleminden önce)
     @BeforeTest(alwaysRun = true) // alwaysRun : her zaman çalıştır.
     public void setUpTest() {
         extentReports = new ExtentReports(); // Raporlamayi baslatir
         //rapor oluştuktan sonra raporunuz nereye eklensin istiyorsanız buraya yazıyorsunuz.
         String date = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
-        String filePath = System.getProperty("user.dir") + "/test-output/Rapor"+date+".html";
+        String filePath = System.getProperty("user.dir") + "/test-output/Rapor" + date + ".html";
         //oluşturmak istediğimiz raporu (html formatında) başlatıyoruz, filePath ile dosya yolunu belirliyoruz.
         extentHtmlReporter = new ExtentHtmlReporter(filePath);
         extentReports.attachReporter(extentHtmlReporter);
 
         // İstediğiniz bilgileri buraya ekeyebiliyorsunuz.
-        extentReports.setSystemInfo("Enviroment","QA");
+        extentReports.setSystemInfo("Enviroment", "QA");
         extentReports.setSystemInfo("Browser", ConfigReader.getProperty("browser")); // chrome, firefox
         extentReports.setSystemInfo("Automation Engineer", "M.Emre");
         extentHtmlReporter.config().setDocumentTitle("TestNG Test");
@@ -44,10 +46,13 @@ public abstract class TestBaseRapor {
             extentTest.fail(result.getName());
             extentTest.addScreenCaptureFromPath(screenshotLocation);
             extentTest.fail(result.getThrowable());
+            Driver.closeDriver();
+
         } else if (result.getStatus() == ITestResult.SKIP) { // eğer test çalıştırılmadan geçilmezse
             extentTest.skip("Test Case is skipped: " + result.getName()); // Ignore olanlar
+            Driver.closeDriver();
         }
-        Driver.closeDriver();
+
 
     }
 
@@ -57,5 +62,6 @@ public abstract class TestBaseRapor {
     public void tearDownTest() {
 
         extentReports.flush();
+
     }
 }
