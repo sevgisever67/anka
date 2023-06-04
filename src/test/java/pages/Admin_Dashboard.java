@@ -26,15 +26,16 @@ public class Admin_Dashboard extends BasePage {
     public WebElement adminSendEmailButton;      //Send Emeil To Subscriber Sayfası send email buttonu
 
     @FindBy(xpath = "//img[@class='img-profile rounded-circle']")
-    public WebElement adminAdmin25Profile;  // Sayfaya admin olarak giriş yaptıktan sonra
-    // sağ üst kösedeki admin 25 yazan profil locate i
+    public WebElement adminAdmin25Profile;   // Sayfaya admin olarak giriş yaptıktan sonra
+                                             // sağ üst kösedeki admin 25 yazan profil locate i
 
     @FindBy(xpath = "//div[@aria-labelledby='userDropdown']")
     public List<WebElement> adminAdmin25ProfileElement;      //admin olarak giriş yapıldıktan sonra
-    // admin25 profilindeki drop down list
+                                                             // admin25 profilindeki drop down list
 
-    @FindBy(xpath = "(//ul[@class='sf-menu sf-js-enabled sf-arrows'])/li")
-    public List<WebElement> mainPageList;
+
+
+
 
 
 }
