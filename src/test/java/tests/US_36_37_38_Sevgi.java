@@ -25,6 +25,7 @@ public class US_36_37_38_Sevgi extends TestBaseRapor {
 
     @BeforeMethod
     public void setUp() {
+        //Ben buraya ne yazayım ???????????????????????
          extentTest= extentReports.createTest("US36_37_38");
 
 
