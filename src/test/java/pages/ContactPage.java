@@ -15,24 +15,28 @@ public class ContactPage extends MainPage {
     public WebElement visitorPhoneBox;      //Contact butonu tıklandığında Contact Form telefon locet i
 
     @FindBy(xpath ="//input[@name='visitor_email']" )
-    public WebElement visitorEmailAdressBox;
+    public WebElement visitorEmailAdressBox; // Contact butonu tıklanıldığında Contact From Address locati
 
     @FindBy (xpath = "//textarea[@name='visitor_message']")
-    public WebElement visitorMessageBox;
+    public WebElement visitorMessageBox;     // Contact butonu tıklanıldığında Contact From Mesaj locati
 
     @FindBy(xpath = "//button[@type='submit']")
-    public WebElement visitorSubmitButton;
+    public WebElement visitorSubmitButton;  //Contact Form doldrulduktan sonraki Submit butonu locati
 
     @FindBy (xpath = "//h4[.='Contact Information']")
     public WebElement contactInformationTitle;
 
     @FindBy(xpath = "//div[@class='contact-text']")
     public List<WebElement> contactInformation;
+
     @FindBy(xpath = "//button[.='ACCEPT']")
     public WebElement contactCookies;
 
     @FindBy(xpath = "//div[@class='toast-progress']/..")
     public WebElement toastmessage;
+
+    @FindBy(xpath = "//div[@class='toast toast-success']")
+    public WebElement toastmessage2;
 
     @FindBy(xpath = "(//h3[.='Address'])[1]")
     public WebElement contactInformationAddress;
