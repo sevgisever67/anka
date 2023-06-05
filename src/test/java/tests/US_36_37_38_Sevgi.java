@@ -21,6 +21,7 @@ import java.util.List;
 public class US_36_37_38_Sevgi extends TestBaseRapor {
 
     Admin_Dashboard adminDashboard = new Admin_Dashboard();
+    SoftAssert softAssert = new SoftAssert();
 
     @BeforeMethod
     public void setUp() {
@@ -34,7 +35,7 @@ public class US_36_37_38_Sevgi extends TestBaseRapor {
         adminDashboard.adminPasswordButton.sendKeys(ConfigReader.getProperty("qaAdminPassword"));
         //Click on the Login
         adminDashboard.adminLoginButton.click();
-        // extentTest.info("Log in as an admin");
+        extentTest.info("Log in as an admin");
 
     }
 
@@ -59,11 +60,14 @@ public class US_36_37_38_Sevgi extends TestBaseRapor {
 
     }
 
+
+
     @Test
     public void verifyTheEditProfileIsAccessible_37() {
 
         //Click on the admin profile
         adminDashboard.adminAdmin25Profile.click();
+        extentTest.info("The profile is clicked");
         //Verify the Edit profile button is accessible
         String expecteIcerik = "Edit Profile";
         String actualIcerik = "";
@@ -71,17 +75,15 @@ public class US_36_37_38_Sevgi extends TestBaseRapor {
         System.out.println(actuaStringlList);
         for (String each : actuaStringlList) {
             if (each.equalsIgnoreCase(expecteIcerik)) {
-                actuaStringlList.add(expecteIcerik);
+                System.out.println(actuaStringlList.add(each));
             }
         }
 
-        SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals(actualIcerik , expecteIcerik);
-        softAssert.assertAll();
+        softAssert.assertEquals(actualIcerik , expecteIcerik +"! Verify the Edit profile button is accessible");
         extentTest.pass("Verify the edit profile is accessible");
+        softAssert.assertAll();
 
     }
-
     @Test
     public void verifyTheChangePasswordIsAccessible_38() {
         //Go to url as an admin
@@ -95,9 +97,23 @@ public class US_36_37_38_Sevgi extends TestBaseRapor {
         //Click on the admin profile
         adminDashboard.adminAdmin25Profile.click();
         //Click on the Change Password
+        adminDashboard.adminChangePassword.click();
+        extentTest.info("Change Password is clicked");
+        //Verify the page is Change Profile .
+        String expectedIcerik="Change Password";
+        String actualIcerik=adminDashboard.adminChangePassword.getText();
+        softAssert.assertEquals(actualIcerik,expectedIcerik+" ! Verify the page is Change Password");
+        extentTest.pass("Verify the page is Change Password");
+        softAssert.assertAll();
 
 
     }
+    @Test
+    public void set(){
+        System.out.println(System.getProperty("user.dir"));
+
+    }
+
 
 }
 
