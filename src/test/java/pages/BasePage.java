@@ -43,5 +43,15 @@ public abstract class BasePage {
     @FindBy(xpath = "//i[@class='fas fa-sign-out-alt']")
     public WebElement userLogoutButton;   //User olarak giriş yaptıktan sonra log out butonu
 
+    @FindBy (xpath = "//button[@type='button']")
+    public WebElement cookiesAcceptButton;
+
+    @FindBy (xpath = "(//a[text()='Packages'])[2]")
+    public WebElement userPackages;
+
+    @FindBy (xpath = "//a[text()='Payment History']")
+    public WebElement userPaymentHistoryButon;
+
+
 
 }
