@@ -46,13 +46,13 @@ public abstract class TestBaseRapor {
             extentTest.fail(result.getName());
             extentTest.addScreenCaptureFromPath(screenshotLocation);
             extentTest.fail(result.getThrowable());
-            Driver.closeDriver();
+
 
         } else if (result.getStatus() == ITestResult.SKIP) { // eğer test çalıştırılmadan geçilmezse
             extentTest.skip("Test Case is skipped: " + result.getName()); // Ignore olanlar
-           Driver.closeDriver();
-        }
 
+        }
+         Driver.closeDriver();
 
     }
 
