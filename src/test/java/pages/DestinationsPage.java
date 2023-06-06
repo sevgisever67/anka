@@ -96,7 +96,7 @@ public class DestinationsPage extends MainPage {
     @FindBy(xpath = "//a[text()='California, USA']")
     public WebElement californiaUsaElementi;
 
-    @FindBy(xpath = "(//*[@class='magnific'])[6]")
+    @FindBy(xpath = "(//*[@class='magnific'])[7]")
     public WebElement californiaUsaBuyutecElementi;
 
     @FindBy(xpath = "//*[@title='Next (Right arrow key)']")
