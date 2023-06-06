@@ -1,6 +1,7 @@
 package tests;
 
 import com.github.javafaker.Faker;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
@@ -128,7 +129,7 @@ public class US_15_16_17_18_19_Ebru {
     }
 
     @Test
-    public void travellerLogin_19() {
+    public void travellerLogin_19()  {
 
         // Login butonu clickable
         aboutUsPage.loginButton.click();
@@ -141,6 +142,11 @@ public class US_15_16_17_18_19_Ebru {
         String expectedTitle = "Traveller Panel";
         String actualTitle = Driver.getDriver().getTitle();
         Assert.assertEquals(actualTitle, expectedTitle);
+
+
+
+
+
 
     }
 
