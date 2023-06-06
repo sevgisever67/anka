@@ -1,6 +1,7 @@
 package tests;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterMethod;
@@ -9,6 +10,7 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.Admin_Dashboard;
 import pages.ContactPage;
+import pages.HomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
@@ -26,7 +28,7 @@ public class US_36_37_38_Sevgi extends TestBaseRapor {
     @BeforeMethod
     public void setUp() {
         //Ben buraya ne yazayım ???????????????????????
-         extentTest= extentReports.createTest("US36_37_38");
+        extentTest = extentReports.createTest("US36_37_38");
 
 
         //Go to url as an admin
@@ -62,7 +64,6 @@ public class US_36_37_38_Sevgi extends TestBaseRapor {
     }
 
 
-
     @Test
     public void verifyTheEditProfileIsAccessible_37() {
 
@@ -80,11 +81,12 @@ public class US_36_37_38_Sevgi extends TestBaseRapor {
             }
         }
 
-        softAssert.assertEquals(actualIcerik , expecteIcerik +"! Verify the Edit profile button is accessible");
+        softAssert.assertEquals(actualIcerik, expecteIcerik + "! Verify the Edit profile button is accessible");
         extentTest.pass("Verify the edit profile is accessible");
         softAssert.assertAll();
 
     }
+
     @Test
     public void verifyTheChangePasswordIsAccessible_38() {
         //Go to url as an admin
@@ -101,17 +103,18 @@ public class US_36_37_38_Sevgi extends TestBaseRapor {
         adminDashboard.adminChangePassword.click();
         extentTest.info("Change Password is clicked");
         //Verify the page is Change Profile .
-        String expectedIcerik="Change Password";
-        String actualIcerik=adminDashboard.adminChangePassword.getText();
-        softAssert.assertEquals(actualIcerik,expectedIcerik+" ! Verify the page is Change Password");
+        String expectedIcerik = "Change Password";
+        String actualIcerik = adminDashboard.adminChangePassword.getText();
+        softAssert.assertEquals(actualIcerik, expectedIcerik + " ! Verify the page is Change Password");
         extentTest.pass("Verify the page is Change Password");
         softAssert.assertAll();
 
 
     }
+
     @Test
-    public void set(){
-        System.out.println(System.getProperty("user.dir"));
+    public void deneme() {
+
 
     }
 
