@@ -34,6 +34,8 @@ public class Admin_Dashboard extends BasePage {
                                                              // admin25 profilindeki drop down list
 
 
+    @FindBy(xpath = "(//a[@class='dropdown-item'])[1]")
+    public WebElement adminChangePassword;    //admin olarak giriş yaptıktan sonra profile tıklandığında görünen Change Password linki
 
 
 

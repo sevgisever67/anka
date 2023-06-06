@@ -31,6 +31,7 @@ public class MainPage extends BasePage {
     @FindBy(xpath = "(//a[text()='Contact'])[2]")
     public WebElement contactElementi;        //Main Page Contact sekmesi
 
+
     @FindBy(xpath = "//*[text()='Terms and Conditions']")
     public WebElement termAndConditionsElementi;
 
@@ -62,6 +63,30 @@ public class MainPage extends BasePage {
     public WebElement iconReligiousTour;
 
 
+    @FindBy(xpath = "//a[.='Registration']")
+    public WebElement registrationButton; // Main Page Registration sekmesi
+
+
+    @FindBy (xpath = "//input[@name='traveller_name']")
+    public WebElement registrationName; // Main Page registration Name button
+
+    @FindBy (xpath = "//button[@tabindex='0']")
+    public WebElement registrationCookies;  // Main Page registration cookies
+
+    @FindBy (xpath = "//input[@name='traveller_email']")
+    public WebElement registrationEmailAddress;
+
+    @FindBy(xpath = "//input[@type='password']")
+    public WebElement registrationPassword;
+
+    @FindBy(xpath = "//button[.='Make Registration']")
+    public WebElement makeRegistrationButton;
+
+    @FindBy(xpath = "//a[.='Login']")
+    public WebElement loginButton;  // Main Page Login Butonu
+
+    @FindBy(xpath = "//button[@name='form1']")
+    public WebElement loginSubmitButton;   // Email adres ve password girildikten sonraki Login buttonu
 
 
 }
