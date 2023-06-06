@@ -41,19 +41,23 @@ public class MainPage extends BasePage {
     public WebElement registrationCookies;  // Main Page registration cookies
 
     @FindBy (xpath = "//input[@name='traveller_email']")
-    public WebElement registrationEmailAddress;
+    public WebElement registrationEmailAddress;  // Registration daki email adress butonu locati
 
     @FindBy(xpath = "//input[@type='password']")
-    public WebElement registrationPassword;
+    public WebElement registrationPassword;   // Registration daki name butonu locati
 
     @FindBy(xpath = "//button[.='Make Registration']")
-    public WebElement makeRegistrationButton;
+    public WebElement makeRegistrationButton;  // Make Regisration butonu
 
     @FindBy(xpath = "//a[.='Login']")
     public WebElement loginButton;  // Main Page Login Butonu
 
     @FindBy(xpath = "//button[@name='form1']")
     public WebElement loginSubmitButton;   // Email adres ve password girildikten sonraki Login buttonu
+
+
+    @FindBy(xpath = "//div[@class='toast toast-success']")
+    public WebElement toastmessage2;   // Registration email ve pasword bilgileri başarılı girdikten sonra çıkan mesaj
 
 
 }

@@ -1,6 +1,8 @@
 package tests;
 
 import com.github.javafaker.Faker;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -16,6 +18,7 @@ public class US_15_16_17_18_19_Ebru {
 
     @BeforeMethod
     public void setUp() {
+
         Driver.getDriver().get(ConfigReader.getProperty("userUrl"));
     }
 
@@ -67,6 +70,7 @@ public class US_15_16_17_18_19_Ebru {
 
 
         // name box, Phone box, email Addrss box information
+
         Faker faker= new Faker();
 
         contactPage.visitorNameBox.sendKeys(faker.name().firstName());
@@ -74,7 +78,10 @@ public class US_15_16_17_18_19_Ebru {
         contactPage.visitorEmailAdressBox.sendKeys(faker.internet().emailAddress());
         contactPage.visitorMessageBox.sendKeys(faker.lorem().paragraph());
         contactPage.visitorSubmitButton.submit();
-        ReusableMethods.wait(1);
+        Actions actions=new Actions(Driver.getDriver());
+        actions.sendKeys(Keys.END).perform();
+        ReusableMethods.wait(2);
+
         Assert.assertTrue(contactPage.toastmessage.isDisplayed());
 
         //address is visible
