@@ -1,5 +1,6 @@
 package tests;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -8,10 +9,8 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.TestBaseRapor;
 
-public class US02_Hasan2 extends TestBaseRapor {
+public class US02_Hasan2  {
     MainPage mainPage=new MainPage();
-    SoftAssert softAssert=new SoftAssert();
-
 
 
     @BeforeMethod
@@ -23,15 +22,21 @@ public class US02_Hasan2 extends TestBaseRapor {
     public void sirketNosununGorunurOldugunuTestEt_TC_01 (){
         String expectedTelefonNo="202-456-3789";
         String actualTelefonno=mainPage.ziyaretciSirketTelefonNo.getText();
-        softAssert.assertEquals(actualTelefonno,expectedTelefonNo);
+        Assert.assertEquals(actualTelefonno,expectedTelefonNo);
     }
     @Test
     public void sirketTelefonIconununGorunurOldugunuTestEt_TC_02 (){
-        softAssert.assertTrue(mainPage.ziyaretciTelefonIcon.isDisplayed());
+        Assert.assertTrue(mainPage.ziyaretciTelefonIcon.isDisplayed());
+    }
+
+    @Test
+    public void sirkeInfosununDogrulugununTesti_TC_03(){
+        Assert.assertTrue(mainPage.ziyaretciIInfo.isDisplayed());
+
     }
     @Test
-    public void sirketMailininDogrulugununTesti(){
-
+    public void mailIkonununGorundugunuDogrula_TC_04(){
+        Assert.assertTrue(mainPage.ziyaretciMailIconu.isDisplayed());
     }
 
 
