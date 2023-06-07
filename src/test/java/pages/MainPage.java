@@ -89,4 +89,18 @@ public class MainPage extends BasePage {
     public WebElement loginSubmitButton;   // Email adres ve password girildikten sonraki Login buttonu
 
 
+    @FindBy(xpath = "(//p[text()='202-456-3789'])[1]")
+    public WebElement ziyaretciSirketTelefonNo;  //Ziyaretci olarak giriş yapıldığında sol üstteki telefon nosu
+
+    @FindBy(xpath ="//i[@class='fas fa-phone']")
+    public WebElement ziyaretciTelefonIcon;    //Ziyaretci olarak giriş yapıldığında sol üstteki telefon ikonu
+
+    @FindBy(xpath = "/html/body/div[4]/div/div/div[1]/div/p[2]/i")
+    public WebElement ziyaretciIInfo;   //Ziyaretci olarak giriş yapıldığında sol üstteki info texti
+
+    @FindBy(xpath = "(//i[@class='far fa-envelope'])[1]")
+    public WebElement ziyaretciMailIconu;   //Ziyaretci olarak giriş yapıldığında sol üstteki mail ikonu
+
+
+
 }
