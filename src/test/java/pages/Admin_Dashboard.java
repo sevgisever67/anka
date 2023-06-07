@@ -36,5 +36,22 @@ public class Admin_Dashboard extends BasePage {
     @FindBy(xpath = "(//ul[@class='sf-menu sf-js-enabled sf-arrows'])/li")
     public List<WebElement> mainPageList;
 
+    @FindBy(xpath = "//a[@class='dropdown-item'][2]")//admin olarak giriş yaptıktan sonra icona tıklandığında
+    public WebElement adminChangePhoto;             //görünen Change Photo linki
+
+    @FindBy(xpath = "//button[@class='rounded-circle border-0']")//admin olarak giriş yaptıktan sonra sayfada
+    public WebElement adminOkIsareti;                           //görünen ok işareti
+
+
+    @FindBy(xpath = "//div[@class='sidebar-brand-text mx-3']")//admin olarak giriş yaptıktan sonra sayfada
+    public WebElement adminADMINPANELYazisi;                       //görünen ADMIN PANEL yazısı
+
+    @FindBy (xpath = "//a[@class='btn btn-info btn-sm mt-3']")//admin olarak giriş yaptıktan sonra sayfada
+    public WebElement adminVisitWebsiteButonu;               //görünen Visit Website butonu
+
+
+
+
+
 
 }
