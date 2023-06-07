@@ -3,13 +3,11 @@ package tests;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 import pages.MainPage;
 import utilities.ConfigReader;
 import utilities.Driver;
-import utilities.TestBaseRapor;
 
-public class US02_Hasan2  {
+public class US_02_Hasan2 {
     MainPage mainPage=new MainPage();
 
 
