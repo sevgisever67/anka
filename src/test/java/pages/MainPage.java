@@ -103,6 +103,42 @@ public class MainPage extends BasePage {
 
     @FindBy(xpath = "(//i[@class='far fa-envelope'])[1]")
     public WebElement ziyaretciMailIconu;   //Ziyaretci olarak giriş yapıldığında sol üstteki mail ikonu
+    @FindBy(xpath="//div[@class='footer-item mt_30']//a[contains(text(),'3 days in Buenos Aires')]")
+    public WebElement featuredPackagestFirstElement;
+    @FindBy(xpath="//div[@class='footer-item mt_30']//a[contains(text(),'10 days in Buenos Aires')]")
+    public WebElement featuredPackagesSecondElement;
+
+    @FindBy(xpath = "//div[@class='col-md-3 col-sm-6 wow fadeInLeft']//a[contains(text(),'3 days in Bangkok')]")
+    public WebElement featuredPackagesThirdElement;
+    @FindBy(xpath = "//div[@class='col-md-3 col-sm-6 wow fadeInLeft']//a[contains(text(),'7 days in Salina Island')]")
+    public WebElement featuredPackagesFourthElement;
+
+    @FindBy(xpath ="//div[@class='col-md-3 col-sm-6 wow fadeIn']//a[contains(text(),'New Test Packages')]")
+    public WebElement latestPackagesFirstElement;
+    @FindBy(xpath="//a[normalize-space()='test04']" )
+    public WebElement latesPackagesSecondElement;
+    @FindBy(xpath ="//a[normalize-space()='5 Day California']")
+    public WebElement latesPackagesThirdElement;
+    @FindBy(xpath="//div[@class='col-md-3 col-sm-6 wow fadeIn']//a[contains(text(),'7 days in Salina Island')]")
+
+    public WebElement latesPackagesFourthElement;
+    @FindBy(xpath="//div[@class='col-md-3 col-sm-6 wow fadeIn']//a[contains(text(),'3 days in Bangkok')]")
+    public WebElement latesPackagesFifthElement;
+
+    @FindBy(xpath = "//div[@class='footer-item mt_30']//a[normalize-space()='Amazing Place'])")
+    public WebElement recentPostFirstElement;
+
+     @FindBy(xpath = "//div[@class='footer-item mt_30']//a[contains(text(),'Discovering Greenville: A Hidden Gem in South Caro')]")
+    public WebElement recentPostSecondElement;
+    @FindBy(xpath = "//div[@class='footer-item mt_30']//a[normalize-space()='Buenos Aires: The Paris of South America']")
+    public WebElement recentPostThirdElement;
+    @FindBy(xpath = "//div[@class='footer-item mt_30']//a[normalize-space()='Bangkok: A City of Contrasts']")
+    public WebElement recentPostFourthElement;
+    @FindBy(xpath = "//div[@class='footer-item mt_30']//a[normalize-space()='Salina Island: A Perfect Family Getaway']")
+    public WebElement recentPostFifthElement;
+
+
+
 
 
 
