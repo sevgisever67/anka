@@ -16,6 +16,7 @@ public class US_15_16_17_18_19_Ebru {
     AboutUsPage aboutUsPage = new AboutUsPage();
     FAQPage faqPage = new FAQPage();
     ContactPage contactPage = new ContactPage();
+    Faker faker = new Faker();
 
     @BeforeMethod
     public void setUp() {
@@ -24,7 +25,7 @@ public class US_15_16_17_18_19_Ebru {
     }
 
     @Test
-    public void aboutUs_015() {
+    public void aboutUs_015_TC01() {
         // Cookies clickable
         aboutUsPage.cookies.click();
         //Verify the "About Us" is display and clickable
@@ -45,12 +46,12 @@ public class US_15_16_17_18_19_Ebru {
     }
 
     @Test
-    public void faq_016() {
+    public void faqUS_016_TC01() {
         //Verify the "FAQ" is display and clickable
         Assert.assertTrue(faqPage.fqaElementi.isDisplayed());
         faqPage.fqaElementi.click();
 
-        // cookies
+        // Cookies clickable
         faqPage.faqCookies.click();
 
         //Verify the titletext contains "FAQ"
@@ -61,12 +62,12 @@ public class US_15_16_17_18_19_Ebru {
     }
 
     @Test
-    public void conTact_17() {
+    public void conTactUS_17_TC01() {
         //Verify the "CONTACT" is display and clickable
         Assert.assertTrue(contactPage.contactElementi.isDisplayed());
         contactPage.contactElementi.click();
 
-        ////Verify the titletext contains "CONTACT"
+        ////Verify the title text contains "CONTACT"
         String expectedTitle = "Contact Us";
         String actualTitle = Driver.getDriver().getTitle();
         Assert.assertEquals(actualTitle, expectedTitle);
@@ -74,32 +75,31 @@ public class US_15_16_17_18_19_Ebru {
         contactPage.contactCookies.click();
 
 
-        // name box, Phone box, email Addrss box information
+        // write  information of  name, Phone, email Address to the related box
 
-        Faker faker= new Faker();
 
         contactPage.visitorNameBox.sendKeys(faker.name().firstName());
         contactPage.visitorPhoneBox.sendKeys(faker.number().digits(12));
         contactPage.visitorEmailAdressBox.sendKeys(faker.internet().emailAddress());
         contactPage.visitorMessageBox.sendKeys(faker.lorem().paragraph());
         contactPage.visitorSubmitButton.submit();
-        Actions actions=new Actions(Driver.getDriver());
+        Actions actions = new Actions(Driver.getDriver());
         actions.sendKeys(Keys.END).perform();
         ReusableMethods.wait(2);
 
         Assert.assertTrue(contactPage.toastmessage.isDisplayed());
 
-        //address is visible
+        // Verify the address is visible
         String expectedAddress = "ADDRESS";
         String actualAddress = contactPage.contactInformationAddress.getText();
         Assert.assertEquals(actualAddress, expectedAddress);
 
-        // Email Adress is visible
+        // Verify the Email Adress is visible
         String expectedContactInformationEmailAdress = "EMAIL ADDRESS";
         String actualContactInformationEmailAdress = contactPage.contactInformationEmailAddress.getText();
         Assert.assertEquals(actualContactInformationEmailAdress, expectedContactInformationEmailAdress);
 
-        // Phone is visible
+        // Verify the Phone is visible
         String expectedContactInformationPhone = "PHONE";
         String actualContactInformationPhone = contactPage.contactInformationPhone.getText();
 
@@ -109,46 +109,41 @@ public class US_15_16_17_18_19_Ebru {
     }
 
     @Test
-    public void travellerRegistration_18() {
-        // registraion button is clickable
+    public void travellerRegistrationUS_18_TC01() {
+        // Verify the  registraion button is clickable
         aboutUsPage.registrationButton.click();
 
 
-        // cookies clickable
+        //Handle the  cookies
         aboutUsPage.registrationCookies.click();
 
-        Faker faker = new Faker();
 
-
-        // Name Email adress password
+        //Send the Name, Email address and  password
         aboutUsPage.registrationName.sendKeys(faker.name().firstName());
         aboutUsPage.registrationEmailAddress.sendKeys((faker.internet().emailAddress()));
         aboutUsPage.registrationPassword.sendKeys(faker.internet().password());
         aboutUsPage.makeRegistrationButton.submit();
 
-        // başarılı giriş yapıldığını test eder
+        //Test the registration is succesfull
 
         Assert.assertTrue(contactPage.toastmessage2.isDisplayed());
 
     }
 
     @Test
-    public void travellerLogin_19()  {
+    public void travellerLoginUS_19_TC01() {
 
-        // Login butonu clickable
+        //  Verify Login butonu clickable
         aboutUsPage.loginButton.click();
         contactPage.contactCookies.click();
-        // Eamil adrres
+        // Send  the Email adrres and password
         aboutUsPage.registrationEmailAddress.sendKeys(ConfigReader.getProperty("visitorRegistrationEmailAddress"));
         aboutUsPage.registrationPassword.sendKeys(ConfigReader.getProperty("visitorRegistrationPassword"));
         aboutUsPage.loginSubmitButton.click();
-
+        // Test login is succesfull
         String expectedTitle = "Traveller Panel";
         String actualTitle = Driver.getDriver().getTitle();
         Assert.assertEquals(actualTitle, expectedTitle);
-
-
-
 
 
 

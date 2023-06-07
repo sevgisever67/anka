@@ -1,5 +1,6 @@
 package tests;
 
+import com.beust.ah.A;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -36,8 +37,22 @@ public class US02_Hasan2  {
     }
     @Test
     public void mailIkonununGorundugunuDogrula_TC_04(){
+
         Assert.assertTrue(mainPage.ziyaretciMailIconu.isDisplayed());
     }
+@Test
+    public void registrationGorundugunuDogrula_TC_05(){
 
-
+        Assert.assertTrue(mainPage.registrationButton.isDisplayed());
+        Assert.assertTrue(mainPage.registrationIcon.isDisplayed());
+}
+@Test
+    public void loginGorundugunuDogrula(){
+    Assert.assertTrue(mainPage.loginButton.isDisplayed());
+    Assert.assertTrue(mainPage.loginIcon.isDisplayed());
+}
+@Test
+    public void tripandwayLogoGorundugunuDogrula(){
+        Assert.assertTrue(mainPage.tripandwayLogo.isDisplayed());
+}
 }
