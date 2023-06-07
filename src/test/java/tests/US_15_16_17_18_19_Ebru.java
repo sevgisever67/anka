@@ -49,6 +49,10 @@ public class US_15_16_17_18_19_Ebru {
         //Verify the "FAQ" is display and clickable
         Assert.assertTrue(faqPage.fqaElementi.isDisplayed());
         faqPage.fqaElementi.click();
+
+        // cookies
+        faqPage.faqCookies.click();
+
         //Verify the titletext contains "FAQ"
         String expectedTitle = "FAQ";
         String actualTitle = Driver.getDriver().getTitle();
