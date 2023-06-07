@@ -62,7 +62,11 @@ public class Admin_Dashboard extends BasePage {
     public WebElement adminAllSubscribersButton;
 
     @FindBy(xpath = "//h6[text()='View Subscribers']")
-    public WebElement adminViewSubscribersText;
+    public WebElement adminViewSubscribersText;   // Admin Panel--> subscriber menüsünden AllSubscribers tıklayınca
+                                                  // tüm haber listesi üyelerinin görüntülendiği sayfanın "View Subscribers" texti
+
+    @FindBy(xpath = "(//a[@class='dropdown-item'])[3]")
+    public WebElement adminProfileLogout;   // Admin olduktan sonra profil ikonunu tıklayınca "Logout" öğesi
 
 
     @FindBy (xpath = "//span[text()='General Settings']")     //admin panelindeki "General Settings" menu butonu
@@ -147,3 +151,4 @@ public class Admin_Dashboard extends BasePage {
 
 
 }
+  ////h6[text()='View Subscribers']
