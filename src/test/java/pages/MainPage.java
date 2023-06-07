@@ -7,14 +7,19 @@ public class MainPage extends BasePage {
 
 
 
+
     @FindBy(xpath = "(//a[text()='Home'])[2]")
     public WebElement homeElementi;    //main page Home sekmesi
+
 
     @FindBy(xpath = "(//a[text()='Services'])[2]")
     public WebElement servicesElementi;  //Main Page Services sekmesi
 
+
+
     @FindBy(xpath = "(//a[text()='Destinations'])[2]")
     public WebElement destinationElementi;  //Main Page Destination sekmesi
+
 
     @FindBy(xpath = "(//a[text()='Packages'])[2]")
     public WebElement packageElementi;      //Main page Package sekmesi
@@ -24,6 +29,7 @@ public class MainPage extends BasePage {
 
     @FindBy(xpath = "(//a[text()='FAQ'])[2]")
     public WebElement fqaElementi;    //Main page FQA sekmesi
+
 
     @FindBy(xpath = "(//a[text()='Blog'])[2]")
     public WebElement blogElementi;   //MainPage Blog sekmesi
@@ -42,7 +48,7 @@ public class MainPage extends BasePage {
     public WebElement privacyPolicyElementi;
 
     @FindBy(xpath = "//*[@id=\"menu\"]/li[2]/a")
-    public WebElement iconServices;
+     public WebElement iconServices;
 
     @FindBy (xpath = "//h4[text()='International Tour']")
     public WebElement iconInternationalTour;
@@ -91,6 +97,19 @@ public class MainPage extends BasePage {
 
     @FindBy(xpath = "//div[@class='toast toast-success']")
     public WebElement toastmessage2;   // Registration email ve pasword bilgileri başarılı girdikten sonra çıkan mesaj
+
+    @FindBy(xpath = "(//p[text()='202-456-3789'])[1]")
+    public WebElement ziyaretciSirketTelefonNo;  //Ziyaretci olarak giriş yapıldığında sol üstteki telefon nosu
+
+    @FindBy(xpath ="//i[@class='fas fa-phone']")
+    public WebElement ziyaretciTelefonIcon;    //Ziyaretci olarak giriş yapıldığında sol üstteki telefon ikonu
+
+    @FindBy(xpath = "/html/body/div[4]/div/div/div[1]/div/p[2]/i")
+    public WebElement ziyaretciIInfo;   //Ziyaretci olarak giriş yapıldığında sol üstteki info texti
+
+    @FindBy(xpath = "(//i[@class='far fa-envelope'])[1]")
+    public WebElement ziyaretciMailIconu;   //Ziyaretci olarak giriş yapıldığında sol üstteki mail ikonu
+
 
 
 }

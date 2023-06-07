@@ -12,9 +12,12 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
+import java.util.Random;
+
 public class US_23_24_25_Fatih{
 
     PackagePage packagePage = new PackagePage();
+    Random random =new Random();
 
 
 
@@ -53,7 +56,9 @@ public class US_23_24_25_Fatih{
         ReusableMethods.wait(5);
         packagePage.userNumberPersonBox.click();
         Select select= new Select(packagePage.userNumberPersonBox);
-        select.selectByVisibleText("2");
+        int randomKisiSayisi = random.nextInt(20)+1;
+
+        select.selectByIndex(randomKisiSayisi);
         packagePage.userNumberPersonBox.click();
         //Thread.sleep(2000);
 
@@ -117,4 +122,5 @@ public class US_23_24_25_Fatih{
 
 
     }
+
 }
