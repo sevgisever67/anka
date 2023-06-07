@@ -65,4 +65,55 @@ public class Admin_Dashboard extends BasePage {
     public WebElement adminViewSubscribersText;
 
 
+    @FindBy (xpath = "//span[text()='General Settings']")     //admin panelindeki "General Settings" menu butonu
+    public WebElement adminGeneralSettingsButton;
+
+    @FindBy (xpath = "//span[text()='Page Settings']")       // admin panelindeki "Page Settings" menu butonu
+    public WebElement adminPageSettingsButton;
+
+    @FindBy (xpath = "//span[text()='Payment Settings']")
+    public WebElement adminPaymentSettingsButton;            // admin panelindeki "Payment Settings" menu butonu
+
+    @FindBy (xpath = "(//li[@class = 'nav-item '])[7]")
+    public WebElement adminDynamicPagesButton;              // admin panelindeki "Dynamic Pages" menu butonu
+
+   @FindBy (xpath = "//span[text()='Language']")
+    public WebElement adminLanguageButton;                 //admin panelindeki "Language" butonu
+
+    @FindBy (xpath="//span[text()='Website Section']")
+    public  WebElement adminWebsiteSectionButton;          // admin panelindeki "Website Section" menu butonu
+
+    @FindBy (xpath="//span[text()='Email Template']")
+    public  WebElement adminEmailTemplateButton;          // admin panelindeki "Email Template" butonu
+
+    @FindBy (xpath = "//span[text()='Blog Section']")
+    public  WebElement adminBlogSectionButton;       // admin panelindeki "Blog Section" menu butonu
+
+
+    @FindBy (xpath = "//div[@class = 'float-right d-inline']")
+    public  WebElement BlogSectionAddNewButton;                 // admin panelindeki "Blog Section" bolumundeki
+                                                                // "+Add New" butonu
+
+    @FindBy (xpath = "//input[@name ='category_name']")
+    public WebElement BlogSectionCategoryNameBox;         //admin giris yaptıktan sonra "Blog Section" menusunden
+                                                          //"+Add New" butonuna tıkladiktan sonra "Category Name" kutusu
+    @FindBy (xpath = "//input[@name ='category_slug']")
+    public WebElement BlogSectionCategorySlugBox;         //admin giris yaptıktan sonra "Blog Section" menusunden
+                                                          // "+Add New" butonuna tıkladiktan sonra "Category Slug" kutusu
+
+
+    @FindBy (xpath = "//input[@name ='seo_title']")
+    public WebElement BlogSectionTitleBox;               //admin giris yaptıktan sonra "Blog Section" menusunden
+                                                         // "+Add New" butonuna tıkladiktan sonra "Title" kutusu
+
+    @FindBy (xpath = "//textarea[@name ='seo_meta_description']")
+    public WebElement BlogSectionMetaDescriptionBox;               //admin giris yaptıktan sonra "Blog Section" menusunden
+                                                                   // "+Add New" butonuna tıkladiktan sonra
+                                                                   // "Meta Description" kutusu
+
+    @FindBy (xpath = "//button[@type= 'submit']")                  //admin giris yaptıktan sonra "Blog Section" menusunden
+    public WebElement getAdminBlogSectionSubmitButton;             // "+Add New" butonuna tıkladiktan sonra
+                                                                   // "Submit" butonu
+
+
 }
