@@ -1,20 +1,23 @@
 package pages;
 
+import org.bouncycastle.jcajce.provider.asymmetric.X509;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class MainPage extends BasePage {
 
 
-
     @FindBy(xpath = "(//a[text()='Home'])[2]")
     public WebElement homeElementi;    //main page Home sekmesi
+
 
     @FindBy(xpath = "(//a[text()='Services'])[2]")
     public WebElement servicesElementi;  //Main Page Services sekmesi
 
+
     @FindBy(xpath = "(//a[text()='Destinations'])[2]")
     public WebElement destinationElementi;  //Main Page Destination sekmesi
+
 
     @FindBy(xpath = "(//a[text()='Packages'])[2]")
     public WebElement packageElementi;      //Main page Package sekmesi
@@ -24,6 +27,7 @@ public class MainPage extends BasePage {
 
     @FindBy(xpath = "(//a[text()='FAQ'])[2]")
     public WebElement fqaElementi;    //Main page FQA sekmesi
+
 
     @FindBy(xpath = "(//a[text()='Blog'])[2]")
     public WebElement blogElementi;   //MainPage Blog sekmesi
@@ -44,58 +48,68 @@ public class MainPage extends BasePage {
     @FindBy(xpath = "//*[@id=\"menu\"]/li[2]/a")
     public WebElement iconServices;
 
-    @FindBy(xpath = "//*[@id=\"menu\"]/li[3]/a")
-    public WebElement iconDestinations;
 
-    @FindBy (xpath = "//h4[text()='International Tour']")
+
+    @FindBy(xpath = "//h4[text()='International Tour']")
     public WebElement iconInternationalTour;
 
-    @FindBy (xpath = "//h4[text()='Adventure Tour']")
+    @FindBy(xpath = "//h4[text()='Adventure Tour']")
     public WebElement iconAdventureTour;
 
-    @FindBy (xpath = "//h4[text()='Culture Tour']")
+    @FindBy(xpath = "//h4[text()='Culture Tour']")
     public WebElement iconCultureTour;
 
-    @FindBy (xpath = "//h4[text()='Bussiness Tour']")
+    @FindBy(xpath = "//h4[text()='Bussiness Tour']")
     public WebElement iconBussinessTour;
 
-    @FindBy (xpath = "//h4[text()='Health Tour']")
+    @FindBy(xpath = "//h4[text()='Health Tour']")
     public WebElement iconHealthTour;
 
-    @FindBy (xpath = "//h4[text()='Religious Tour']")
+    @FindBy(xpath = "//h4[text()='Religious Tour']")
     public WebElement iconReligiousTour;
 
+    @FindBy(xpath = "//i[@class='fas fa-user-plus']")
+    public WebElement registrationIcon;
 
     @FindBy(xpath = "//a[.='Registration']")
     public WebElement registrationButton; // Main Page Registration sekmesi
 
 
-    @FindBy (xpath = "//input[@name='traveller_name']")
+    @FindBy(xpath = "//input[@name='traveller_name']")
     public WebElement registrationName; // Main Page registration Name button
 
-    @FindBy (xpath = "//button[@tabindex='0']")
+    @FindBy(xpath = "//button[@tabindex='0']")
     public WebElement registrationCookies;  // Main Page registration cookies
 
-    @FindBy (xpath = "//input[@name='traveller_email']")
-    public WebElement registrationEmailAddress;
+    @FindBy(xpath = "//input[@name='traveller_email']")
+    public WebElement registrationEmailAddress;  // Registration daki email adress butonu locati
 
     @FindBy(xpath = "//input[@type='password']")
-    public WebElement registrationPassword;
+    public WebElement registrationPassword;   // Registration daki name butonu locati
 
     @FindBy(xpath = "//button[.='Make Registration']")
-    public WebElement makeRegistrationButton;
+    public WebElement makeRegistrationButton;  // Make Regisration butonu
 
     @FindBy(xpath = "//a[.='Login']")
     public WebElement loginButton;  // Main Page Login Butonu
+
+    @FindBy(xpath = "//i[@class='fas fa-lock']")
+    public WebElement loginIcon;
+
+    @FindBy(xpath = "//img[@alt='Logo']")
+    public WebElement tripandwayLogo;
 
     @FindBy(xpath = "//button[@name='form1']")
     public WebElement loginSubmitButton;   // Email adres ve password girildikten sonraki Login buttonu
 
 
+    @FindBy(xpath = "//div[@class='toast toast-success']")
+    public WebElement toastmessage2;   // Registration email ve pasword bilgileri başarılı girdikten sonra çıkan mesaj
+
     @FindBy(xpath = "(//p[text()='202-456-3789'])[1]")
     public WebElement ziyaretciSirketTelefonNo;  //Ziyaretci olarak giriş yapıldığında sol üstteki telefon nosu
 
-    @FindBy(xpath ="//i[@class='fas fa-phone']")
+    @FindBy(xpath = "//i[@class='fas fa-phone']")
     public WebElement ziyaretciTelefonIcon;    //Ziyaretci olarak giriş yapıldığında sol üstteki telefon ikonu
 
     @FindBy(xpath = "/html/body/div[4]/div/div/div[1]/div/p[2]/i")
@@ -136,7 +150,6 @@ public class MainPage extends BasePage {
     public WebElement recentPostFourthElement;
     @FindBy(xpath = "//div[@class='footer-item mt_30']//a[normalize-space()='Salina Island: A Perfect Family Getaway']")
     public WebElement recentPostFifthElement;
-
 
 
 
