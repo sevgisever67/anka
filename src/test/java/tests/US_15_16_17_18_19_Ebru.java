@@ -5,9 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
 import pages.*;
 import utilities.ConfigReader;
@@ -22,13 +20,13 @@ public class US_15_16_17_18_19_Ebru extends TestBaseRapor {
     SoftAssert softAssert = new SoftAssert();
     Faker faker = new Faker();
 
-    @BeforeMethod
+    @BeforeTest
     public void setUp() {
 
         Driver.getDriver().get(ConfigReader.getProperty("userUrl"));
         extentTest = extentReports.createTest("US_015_016_017_018_019");
     }
-@AfterMethod
+@AfterClass
 public void tearDown(){
         Driver.closeDriver();
 }

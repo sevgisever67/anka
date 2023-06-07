@@ -27,6 +27,7 @@ public class Driver {
 
 
     public static void closeDriver(){
+
         driver.close();
     }
 }
