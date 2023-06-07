@@ -44,6 +44,9 @@ public class MainPage extends BasePage {
     @FindBy(xpath = "//*[@id=\"menu\"]/li[2]/a")
     public WebElement iconServices;
 
+    @FindBy(xpath = "//*[@id=\"menu\"]/li[3]/a")
+    public WebElement iconDestinations;
+
     @FindBy (xpath = "//h4[text()='International Tour']")
     public WebElement iconInternationalTour;
 
