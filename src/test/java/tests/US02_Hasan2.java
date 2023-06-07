@@ -36,7 +36,7 @@ public class US02_Hasan2 extends TestBaseRapor{
     }
 
     @Test
-    public void sirkeInfosununDogrulugununTesti_TC_03() {
+    public void sirketInfosununDogrulugununTesti_TC_03() {
         Assert.assertTrue(mainPage.ziyaretciIInfo.isDisplayed());
         extentTest.pass("Şirket infosu görünür");
 
