@@ -151,6 +151,38 @@ public class MainPage extends BasePage {
     @FindBy(xpath = "//div[@class='footer-item mt_30']//a[normalize-space()='Salina Island: A Perfect Family Getaway']")
     public WebElement recentPostFifthElement;
 
+    @FindBy(xpath = "//h3[text()='Address']")
+    public WebElement footerAdressHeader ; // >>Homepage >> Footer >>'Adress' section
+
+    @FindBy(xpath = "(//div[@class='text'])[1]") // >>Homepage >> Footer >> Adress >> CompanyAdress
+    public WebElement footerCompanyAdress ;
+
+    @FindBy(xpath = "(//div[@class='text'])[2]")   // >>Homepage >> Footer >> Adress >> CompanyPhoneNumber
+    public WebElement footerCompanyPhoneNumber;
+
+    @FindBy(xpath = "(//div[@class='text'])[3]")   // >>Homepage >> Footer >> Adress >> CompanyEmailAdress
+    public WebElement footerCompanyEmailAdress;
+
+
+    // Homepage >> Footer >> Social media icon's locaters
+
+    @FindBy(xpath = "(//a[@href='http://www.facebook.com'])[1]")
+    public WebElement FooterFacebookIconElement;
+
+    @FindBy(xpath = "(//a[@href='http://www.facebook.com'])[2]")
+    public WebElement FooterTwitterIconElement;
+
+    @FindBy(xpath = "//a[@href='http://www.linkedin.com']")
+    public WebElement FooterLinkedinIconElement;
+
+    @FindBy(xpath = "//a[@href='https://twitter.com']")
+    public WebElement FooterPinterestIconElement;
+
+    @FindBy(xpath = "//a[@href='http://www.instagram.com']")
+    public WebElement FooterInstagramIconElement;
+
+
+
 
 
 
