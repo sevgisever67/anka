@@ -89,31 +89,44 @@ public class Admin_Dashboard extends BasePage {
     @FindBy (xpath = "//span[text()='Blog Section']")
     public  WebElement adminBlogSectionButton;       // admin panelindeki "Blog Section" menu butonu
 
+    @FindBy (xpath = "(//a[@class ='collapse-item'])[3]")
+    public WebElement adminBlogSectionCategoriesButton;     // admin panelindeki "Blog Section" bolumundaki
+                                                            // "Categories" butonu
+
 
     @FindBy (xpath = "//div[@class = 'float-right d-inline']")
-    public  WebElement BlogSectionAddNewButton;                 // admin panelindeki "Blog Section" bolumundeki
+    public  WebElement blogSectionAddNewButton;                 // admin panelindeki "Blog Section" bolumundeki
                                                                 // "+Add New" butonu
 
     @FindBy (xpath = "//input[@name ='category_name']")
-    public WebElement BlogSectionCategoryNameBox;         //admin giris yaptıktan sonra "Blog Section" menusunden
+    public WebElement blogSectionCategoryNameBox;         //admin giris yaptıktan sonra "Blog Section" menusunden
                                                           //"+Add New" butonuna tıkladiktan sonra "Category Name" kutusu
     @FindBy (xpath = "//input[@name ='category_slug']")
-    public WebElement BlogSectionCategorySlugBox;         //admin giris yaptıktan sonra "Blog Section" menusunden
+    public WebElement blogSectionCategorySlugBox;         //admin giris yaptıktan sonra "Blog Section" menusunden
                                                           // "+Add New" butonuna tıkladiktan sonra "Category Slug" kutusu
 
 
     @FindBy (xpath = "//input[@name ='seo_title']")
-    public WebElement BlogSectionTitleBox;               //admin giris yaptıktan sonra "Blog Section" menusunden
+    public WebElement blogSectionTitleBox;               //admin giris yaptıktan sonra "Blog Section" menusunden
                                                          // "+Add New" butonuna tıkladiktan sonra "Title" kutusu
 
     @FindBy (xpath = "//textarea[@name ='seo_meta_description']")
-    public WebElement BlogSectionMetaDescriptionBox;               //admin giris yaptıktan sonra "Blog Section" menusunden
+    public WebElement blogSectionMetaDescriptionBox;               //admin giris yaptıktan sonra "Blog Section" menusunden
                                                                    // "+Add New" butonuna tıkladiktan sonra
                                                                    // "Meta Description" kutusu
 
     @FindBy (xpath = "//button[@type= 'submit']")                  //admin giris yaptıktan sonra "Blog Section" menusunden
-    public WebElement getAdminBlogSectionSubmitButton;             // "+Add New" butonuna tıkladiktan sonra
+    public WebElement adminBlogSectionSubmitButton;                // "+Add New" butonuna tıkladiktan sonra
                                                                    // "Submit" butonu
+
+
+
+    @FindBy (xpath = "(//a[@class ='btn btn-warning btn-sm'])[5]")             //admin giris yaptıktan sonra "Blog Section" menusunden
+    public WebElement adminBlogSectionEditButton;                   // "Category" ekledikten sonra "Edit" butonu
+
+
+    @FindBy (xpath = "((//i[@class ='fas fa-trash-alt'])[5]")        //admin giris yaptıktan sonra "Blog Section" menusunden
+    public  WebElement adminBlogSectionDeleteButton;                // "Category" ekledikten sonra "Delete" butonu
 
 
 }
