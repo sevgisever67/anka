@@ -33,8 +33,16 @@ public class MainPage extends BasePage {
     public WebElement blogElementi;   //MainPage Blog sekmesi
 
     @FindBy(xpath = "(//a[text()='Contact'])[2]")
+<<<<<<< HEAD
+    public WebElement contactElementi;        //Main Page Contact sekm
+=======
     public WebElement contactElementi;        //Main Page Contact sekmesi
 
+
+    @FindBy(xpath = "//img[@alt='Logo']")
+    public WebElement SiteLogo;
+
+>>>>>>> c37172838e969ce68d768d52e793472320c422fb
 
     @FindBy(xpath = "//*[text()='Terms and Conditions']")
     public WebElement termAndConditionsElementi;
@@ -47,7 +55,6 @@ public class MainPage extends BasePage {
 
     @FindBy(xpath = "//*[@id=\"menu\"]/li[2]/a")
     public WebElement iconServices;
-
 
 
     @FindBy(xpath = "//h4[text()='International Tour']")
@@ -117,9 +124,9 @@ public class MainPage extends BasePage {
 
     @FindBy(xpath = "(//i[@class='far fa-envelope'])[1]")
     public WebElement ziyaretciMailIconu;   //Ziyaretci olarak giriş yapıldığında sol üstteki mail ikonu
-    @FindBy(xpath="//div[@class='footer-item mt_30']//a[contains(text(),'3 days in Buenos Aires')]")
+    @FindBy(xpath = "//div[@class='footer-item mt_30']//a[contains(text(),'3 days in Buenos Aires')]")
     public WebElement featuredPackagestFirstElement;
-    @FindBy(xpath="//div[@class='footer-item mt_30']//a[contains(text(),'10 days in Buenos Aires')]")
+    @FindBy(xpath = "//div[@class='footer-item mt_30']//a[contains(text(),'10 days in Buenos Aires')]")
     public WebElement featuredPackagesSecondElement;
 
     @FindBy(xpath = "//div[@class='col-md-3 col-sm-6 wow fadeInLeft']//a[contains(text(),'3 days in Bangkok')]")
@@ -127,22 +134,22 @@ public class MainPage extends BasePage {
     @FindBy(xpath = "//div[@class='col-md-3 col-sm-6 wow fadeInLeft']//a[contains(text(),'7 days in Salina Island')]")
     public WebElement featuredPackagesFourthElement;
 
-    @FindBy(xpath ="//div[@class='col-md-3 col-sm-6 wow fadeIn']//a[contains(text(),'New Test Packages')]")
+    @FindBy(xpath = "//div[@class='col-md-3 col-sm-6 wow fadeIn']//a[contains(text(),'New Test Packages')]")
     public WebElement latestPackagesFirstElement;
-    @FindBy(xpath="//a[normalize-space()='test04']" )
+    @FindBy(xpath = "//a[normalize-space()='test04']")
     public WebElement latesPackagesSecondElement;
-    @FindBy(xpath ="//a[normalize-space()='5 Day California']")
+    @FindBy(xpath = "//a[normalize-space()='5 Day California']")
     public WebElement latesPackagesThirdElement;
-    @FindBy(xpath="//div[@class='col-md-3 col-sm-6 wow fadeIn']//a[contains(text(),'7 days in Salina Island')]")
+    @FindBy(xpath = "//div[@class='col-md-3 col-sm-6 wow fadeIn']//a[contains(text(),'7 days in Salina Island')]")
 
     public WebElement latesPackagesFourthElement;
-    @FindBy(xpath="//div[@class='col-md-3 col-sm-6 wow fadeIn']//a[contains(text(),'3 days in Bangkok')]")
+    @FindBy(xpath = "//div[@class='col-md-3 col-sm-6 wow fadeIn']//a[contains(text(),'3 days in Bangkok')]")
     public WebElement latesPackagesFifthElement;
 
     @FindBy(xpath = "//div[@class='footer-item mt_30']//a[normalize-space()='Amazing Place'])")
     public WebElement recentPostFirstElement;
 
-     @FindBy(xpath = "//div[@class='footer-item mt_30']//a[contains(text(),'Discovering Greenville: A Hidden Gem in South Caro')]")
+    @FindBy(xpath = "//div[@class='footer-item mt_30']//a[contains(text(),'Discovering Greenville: A Hidden Gem in South Caro')]")
     public WebElement recentPostSecondElement;
     @FindBy(xpath = "//div[@class='footer-item mt_30']//a[normalize-space()='Buenos Aires: The Paris of South America']")
     public WebElement recentPostThirdElement;
@@ -150,12 +157,90 @@ public class MainPage extends BasePage {
     public WebElement recentPostFourthElement;
     @FindBy(xpath = "//div[@class='footer-item mt_30']//a[normalize-space()='Salina Island: A Perfect Family Getaway']")
     public WebElement recentPostFifthElement;
+    @FindBy(xpath = "(//img[@alt='Blog Image'])[4]")
+    public WebElement LatesBlogIstanbulPhotoElement;   // "LATEST BLOG" alanında "ISTANBUL: A FUSION OF EAST AND WEST" blog fotosu
+
+    @FindBy(xpath = "(//img[@alt='Blog Image'])[5]")
+    public WebElement LatesBlogHittitesPhotoElement;   // "LATEST BLOG" alanında "DISCOVERING THE ANCIENT CAPITAL OF THE HITTITES: BOGAZKALE AND HATTUSAS" blog fotosu
+
+    @FindBy(xpath = "(//img[@alt='Blog Image'])[6]")
+    public WebElement LatesBlogSalinaIslandPhotoElement;   // "LATEST BLOG" alanında "SALINA ISLAND: A PERFECT FAMILY GETAWAY" blog fotosu
+
+    @FindBy(xpath = "(//img[@alt='Blog Image'])[7]")
+    public WebElement LatesBlogBangkokPhotoElement;  // "LATEST BLOG" alanında "BANGKOK: A CITY OF CONTRASTS" blog fotosu
+
+    @FindBy(xpath = "(//img[@alt='Blog Image'])[8]")
+    public WebElement LatesBlogBuenosAiresPhotoElement;  // "LATEST BLOG" alanında "BUENOS AIRES: THE PARIS OF SOUTH AMERICA" blog fotosu
+
+    @FindBy(xpath = "(//img[@alt='Blog Image'])[9]")
+    public WebElement LatesBlogGreenvillePhotoElement;  // "LATEST BLOG" alanında "DISCOVERING GREENVILLE: A HIDDEN GEM IN SOUTH CAROLINA" blog fotosu
+
+    @FindBy(xpath = "(//a[@class='b-head'])[4]")
+    public WebElement LatesBlogIstanbulTextElement;  // "LATEST BLOG" alanında "ISTANBUL: A FUSION OF EAST AND WEST" blog texti
+
+    @FindBy(xpath = "(//a[@class='b-head'])[5]")
+    public WebElement LatesBlogHittitesTextElement;  // "LATEST BLOG" alanında "DISCOVERING THE ANCIENT CAPITAL OF THE HITTITES: BOGAZKALE AND HATTUSAS" blog texti
+
+    @FindBy(xpath = "(//a[@class='b-head'])[6]")
+    public WebElement LatesBlogSalinaIslandTextElement; // "LATEST BLOG" alanında "SALINA ISLAND: A PERFECT FAMILY GETAWAY" blog texti
+
+    @FindBy(xpath = "(//a[@class='b-head'])[7]")
+    public WebElement LatesBlogBangkokTextElement; // "LATEST BLOG" alanında "BANGKOK: A CITY OF CONTRASTS" blog texti
+
+    @FindBy(xpath = "(//a[@class='b-head'])[8]")
+    public WebElement LatesBlogBuenosAiresTextElement; // "LATEST BLOG" alanında "BUENOS AIRES: THE PARIS OF SOUTH AMERICA" blog texti
+
+    @FindBy(xpath = "(//a[@class='b-head'])[9]")
+    public WebElement LatesBlogGreenvilleTextElement; // "LATEST BLOG" alanında "DISCOVERING GREENVILLE: A HIDDEN GEM IN SOUTH CAROLINA" blog texti
+
+    @FindBy(xpath = "(//i[@class='fa fa-chevron-circle-right'])[4]")
+    public WebElement LatesBlogIstanbulReadMoreButton;
+    ////div[@class='button mt_15'])[4]
+
+    @FindBy(xpath = "(//div[@class='button mt_15'])[5]")
+    public WebElement LatesBlogHittitesReadMoreButton;
+
+    @FindBy(xpath = "(//div[@class='button mt_15'])[6]")
+    public WebElement LatesBlogSalinaIslandReadMoreButton;
+
+    @FindBy(xpath = "(//div[@class='button mt_15'])[7]")
+    public WebElement LatesBlogBangkokReadMoreButton;
+
+    @FindBy(xpath = "(//div[@class='button mt_15'])[8]")
+    public WebElement LatesBlogBuenosAiresReadMoreButton;
+
+    @FindBy(xpath = "(//div[@class='button mt_15'])[9]")
+    public WebElement LatesBlogGreenvilleReadMoreButton;
+
+    @FindBy(xpath = "//div[@class='blog-area pt_80 pb_80']")
+    public WebElement LatesBlog;
+
+    @FindBy(xpath = "(//div[@class='brand-item wow fadeIn'])[1]")
+    public WebElement OurClientEasyTicketPhotoElement;
+
+    @FindBy(xpath = "(//div[@class='brand-item wow fadeIn'])[2]")
+    public WebElement OurClientPassportPhotoElement;
+
+    @FindBy(xpath = "(//div[@class='brand-item wow fadeIn'])[3]")
+    public WebElement OurClientIcanActivitiesPhotoElement;
+
+    @FindBy(xpath = "(//div[@class='brand-item wow fadeIn'])[4]")
+    public WebElement OurClientParkmapPhotoElement;
+
+    @FindBy(xpath = "(//div[@class='brand-item wow fadeIn'])[5]")
+    public WebElement OurClientEasyFlyPhotoElement;
+
+    @FindBy(xpath = "(//div[@class='brand-item wow fadeIn'])[6]")
+    public WebElement OurClientBussinesIncreasePhotoElement;
+
+    @FindBy(xpath = "(//div[@class='brand-item wow fadeIn'])[7]")
+    public WebElement OurClientYachtseaPhotoElement;
 
     @FindBy(xpath = "//h3[text()='Address']")
-    public WebElement footerAdressHeader ; // >>Homepage >> Footer >>'Adress' section
+    public WebElement footerAdressHeader; // >>Homepage >> Footer >>'Adress' section
 
     @FindBy(xpath = "(//div[@class='text'])[1]") // >>Homepage >> Footer >> Adress >> CompanyAdress
-    public WebElement footerCompanyAdress ;
+    public WebElement footerCompanyAdress;
 
     @FindBy(xpath = "(//div[@class='text'])[2]")   // >>Homepage >> Footer >> Adress >> CompanyPhoneNumber
     public WebElement footerCompanyPhoneNumber;
@@ -181,10 +266,30 @@ public class MainPage extends BasePage {
     @FindBy(xpath = "//a[@href='http://www.instagram.com']")
     public WebElement footerInstagramIconElement;
 
+<<<<<<< HEAD
+    @FindBy(xpath = "//img[@alt='Logo']")
+    public WebElement SiteLogo;
+=======
 
 
 
 
 
+>>>>>>> c37172838e969ce68d768d52e793472320c422fb
+
+
+    public WebElement iconDestinations;
+
+    @FindBy(xpath = "(//div[@class='slider-item'])[3]")
+    public WebElement mainSlider1;
+
+    @FindBy(xpath = "(//a[.='Read More'])[3]")
+    public WebElement readMore1;
+
+    @FindBy(xpath = "(//div[@class='owl-next'])[1]")
+    public WebElement mainSliderNextButton;
+
+    @FindBy(xpath = "(//div[@class='slider-item'])[4]")
+    public WebElement mainSlider2;
 
 }
