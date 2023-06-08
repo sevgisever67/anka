@@ -3,6 +3,7 @@ package pages;
 import org.bouncycastle.jcajce.provider.asymmetric.X509;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.w3c.dom.html.HTMLInputElement;
 
 public class MainPage extends BasePage {
 
@@ -150,8 +151,6 @@ public class MainPage extends BasePage {
     public WebElement recentPostFourthElement;
     @FindBy(xpath = "//div[@class='footer-item mt_30']//a[normalize-space()='Salina Island: A Perfect Family Getaway']")
     public WebElement recentPostFifthElement;
-
-
 
 
 

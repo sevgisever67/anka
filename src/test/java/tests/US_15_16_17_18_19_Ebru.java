@@ -14,26 +14,24 @@ import utilities.ReusableMethods;
 import utilities.TestBaseRapor;
 
 public class US_15_16_17_18_19_Ebru extends TestBaseRapor {
-    AboutUsPage aboutUsPage = new AboutUsPage();
-    FAQPage faqPage = new FAQPage();
-    ContactPage contactPage = new ContactPage();
+   AboutUsPage aboutUsPage ;
+   FAQPage faqPage ;
+  ContactPage contactPage;
     SoftAssert softAssert = new SoftAssert();
     Faker faker = new Faker();
 
-    @BeforeTest
+    @BeforeMethod
     public void setUp() {
 
         Driver.getDriver().get(ConfigReader.getProperty("userUrl"));
         extentTest = extentReports.createTest("US_015_016_017_018_019");
     }
-@AfterClass
-public void tearDown(){
-        Driver.closeDriver();
-}
+
+
 
     @Test
     public void aboutUS_015_TC01() {
-
+aboutUsPage=new AboutUsPage();
         //Verify the "About Us" is display and clickable
         softAssert.assertTrue(aboutUsPage.aboutUsElemnti.isDisplayed());
         extentTest.info("ABOUT US button appear");
@@ -53,11 +51,11 @@ public void tearDown(){
         softAssert.assertTrue(aboutUsPage.OurVision.isDisplayed());
         extentTest.pass("Items on the About Us page appear");
 
-//        Verify the text of "About Us" is display
-//        String expectedAboutUsText = "ABOUT US";
-//        String actualAboutUsText = aboutUsPage.aboutBunner.getText();
-//        Assert.assertEquals(actualAboutUsText, expectedAboutUsText);
-     //    extentTest.pass("ABOUT US sayfası test edildi");
+//       Verify the text of "About Us" is display
+       String expectedAboutUsText = "ABOUT US";
+       String actualAboutUsText = aboutUsPage.aboutBunner.getText();
+        Assert.assertEquals(actualAboutUsText, expectedAboutUsText);
+         extentTest.pass("ABOUT US sayfası test edildi");
 
 
         softAssert.assertAll();
@@ -66,6 +64,7 @@ public void tearDown(){
 
     @Test
     public void faqUS_016_TC02() {
+        faqPage=new FAQPage();
         //Verify the "FAQ" is display and clickable
         softAssert.assertTrue(faqPage.fqaElementi.isDisplayed());
         extentTest.info("FAQ button appear");
@@ -86,6 +85,7 @@ public void tearDown(){
 
     @Test
     public void conTactUS_17_TC03() {
+        contactPage=new ContactPage();
         //Verify the "CONTACT" is display and clickable
        softAssert.assertTrue(contactPage.contactElementi.isDisplayed());
        extentTest.info("CONTACT button appear");
@@ -140,6 +140,8 @@ public void tearDown(){
 
     @Test
     public void travellerRegistrationUS_18_TC04() {
+        aboutUsPage=new AboutUsPage();
+        contactPage=new ContactPage();
         // Verify the  registraion button is clickable
         aboutUsPage.registrationButton.click();
 
@@ -165,7 +167,8 @@ public void tearDown(){
 
     @Test
     public void travellerLoginUS_19_TC05() {
-
+aboutUsPage=new AboutUsPage();
+contactPage=new ContactPage();
         //  Verify Login butonu clickable
         aboutUsPage.loginButton.click();
         contactPage.contactCookies.click();
