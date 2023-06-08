@@ -6,7 +6,6 @@ import org.openqa.selenium.support.FindBy;
 public class MainPage extends BasePage {
 
 
-
     @FindBy(xpath = "(//a[text()='Home'])[2]")
     public WebElement homeElementi;    //main page Home sekmesi
 
@@ -31,7 +30,8 @@ public class MainPage extends BasePage {
     @FindBy(xpath = "(//a[text()='Contact'])[2]")
     public WebElement contactElementi;        //Main Page Contact sekmesi
 
-
+    @FindBy(xpath = "//img[@alt='Logo']")
+    public WebElement SiteLogo;
 
 
 }

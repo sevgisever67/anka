@@ -31,5 +31,10 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
         Assert.assertEquals(actualTitle, expectedTitle);
     }
 
+    @Test
 
+    public void us03Logo(){
+        packagePage.SiteLogo.isDisplayed();
+
+    }
 }
