@@ -39,8 +39,20 @@ public class PackagePage extends MainPage{
     @FindBy (xpath = "//button[@id='submitButton']")
     public WebElement userPayButton;
 
+    @FindBy (xpath = "(//input[@class='control'])[1]")
+    public WebElement inputCardNum;
+
+    @FindBy (xpath = "//input[@id='cc-exp']")
+    public WebElement inputCartDate;
+
+    @FindBy (xpath = "//input[@id='cc-csc']")
+    public WebElement inputCartCvc;
+
     @FindBy (xpath= "//div[@class='col-md-9 col-sm-12 wow fadeIn']")
     public WebElement orderYazisi;
+
+    @FindBy (xpath = "(//div[.='Payment is successful!'])[3]")
+    public WebElement alert;
 
 
 }
