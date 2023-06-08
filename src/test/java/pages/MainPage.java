@@ -33,8 +33,7 @@ public class MainPage extends BasePage {
     public WebElement blogElementi;   //MainPage Blog sekmesi
 
     @FindBy(xpath = "(//a[text()='Contact'])[2]")
-    public WebElement contactElementi;        //Main Page Contact sekmesi
-
+    public WebElement contactElementi;        //Main Page Contact sekm
 
     @FindBy(xpath = "//*[text()='Terms and Conditions']")
     public WebElement termAndConditionsElementi;
@@ -47,7 +46,6 @@ public class MainPage extends BasePage {
 
     @FindBy(xpath = "//*[@id=\"menu\"]/li[2]/a")
     public WebElement iconServices;
-
 
 
     @FindBy(xpath = "//h4[text()='International Tour']")
@@ -117,9 +115,9 @@ public class MainPage extends BasePage {
 
     @FindBy(xpath = "(//i[@class='far fa-envelope'])[1]")
     public WebElement ziyaretciMailIconu;   //Ziyaretci olarak giriş yapıldığında sol üstteki mail ikonu
-    @FindBy(xpath="//div[@class='footer-item mt_30']//a[contains(text(),'3 days in Buenos Aires')]")
+    @FindBy(xpath = "//div[@class='footer-item mt_30']//a[contains(text(),'3 days in Buenos Aires')]")
     public WebElement featuredPackagestFirstElement;
-    @FindBy(xpath="//div[@class='footer-item mt_30']//a[contains(text(),'10 days in Buenos Aires')]")
+    @FindBy(xpath = "//div[@class='footer-item mt_30']//a[contains(text(),'10 days in Buenos Aires')]")
     public WebElement featuredPackagesSecondElement;
 
     @FindBy(xpath = "//div[@class='col-md-3 col-sm-6 wow fadeInLeft']//a[contains(text(),'3 days in Bangkok')]")
@@ -127,22 +125,22 @@ public class MainPage extends BasePage {
     @FindBy(xpath = "//div[@class='col-md-3 col-sm-6 wow fadeInLeft']//a[contains(text(),'7 days in Salina Island')]")
     public WebElement featuredPackagesFourthElement;
 
-    @FindBy(xpath ="//div[@class='col-md-3 col-sm-6 wow fadeIn']//a[contains(text(),'New Test Packages')]")
+    @FindBy(xpath = "//div[@class='col-md-3 col-sm-6 wow fadeIn']//a[contains(text(),'New Test Packages')]")
     public WebElement latestPackagesFirstElement;
-    @FindBy(xpath="//a[normalize-space()='test04']" )
+    @FindBy(xpath = "//a[normalize-space()='test04']")
     public WebElement latesPackagesSecondElement;
-    @FindBy(xpath ="//a[normalize-space()='5 Day California']")
+    @FindBy(xpath = "//a[normalize-space()='5 Day California']")
     public WebElement latesPackagesThirdElement;
-    @FindBy(xpath="//div[@class='col-md-3 col-sm-6 wow fadeIn']//a[contains(text(),'7 days in Salina Island')]")
+    @FindBy(xpath = "//div[@class='col-md-3 col-sm-6 wow fadeIn']//a[contains(text(),'7 days in Salina Island')]")
 
     public WebElement latesPackagesFourthElement;
-    @FindBy(xpath="//div[@class='col-md-3 col-sm-6 wow fadeIn']//a[contains(text(),'3 days in Bangkok')]")
+    @FindBy(xpath = "//div[@class='col-md-3 col-sm-6 wow fadeIn']//a[contains(text(),'3 days in Bangkok')]")
     public WebElement latesPackagesFifthElement;
 
     @FindBy(xpath = "//div[@class='footer-item mt_30']//a[normalize-space()='Amazing Place'])")
     public WebElement recentPostFirstElement;
 
-     @FindBy(xpath = "//div[@class='footer-item mt_30']//a[contains(text(),'Discovering Greenville: A Hidden Gem in South Caro')]")
+    @FindBy(xpath = "//div[@class='footer-item mt_30']//a[contains(text(),'Discovering Greenville: A Hidden Gem in South Caro')]")
     public WebElement recentPostSecondElement;
     @FindBy(xpath = "//div[@class='footer-item mt_30']//a[normalize-space()='Buenos Aires: The Paris of South America']")
     public WebElement recentPostThirdElement;
@@ -152,10 +150,10 @@ public class MainPage extends BasePage {
     public WebElement recentPostFifthElement;
 
     @FindBy(xpath = "//h3[text()='Address']")
-    public WebElement footerAdressHeader ; // >>Homepage >> Footer >>'Adress' section
+    public WebElement footerAdressHeader; // >>Homepage >> Footer >>'Adress' section
 
     @FindBy(xpath = "(//div[@class='text'])[1]") // >>Homepage >> Footer >> Adress >> CompanyAdress
-    public WebElement footerCompanyAdress ;
+    public WebElement footerCompanyAdress;
 
     @FindBy(xpath = "(//div[@class='text'])[2]")   // >>Homepage >> Footer >> Adress >> CompanyPhoneNumber
     public WebElement footerCompanyPhoneNumber;
@@ -181,10 +179,22 @@ public class MainPage extends BasePage {
     @FindBy(xpath = "//a[@href='http://www.instagram.com']")
     public WebElement FooterInstagramIconElement;
 
+    @FindBy(xpath = "//img[@alt='Logo']")
+    public WebElement SiteLogo;
 
 
+    public WebElement iconDestinations;
 
+    @FindBy(xpath = "(//div[@class='slider-item'])[3]")
+    public WebElement mainSlider1;
 
+    @FindBy(xpath = "(//a[.='Read More'])[3]")
+    public WebElement readMore1;
 
+    @FindBy(xpath = "(//div[@class='owl-next'])[1]")
+    public WebElement mainSliderNextButton;
+
+    @FindBy(xpath = "(//div[@class='slider-item'])[4]")
+    public WebElement mainSlider2;
 
 }
