@@ -167,19 +167,19 @@ public class MainPage extends BasePage {
     // Homepage >> Footer >> Social media icon's locaters
 
     @FindBy(xpath = "(//a[@href='http://www.facebook.com'])[1]")
-    public WebElement FooterFacebookIconElement;
+    public WebElement footerFacebookIconElement;
 
     @FindBy(xpath = "(//a[@href='http://www.facebook.com'])[2]")
-    public WebElement FooterTwitterIconElement;
+    public WebElement footerTwitterIconElement;
 
     @FindBy(xpath = "//a[@href='http://www.linkedin.com']")
-    public WebElement FooterLinkedinIconElement;
+    public WebElement footerLinkedinIconElement;
 
     @FindBy(xpath = "//a[@href='https://twitter.com']")
-    public WebElement FooterPinterestIconElement;
+    public WebElement footerPinterestIconElement;
 
     @FindBy(xpath = "//a[@href='http://www.instagram.com']")
-    public WebElement FooterInstagramIconElement;
+    public WebElement footerInstagramIconElement;
 
 
 
