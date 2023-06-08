@@ -35,13 +35,23 @@ public abstract class BasePage {
 
 
     @FindBy(xpath = "//input[@type='password']")
-    public WebElement userPasswordButton;  //Main Page user giirişi Password box
+    public WebElement userPasswordButton;  //Main Page user girişi Password box
 
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement userLogin2;      //Main pagede giriş bilgilerinin altındaki log in
 
     @FindBy(xpath = "//i[@class='fas fa-sign-out-alt']")
     public WebElement userLogoutButton;   //User olarak giriş yaptıktan sonra log out butonu
+
+    @FindBy (xpath = "//button[@type='button']")
+    public WebElement cookiesAcceptButton;
+
+    @FindBy (xpath = "(//a[text()='Packages'])[2]")
+    public WebElement userPackages;
+
+    @FindBy (xpath = "//a[text()='Payment History']")
+    public WebElement userPaymentHistoryButon;
+
 
 
 }
