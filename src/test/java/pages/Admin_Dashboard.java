@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
 import utilities.Driver;
 
 import java.util.List;
@@ -114,6 +115,36 @@ public class Admin_Dashboard extends BasePage {
     @FindBy (xpath = "//button[@type= 'submit']")                  //admin giris yaptıktan sonra "Blog Section" menusunden
     public WebElement getAdminBlogSectionSubmitButton;             // "+Add New" butonuna tıkladiktan sonra
                                                                    // "Submit" butonu
+
+    @FindBy(xpath = "//h1[@class='h3 mb-3 text-gray-800']")
+    public WebElement adminDashboardTextiElementi;                      //admin girisi yaptıktan sonra  DasboardTezti Elementi
+
+    @FindBy(xpath = "//a[text()='Blogs']")
+    public WebElement adminBlogsButton;          //BlogSectionButton Blogs buttonu
+
+
+    @FindBy(xpath = "//span[.='Destinations']")
+    public  WebElement adminDestinatiobButton;    // Yönetici panelinde "Destinations" bağlantısı
+
+    @FindBy(xpath = "//a[@class='btn btn-primary btn-sm']")
+    public WebElement adminAddNewButton;
+
+    @FindBy(xpath = "//input[@name='d_name']")
+    public WebElement adminNameBox;
+    @FindBy(xpath = "//input[@name='d_slug']")
+    public WebElement adminSlugBox;
+
+    @FindBy(xpath = "//input[@name='d_heading']")
+    public WebElement adminHeadingBox;          //heading locate
+
+    @FindBy(xpath = "//textarea[@name='d_short_description']")
+    public WebElement adminShortdescriptionLocate;           //short descriptionLocate;
+
+
+
+
+
+
 
 
 }
