@@ -36,6 +36,10 @@ public class MainPage extends BasePage {
     public WebElement contactElementi;        //Main Page Contact sekmesi
 
 
+    @FindBy(xpath = "//img[@alt='Logo']")
+    public WebElement SiteLogo;
+
+
     @FindBy(xpath = "//*[text()='Terms and Conditions']")
     public WebElement termAndConditionsElementi;
 
@@ -180,6 +184,7 @@ public class MainPage extends BasePage {
 
     @FindBy(xpath = "//a[@href='http://www.instagram.com']")
     public WebElement FooterInstagramIconElement;
+
 
 
 
