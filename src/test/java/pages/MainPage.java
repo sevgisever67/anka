@@ -36,6 +36,10 @@ public class MainPage extends BasePage {
     public WebElement contactElementi;        //Main Page Contact sekmesi
 
 
+    @FindBy(xpath = "//img[@alt='Logo']")
+    public WebElement SiteLogo;
+
+
     @FindBy(xpath = "//*[text()='Terms and Conditions']")
     public WebElement termAndConditionsElementi;
 
@@ -150,7 +154,6 @@ public class MainPage extends BasePage {
     public WebElement recentPostFourthElement;
     @FindBy(xpath = "//div[@class='footer-item mt_30']//a[normalize-space()='Salina Island: A Perfect Family Getaway']")
     public WebElement recentPostFifthElement;
-
     @FindBy(xpath = "(//img[@alt='Blog Image'])[4]")
     public WebElement LatesBlogIstanbulPhotoElement;   // "LATEST BLOG" alanında "ISTANBUL: A FUSION OF EAST AND WEST" blog fotosu
 
@@ -229,6 +232,39 @@ public class MainPage extends BasePage {
 
     @FindBy(xpath = "(//div[@class='brand-item wow fadeIn'])[7]")
     public WebElement OurClientYachtseaPhotoElement;
+
+    @FindBy(xpath = "//h3[text()='Address']")
+    public WebElement footerAdressHeader ; // >>Homepage >> Footer >>'Adress' section
+
+    @FindBy(xpath = "(//div[@class='text'])[1]") // >>Homepage >> Footer >> Adress >> CompanyAdress
+    public WebElement footerCompanyAdress ;
+
+    @FindBy(xpath = "(//div[@class='text'])[2]")   // >>Homepage >> Footer >> Adress >> CompanyPhoneNumber
+    public WebElement footerCompanyPhoneNumber;
+
+    @FindBy(xpath = "(//div[@class='text'])[3]")   // >>Homepage >> Footer >> Adress >> CompanyEmailAdress
+    public WebElement footerCompanyEmailAdress;
+
+
+    // Homepage >> Footer >> Social media icon's locaters
+
+    @FindBy(xpath = "(//a[@href='http://www.facebook.com'])[1]")
+    public WebElement FooterFacebookIconElement;
+
+    @FindBy(xpath = "(//a[@href='http://www.facebook.com'])[2]")
+    public WebElement FooterTwitterIconElement;
+
+    @FindBy(xpath = "//a[@href='http://www.linkedin.com']")
+    public WebElement FooterLinkedinIconElement;
+
+    @FindBy(xpath = "//a[@href='https://twitter.com']")
+    public WebElement FooterPinterestIconElement;
+
+    @FindBy(xpath = "//a[@href='http://www.instagram.com']")
+    public WebElement FooterInstagramIconElement;
+
+
+
 
 
 

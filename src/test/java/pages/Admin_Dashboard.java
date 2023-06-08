@@ -142,13 +142,23 @@ public class Admin_Dashboard extends BasePage {
 
 
 
-    @FindBy (xpath = "(//a[@class ='btn btn-warning btn-sm'])[5]")             //admin giris yaptıktan sonra "Blog Section" menusunden
+    @FindBy (xpath = "(//a[@class ='btn btn-warning btn-sm'])[5]")   //admin giris yaptıktan sonra "Blog Section" menusunden
     public WebElement adminBlogSectionEditButton;                   // "Category" ekledikten sonra "Edit" butonu
 
 
-    @FindBy (xpath = "((//i[@class ='fas fa-trash-alt'])[5]")        //admin giris yaptıktan sonra "Blog Section" menusunden
+    @FindBy (xpath = "(//i[@class ='fas fa-trash-alt'])[5]")        //admin giris yaptıktan sonra "Blog Section" menusunden
     public  WebElement adminBlogSectionDeleteButton;                // "Category" ekledikten sonra "Delete" butonu
 
+    @FindBy (xpath ="//div[@class ='toast-message']")             //admin giris yaptıktan sonra "Blog Section" menusunden
+    public WebElement adminEditToastMessage;                      // "Category" ekledikten sonra "Edit" butonuna tıklayip
+                                                                 // upgrade ettikten sonra cikan pop-up yazisi
 
+    @FindBy (xpath = "//button[@class ='btn btn-success']")         //admin giris yaptıktan sonra "Blog Section" menusunden
+    public WebElement adminBlogSectionCategoriesEditUpgradeButton;  // "Category" ekledikten sonra "Edit" butonuna tıklayip
+                                                                    // güncelleme yaptıktan sonra "Upgrade" butonu
+    @FindBy (xpath = "//div[@class = 'toast-message']")
+    public WebElement adminDeleteToastMessage;                     //admin giris yaptıktan sonra "Blog Section" menusunden
+                                                                  // "Category" ekledikten sonra "Delete" butonuna tıklayip
+                                                                 // delete 'den sonra cikan pop up yazisi
 }
   ////h6[text()='View Subscribers']
