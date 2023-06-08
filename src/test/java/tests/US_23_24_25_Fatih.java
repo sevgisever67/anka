@@ -1,9 +1,8 @@
 package tests;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Cookie;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
+import com.github.dockerjava.api.model.Reachability;
+import com.github.javafaker.Faker;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -11,6 +10,7 @@ import org.testng.annotations.Test;
 import pages.PackagePage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 import java.util.Random;
 
@@ -53,6 +53,7 @@ public class US_23_24_25_Fatih{
 
         packagePage.userPackages.click();
         packagePage.user7daysInIstanbul.click();
+        ReusableMethods.wait(5);
         packagePage.userNumberPersonBox.click();
         Select select= new Select(packagePage.userNumberPersonBox);
         int randomKisiSayisi = random.nextInt(20)+1;
@@ -79,16 +80,27 @@ public class US_23_24_25_Fatih{
         Assert.assertTrue(actualTotalPrice.contains(expectedTotalPrice));
 
 
-        packagePage.userCardNumberBox.sendKeys(ConfigReader.getProperty("qaCardNumber"));
+
+
+        String cardNum= "4242424242424242";
+        WebElement inputField= Driver.getDriver().findElement(By.xpath("(//input[@class='control'])[1]"));
+
+        JavascriptExecutor js= (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("arguments[1].value = arguments[0]; ", cardNum, inputField );
+
+       //packagePage.userCardNumberBox.sendKeys(faker.finance().creditCard());
+        //packagePage.userCardNumberBox.sendKeys(ConfigReader.getProperty("qaCardNumber"));
         //Driver.getDriver().switchTo().defaultContent();
         //packagePage.userCardNumberBox.submit();
         //packagePage.userCardNumberBox.sendKeys("4242424242424242");
 
         Thread.sleep(5000);
-        packagePage.userCardDateBox.submit();
-        packagePage.userCardDateBox.sendKeys(ConfigReader.getProperty("qaCardDate"));
-        packagePage.userCardCvcBox.submit();
-        packagePage.userCardCvcBox.sendKeys(ConfigReader.getProperty("qaCardCvc"));
+      //  packagePage.userCardDateBox.submit();
+      //  packagePage.userCardDateBox.sendKeys(ConfigReader.getProperty("1125"));
+       // packagePage.userCardCvcBox.submit();
+        Thread.sleep(5000);
+       // packagePage.userCardCvcBox.sendKeys(ConfigReader.getProperty("qaCardCvc"));
+
 
 
 
