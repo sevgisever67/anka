@@ -26,11 +26,14 @@ public class Driver {
     }
 
 
-    public static void closeDriver() {
-        if (driver != null) {
+
+    public static void closeDriver(){
+        if (driver!=null) {
+
             driver.close();
             driver.quit();
             driver = null;
         }
+
     }
 }
