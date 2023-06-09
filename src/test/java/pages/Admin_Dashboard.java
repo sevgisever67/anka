@@ -4,6 +4,7 @@ import org.bouncycastle.jcajce.provider.asymmetric.X509;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
 import utilities.Driver;
 
 import java.util.List;
@@ -64,7 +65,11 @@ public class Admin_Dashboard extends BasePage {
     public WebElement adminAllSubscribersButton;
 
     @FindBy(xpath = "//h6[text()='View Subscribers']")
-    public WebElement adminViewSubscribersText;
+    public WebElement adminViewSubscribersText;   // Admin Panel--> subscriber menüsünden AllSubscribers tıklayınca
+                                                  // tüm haber listesi üyelerinin görüntülendiği sayfanın "View Subscribers" texti
+
+    @FindBy(xpath = "(//a[@class='dropdown-item'])[3]")
+    public WebElement adminProfileLogout;   // Admin olduktan sonra profil ikonunu tıklayınca "Logout" öğesi
 
 
     @FindBy (xpath = "//span[text()='General Settings']")     //admin panelindeki "General Settings" menu butonu
@@ -91,34 +96,71 @@ public class Admin_Dashboard extends BasePage {
     @FindBy (xpath = "//span[text()='Blog Section']")
     public  WebElement adminBlogSectionButton;       // admin panelindeki "Blog Section" menu butonu
 
+    @FindBy (xpath = "(//a[@class ='collapse-item'])[3]")
+    public WebElement adminBlogSectionCategoriesButton;     // admin panelindeki "Blog Section" bolumundaki
+                                                            // "Categories" butonu
+
 
     @FindBy (xpath = "//div[@class = 'float-right d-inline']")
-    public  WebElement BlogSectionAddNewButton;                 // admin panelindeki "Blog Section" bolumundeki
+    public  WebElement blogSectionAddNewButton;                 // admin panelindeki "Blog Section" bolumundeki
                                                                 // "+Add New" butonu
 
     @FindBy (xpath = "//input[@name ='category_name']")
-    public WebElement BlogSectionCategoryNameBox;         //admin giris yaptıktan sonra "Blog Section" menusunden
+    public WebElement blogSectionCategoryNameBox;         //admin giris yaptıktan sonra "Blog Section" menusunden
                                                           //"+Add New" butonuna tıkladiktan sonra "Category Name" kutusu
     @FindBy (xpath = "//input[@name ='category_slug']")
-    public WebElement BlogSectionCategorySlugBox;         //admin giris yaptıktan sonra "Blog Section" menusunden
+    public WebElement blogSectionCategorySlugBox;         //admin giris yaptıktan sonra "Blog Section" menusunden
                                                           // "+Add New" butonuna tıkladiktan sonra "Category Slug" kutusu
 
 
     @FindBy (xpath = "//input[@name ='seo_title']")
-    public WebElement BlogSectionTitleBox;               //admin giris yaptıktan sonra "Blog Section" menusunden
+    public WebElement blogSectionTitleBox;               //admin giris yaptıktan sonra "Blog Section" menusunden
                                                          // "+Add New" butonuna tıkladiktan sonra "Title" kutusu
 
     @FindBy (xpath = "//textarea[@name ='seo_meta_description']")
-    public WebElement BlogSectionMetaDescriptionBox;               //admin giris yaptıktan sonra "Blog Section" menusunden
+    public WebElement blogSectionMetaDescriptionBox;               //admin giris yaptıktan sonra "Blog Section" menusunden
                                                                    // "+Add New" butonuna tıkladiktan sonra
                                                                    // "Meta Description" kutusu
 
     @FindBy (xpath = "//button[@type= 'submit']")                  //admin giris yaptıktan sonra "Blog Section" menusunden
-    public WebElement getAdminBlogSectionSubmitButton;             // "+Add New" butonuna tıkladiktan sonra
+    public WebElement adminBlogSectionSubmitButton;                // "+Add New" butonuna tıkladiktan sonra
                                                                    // "Submit" butonu
+
+
+    @FindBy(xpath = "//h1[@class='h3 mb-3 text-gray-800']")
+    public WebElement adminDashboardTextiElementi;                      //admin girisi yaptıktan sonra  DasboardTezti Elementi
+
+    @FindBy(xpath = "//a[text()='Blogs']")
+    public WebElement adminBlogsButton;          //BlogSectionButton Blogs buttonu
+
+
+    @FindBy(xpath = "//span[.='Destinations']")
+    public  WebElement adminDestinatiobButton;    // Yönetici panelinde "Destinations" bağlantısı
+
+    @FindBy(xpath = "//a[@class='btn btn-primary btn-sm']")
+    public WebElement adminAddNewButton;
+
+    @FindBy(xpath = "//input[@name='d_name']")
+    public WebElement adminNameBox;
+    @FindBy(xpath = "//input[@name='d_slug']")
+    public WebElement adminSlugBox;
+
+    @FindBy(xpath = "//input[@name='d_heading']")
+    public WebElement adminHeadingBox;          //heading locate
+
+    @FindBy(xpath = "//textarea[@name='d_short_description']")
+    public WebElement adminShortdescriptionLocate;           //short descriptionLocate;
+
+
+
+
+
+
+
 
     @FindBy(xpath = "//a[@class='dropdown-item'][2]")//admin olarak giriş yaptıktan sonra icona tıklandığında
     public WebElement adminChangePhoto;             //görünen Change Photo linki
+
 
     @FindBy(xpath = "//button[@class='rounded-circle border-0']")//admin olarak giriş yaptıktan sonra sayfada
     public WebElement adminOkIsareti;                           //görünen ok işareti
@@ -142,4 +184,24 @@ public class Admin_Dashboard extends BasePage {
 
 
 
+
+    @FindBy (xpath = "(//a[@class ='btn btn-warning btn-sm'])[5]")   //admin giris yaptıktan sonra "Blog Section" menusunden
+    public WebElement adminBlogSectionEditButton;                   // "Category" ekledikten sonra "Edit" butonu
+
+
+    @FindBy (xpath = "(//i[@class ='fas fa-trash-alt'])[5]")        //admin giris yaptıktan sonra "Blog Section" menusunden
+    public  WebElement adminBlogSectionDeleteButton;                // "Category" ekledikten sonra "Delete" butonu
+
+    @FindBy (xpath ="//div[@class ='toast-message']")             //admin giris yaptıktan sonra "Blog Section" menusunden
+    public WebElement adminEditToastMessage;                      // "Category" ekledikten sonra "Edit" butonuna tıklayip
+                                                                 // upgrade ettikten sonra cikan pop-up yazisi
+
+    @FindBy (xpath = "//button[@class ='btn btn-success']")         //admin giris yaptıktan sonra "Blog Section" menusunden
+    public WebElement adminBlogSectionCategoriesEditUpgradeButton;  // "Category" ekledikten sonra "Edit" butonuna tıklayip
+                                                                    // güncelleme yaptıktan sonra "Upgrade" butonu
+    @FindBy (xpath = "//div[@class = 'toast-message']")
+    public WebElement adminDeleteToastMessage;                     //admin giris yaptıktan sonra "Blog Section" menusunden
+                                                                  // "Category" ekledikten sonra "Delete" butonuna tıklayip
+                                                                 // delete 'den sonra cikan pop up yazisi
 }
+  ////h6[text()='View Subscribers']
