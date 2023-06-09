@@ -21,7 +21,6 @@ public class US_39_40_Nursen extends TestBaseRapor {
     public void setUp() {
 
         adminDashboard= new Admin_Dashboard();
-        extentTest= extentReports.createTest("US39_40");
 
         //1. Yönetici olarak herhangi bir browser'a "https://qa.tripandway.com/admin/login URL'sini yazınız
         Driver.getDriver().get(ConfigReader.getProperty("qaAdminUrl"));
@@ -40,6 +39,8 @@ public class US_39_40_Nursen extends TestBaseRapor {
 
     @Test
     public void adminFotografDegistirmeEkraniTesti_39(){
+
+        extentTest= extentReports.createTest("adminFotografDegistirmeEkraniTesti_39");
 
         //5. Hesap ikonuna tıklayınız
         adminDashboard.adminAdmin25Profile.click();
@@ -63,6 +64,8 @@ public class US_39_40_Nursen extends TestBaseRapor {
     @Test
     public  void daraltmaOkIsaretiTesti_40_01(){
 
+        extentTest= extentReports.createTest("daraltmaOkIsaretiTesti_40_01");
+
         //5. Admin sayfasının altındaki ok işaretine basınız
         adminDashboard.adminOkIsareti.click();
         extentTest.info("Yönetici ok işaretine click yapar");
@@ -78,6 +81,8 @@ public class US_39_40_Nursen extends TestBaseRapor {
 
     @Test
     public void visitWebsiteButonuTesti_40_02(){
+
+        extentTest= extentReports.createTest("visitWebsiteButonuTesti_40_02");
 
         //5. Sayfasının üst kısmında bulunan "Visit Website" butonuna tıklayınız
         adminDashboard.adminVisitWebsiteButonu.click();
