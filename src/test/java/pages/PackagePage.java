@@ -9,9 +9,8 @@ import java.security.PublicKey;
 
 public class PackagePage extends MainPage{
 
-    @FindBy (xpath = "(//div[@class='photo-title'])[3]")
+    @FindBy (xpath = "(//div[@class='col-md-4 col-xs-6 clear-three wow fadeIn'])[3]")
     public WebElement user7daysInIstanbul;
-
 
 
     @FindBy (xpath = "//select[@id='numberPerson']")
@@ -40,6 +39,15 @@ public class PackagePage extends MainPage{
 
     @FindBy (xpath = "//button[@id='submitButton']")
     public WebElement userPayButton;
+
+    @FindBy (xpath = "(//input[@class='control'])[1]")
+    public WebElement inputCardNum;
+
+    @FindBy (xpath = "//input[@id='cc-exp']")
+    public WebElement inputCartDate;
+
+    @FindBy (xpath = "//input[@id='cc-csc']")
+    public WebElement inputCartCvc;
 
     @FindBy (xpath= "//div[@class='col-md-9 col-sm-12 wow fadeIn']")
     public WebElement orderYazisi;
@@ -78,6 +86,63 @@ public class PackagePage extends MainPage{
     public WebElement visitor5dayCaliforniaBuyutecElementi;
 
 
+    // Profile edit
+    @FindBy (xpath= "//a[text()='Update Profile']")
+    public WebElement profileUpdate;
+
+    @FindBy (xpath= "//input[@name='traveller_name']")
+    public WebElement profileName;
+
+    @FindBy (xpath= "//input[@name='traveller_phone']")
+    public WebElement profilePhone;
+
+    @FindBy (xpath= "//input[@name='traveller_country']")
+    public WebElement profileCountry;
+
+    @FindBy (xpath= "//input[@name='traveller_address']")
+    public WebElement profileAddress;
+
+    @FindBy (xpath= "//input[@name='traveller_city']")
+    public WebElement profileCity;
+
+    @FindBy (xpath = "//button[@class='btn btn-primary']")
+    public WebElement updateButton;
+
+    @FindBy (xpath = "//div[@class='toast-message']")
+    public WebElement updateSuccessMessage;
+
+    // Update password
+
+    @FindBy (xpath= "//a[text()='Update Password']")
+    public WebElement updatePassword;
+
+    @FindBy (xpath= "//input[@type='password']")
+    public WebElement newPassword;
+
+    @FindBy (xpath = "//button[@type='submit']")
+    public WebElement updatePasswordButton;
+
+    // Forget password
+
+    @FindBy (xpath= "//a[@class='forget-password-link']")
+    public WebElement forgetPassword;
+
+    @FindBy (xpath= "//input[@name='traveller_email']")
+    public WebElement forgetEmailField;
+
+    @FindBy (xpath = "//button[@class='btn btn-primary']")
+    public WebElement forgetSubmitButton;
+
+    @FindBy (xpath = "//div[@class='toast-message']")
+    public WebElement checkEmailMessage;
+
+
+
+
+
+
+    @FindBy (xpath = "(//div[.='Payment is successful!'])[3]")
+    public WebElement alert;
 
 
 }

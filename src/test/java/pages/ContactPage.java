@@ -23,29 +23,20 @@ public class ContactPage extends MainPage {
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement visitorSubmitButton;  //Contact Form doldrulduktan sonraki Submit butonu locati
 
-    @FindBy (xpath = "//h4[.='Contact Information']")
-    public WebElement contactInformationTitle;
-
-    @FindBy(xpath = "//div[@class='contact-text']")
-    public List<WebElement> contactInformation;
-
     @FindBy(xpath = "//button[.='ACCEPT']")
-    public WebElement contactCookies;
+    public WebElement contactCookies;       // contact ta çıkan cookies ın locati
 
     @FindBy(xpath = "//div[@class='toast-progress']/..")
-    public WebElement toastmessage;
-
-    @FindBy(xpath = "//div[@class='toast toast-success']")
-    public WebElement toastmessage2;
+    public WebElement toastmessage;         // Contact Form daki bilgileri girdikten sonra çıkan mesajın locati
 
     @FindBy(xpath = "(//h3[.='Address'])[1]")
-    public WebElement contactInformationAddress;
+    public WebElement contactInformationAddress;    // Contact Information da Adres butonu
 
     @FindBy(xpath = "(//h3[.='Email Address'])[1]")
-    public WebElement contactInformationEmailAddress;
+    public WebElement contactInformationEmailAddress;  // Contact Information da Email Adress  butonu
 
     @FindBy(xpath = "(//h3[.='Phone'])[1]")
-    public WebElement contactInformationPhone;
+    public WebElement contactInformationPhone;  // Contact Information da Phone  butonu
 
 
 }
