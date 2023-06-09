@@ -108,4 +108,6 @@ public class DestinationsPage extends MainPage {
     @FindBy(xpath = "//*[@title='Close (Esc)']")
     public WebElement visitorCaliforniaUsaKapatmaElementi;
 
+
+
 }

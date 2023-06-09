@@ -1,15 +1,10 @@
 package tests;
 
-
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.testng.annotations.AfterMethod;
-
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
 import pages.Admin_Dashboard;
 import pages.ContactPage;
@@ -26,6 +21,7 @@ import java.util.List;
 public class US_36_37_38_Sevgi extends TestBaseRapor {
 
     Admin_Dashboard adminDashboard = new Admin_Dashboard();
+    ContactPage contactPage=new ContactPage();
     SoftAssert softAssert = new SoftAssert();
 
     @BeforeMethod
@@ -61,6 +57,8 @@ public class US_36_37_38_Sevgi extends TestBaseRapor {
         adminDashboard.adminMessageBox.sendKeys(ConfigReader.getProperty("qaAdminSendEmailSubscriberMessageBox"));
         //Click the "Send Email" button
         adminDashboard.adminSendEmailButton.click();
+        //Verify the message is sent to the all subscriber
+        softAssert.assertTrue(contactPage.toastmessage.isDisplayed());
         extentTest.pass("Sending email to the all subscriber");
 
     }
@@ -114,8 +112,10 @@ public class US_36_37_38_Sevgi extends TestBaseRapor {
 
     }
 
-
-
+    @AfterClass
+    public void tearDown(){
+        Driver.getDriver().close();
+    }
 }
 
 
