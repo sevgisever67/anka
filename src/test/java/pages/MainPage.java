@@ -194,7 +194,32 @@ public class MainPage extends BasePage {
     @FindBy(xpath = "(//div[@class='owl-next'])[1]")
     public WebElement mainSliderNextButton;
 
-    @FindBy(xpath = "(//div[@class='slider-item'])[4]")
-    public WebElement mainSlider2;
+    @FindBy(xpath = "//i[@class='fas fa-caret-right']")
+    public WebElement nextSliderButton;
 
+    @FindBy(xpath = "(//div[@class='slider-bg'])[4]")
+    public WebElement mainSlider2;
+    @FindBy(xpath = "(//a[text()='Read More'])[4]")
+    public WebElement readMore2;
+
+    @FindBy(xpath = "(//div[@class='container'])[7]")
+    public WebElement mainSlider3;
+
+    @FindBy(xpath = "(//a[text()='Read More'])[5]")
+    public WebElement readMore3;
+    @FindBy(xpath = "//a[@href='https://qa.tripandway.com/service/international-tour']")
+    public WebElement intTourText;
+
+    @FindBy (xpath = "//a[@href='https://qa.tripandway.com/service/adventure-tour']")
+    public WebElement advantureText;
+    @FindBy (xpath = "//a[@href='https://qa.tripandway.com/service/culture-tour']")
+    public WebElement cultureText;
+    @FindBy (xpath = "//a[@href='https://qa.tripandway.com/service/bussiness-tour']")
+    public WebElement businessText;
+    @FindBy (xpath = "//a[@href='https://qa.tripandway.com/service/health-tour']")
+    public WebElement healthText;
+    @FindBy (xpath = "//a[@href='https://qa.tripandway.com/service/religious-tour']")
+    public WebElement religiousText;
 }
+
+
