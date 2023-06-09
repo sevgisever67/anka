@@ -36,7 +36,7 @@ public class US_36_37_38_Sevgi extends TestBaseRapor {
     }
 
     @Test
-    public void verifySendingEmail_36() {
+    public void verifySendingEmail_36() throws InterruptedException {
 
         //Click on the subscriber
         adminDashboard.adminSubscriberButton.click();
@@ -50,6 +50,7 @@ public class US_36_37_38_Sevgi extends TestBaseRapor {
         adminDashboard.adminMessageBox.click();
         //Send keys The message
         adminDashboard.adminMessageBox.sendKeys(ConfigReader.getProperty("qaAdminSendEmailSubscriberMessageBox"));
+        Thread.sleep(300);
         //Click the "Send Email" button
         adminDashboard.adminSendEmailButton.click();
         //Verify the message is sent to the all subscriber

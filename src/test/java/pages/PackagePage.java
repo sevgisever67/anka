@@ -9,7 +9,7 @@ import java.security.PublicKey;
 
 public class PackagePage extends MainPage{
 
-    @FindBy (xpath = "(//div[@class='col-md-4 col-xs-6 clear-three wow fadeIn'])[3]")
+    @FindBy (xpath = "(//span[@class='fz_22'])[3]")
     public WebElement user7daysInIstanbul;
 
 

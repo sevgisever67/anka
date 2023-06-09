@@ -40,7 +40,7 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
         String expectedTelefonNo = "202-456-3789";
         String actualTelefonno = mainPage.ziyaretciSirketTelefonNo.getText();
         Assert.assertEquals(actualTelefonno, expectedTelefonNo);
-        extentTest.pass("Şirket nosunun görünür");
+        extentTest.pass("Şirket nosu görünür");
     }
 
     @Test
@@ -239,6 +239,7 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
         extentTest.pass("Blog sayfasının olduğu görünür");
 
     }
+
     @Test
     public void us03ContactTC_09() {
         Assert.assertTrue(mainPage.contactElementi.isDisplayed());
@@ -265,7 +266,7 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
         //String expectedTitle = "Contact Us";(//div[@class='text-animated'])[9]
         //String actualTitle = Driver.getDriver().getTitle();
         //Assert.assertEquals(actualTitle, expectedTitle);
-       // extentTest.pass("Contact sayfasının olduğu görünür");
+        // extentTest.pass("Contact sayfasının olduğu görünür");
 
     }
 
@@ -291,7 +292,6 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
             mainPage.LatesBlogIstanbulReadMoreButton.click();
 
 
-
             softAssert.assertTrue(mainPage.LatesBlogIstanbulPhotoElement.isDisplayed());
             softAssert.assertTrue(mainPage.LatesBlogIstanbulPhotoElement.isEnabled());
             softAssert.assertAll();
@@ -301,18 +301,17 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
             Driver.getDriver().navigate().back();
             mainPage.LatesBlogIstanbulReadMoreButton.click();
 
-            actualTitle=Driver.getDriver().getTitle();
-            expectedTitle="Istanbul:A Fusion of East and West";
-            softAssert.assertEquals(actualTitle,expectedTitle);
+            actualTitle = Driver.getDriver().getTitle();
+            expectedTitle = "Istanbul:A Fusion of East and West";
+            softAssert.assertEquals(actualTitle, expectedTitle);
             softAssert.assertAll();
 
         }
 
         @Test
-        public void OurClientTest_TC_46(){
+        public void OurClientTest_TC_46() {
 
         }
-
 
 
     }
