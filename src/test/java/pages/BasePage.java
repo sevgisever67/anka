@@ -52,6 +52,20 @@ public abstract class BasePage {
     @FindBy (xpath = "//a[text()='Payment History']")
     public WebElement userPaymentHistoryButon;
 
+    @FindBy (xpath = "(//i[@class='fas fa-eye'])[1]")
+    public WebElement userPaymentHistoryActionButton;
+
+    @FindBy (tagName = "h1")
+    public WebElement orderDetailText;
+
+    @FindBy (xpath = "//td[text()='$ 7,000.00']")
+    public WebElement payAmountText;
+
+    @FindBy (xpath = "//a[text()='Dashboard']") //a[text()='Dashboard']
+    public WebElement dashBoardElementi;
+
+
+
 
 
 }

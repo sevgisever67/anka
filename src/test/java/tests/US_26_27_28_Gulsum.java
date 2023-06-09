@@ -14,7 +14,7 @@ import utilities.TestBaseRapor;
 
 public  class US_26_27_28_Gulsum extends TestBaseRapor {
 
-    Admin_Dashboard adminDashboard = new Admin_Dashboard();
+    Admin_Dashboard adminDashboard;
     ContactPage  contantPage = new ContactPage();
     SoftAssert softAssert = new SoftAssert();
 
@@ -22,6 +22,7 @@ public  class US_26_27_28_Gulsum extends TestBaseRapor {
 
     @BeforeMethod
     public void setup () {
+        adminDashboard = new Admin_Dashboard();
         extentTest = extentReports.createTest("US_26_27_28_Gulsum");
 
         //Go to url as an admin
