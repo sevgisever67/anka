@@ -1,5 +1,6 @@
 package tests;
 
+import com.beust.ah.A;
 import org.testng.Assert;
 import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
@@ -10,12 +11,14 @@ import utilities.TestBaseRapor;
 
 public class US_33_34_35_41_Sumeyra extends TestBaseRapor{
 
-    Admin_Dashboard adminDashboard = new Admin_Dashboard();
+    Admin_Dashboard adminDashboard;
 
     SoftAssert softAssert = new SoftAssert();
 
     @BeforeMethod
     public void setup(){
+
+        adminDashboard=new Admin_Dashboard();
 
         extentTest= extentReports.createTest("US33_34_35_41");
 
@@ -36,6 +39,8 @@ public class US_33_34_35_41_Sumeyra extends TestBaseRapor{
     @Test(priority = 1)
     public void orderDetailDisplayTest_us33(){
 
+        adminDashboard=new Admin_Dashboard();
+
         // click the order menu from the admin panel
         adminDashboard.adminOrderButton.click();
         extentTest.info("Kullanıcı admin olarak giriş yaptıktan sonra Admin Panel'den 'Order' menüsünü tıklar.");
@@ -49,13 +54,14 @@ public class US_33_34_35_41_Sumeyra extends TestBaseRapor{
         softAssert.assertAll();
         extentTest.pass("Siparişin 'Detail' butonu tıklandığında sipariş detaylarının görüntülendiği dogrulandı.");
 
-        //Driver.closeDriver();
 
 
     }
 
     @Test(priority = 2)
     public void orderInvoiceDisplayTest_us34(){
+
+        adminDashboard=new Admin_Dashboard();
 
         // click the order menu from the admin panel
         adminDashboard.adminOrderButton.click();
@@ -77,6 +83,8 @@ public class US_33_34_35_41_Sumeyra extends TestBaseRapor{
 
     @Test(priority = 3)
     public void whereAllNewsListMembersAreDisplayed_us35() {
+
+        adminDashboard=new Admin_Dashboard();
 
         // click on subscribe menu from admin panel
         adminDashboard.adminSubscriberButton.click();
@@ -101,6 +109,7 @@ public class US_33_34_35_41_Sumeyra extends TestBaseRapor{
     public void returnHomeScreenTest_us41(){
 
 
+        adminDashboard=new Admin_Dashboard();
         adminDashboard.adminAdmin25Profile.click();
         adminDashboard.adminProfileLogout.click();
         extentTest.info("Admin hesabından cıkıs yapar.");
@@ -117,28 +126,7 @@ public class US_33_34_35_41_Sumeyra extends TestBaseRapor{
         softAssert.assertAll();
 
 
-
-
     }
-
-/*
-    @AfterMethod
-    public void taerDown(){
-
-        Driver.closeDriver();
-
-    }
-
- */
-
-
-
-
-
-
-
-
-
 
 
 }
