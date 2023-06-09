@@ -151,9 +151,9 @@ public class MainPage extends BasePage {
     @FindBy(xpath = "//div[@class='footer-item mt_30']//a[normalize-space()='Salina Island: A Perfect Family Getaway']")
     public WebElement recentPostFifthElement;
 
-    @FindBy(xpath = "(//img[@alt='Blog Image'])[4]")
+    @FindBy(xpath = "(//h3[.='07'])[1]//..//../..//../a")
     public WebElement LatesBlogIstanbulPhotoElement;   // "LATEST BLOG" alanında "ISTANBUL: A FUSION OF EAST AND WEST" blog fotosu
-
+    //img[@alt='Blog Image'])[4]
     @FindBy(xpath = "(//img[@alt='Blog Image'])[5]")
     public WebElement LatesBlogHittitesPhotoElement;   // "LATEST BLOG" alanında "DISCOVERING THE ANCIENT CAPITAL OF THE HITTITES: BOGAZKALE AND HATTUSAS" blog fotosu
 
@@ -229,6 +229,9 @@ public class MainPage extends BasePage {
 
     @FindBy(xpath = "(//div[@class='brand-item wow fadeIn'])[7]")
     public WebElement OurClientYachtseaPhotoElement;
+
+    @FindBy(xpath = "//h2[text()='OUR CLIENT']")
+    public WebElement ourclientYazisi;
 
 
 
