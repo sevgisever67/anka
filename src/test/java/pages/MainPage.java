@@ -123,9 +123,9 @@ public class MainPage extends BasePage {
     @FindBy(xpath = "//div[@class='col-md-3 col-sm-6 wow fadeInLeft']//a[contains(text(),'7 days in Salina Island')]")
     public WebElement featuredPackagesFourthElement;
 
-    @FindBy(xpath = "//div[@class='col-md-3 col-sm-6 wow fadeIn']//a[contains(text(),'New Test Packages')]")
+    @FindBy(xpath ="//a[normalize-space()='3 Days Yorkville']")
     public WebElement latestPackagesFirstElement;
-    @FindBy(xpath = "//a[normalize-space()='test04']")
+    @FindBy(xpath = "//a[normalize-space()='7 days in Esenyurt']")
     public WebElement latesPackagesSecondElement;
     @FindBy(xpath = "//a[normalize-space()='5 Day California']")
     public WebElement latesPackagesThirdElement;
@@ -135,7 +135,7 @@ public class MainPage extends BasePage {
     @FindBy(xpath = "//div[@class='col-md-3 col-sm-6 wow fadeIn']//a[contains(text(),'3 days in Bangkok')]")
     public WebElement latesPackagesFifthElement;
 
-    @FindBy(xpath = "//div[@class='footer-item mt_30']//a[normalize-space()='Amazing Place'])")
+    @FindBy(xpath = "//div[@class='footer-item mt_30']//a[normalize-space()='ANKA']")
     public WebElement recentPostFirstElement;
 
     @FindBy(xpath = "//div[@class='footer-item mt_30']//a[contains(text(),'Discovering Greenville: A Hidden Gem in South Caro')]")

@@ -11,6 +11,7 @@ import org.openqa.selenium.*;
 
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -32,19 +33,24 @@ import java.util.Random;
 
 public class US_23_24_25_Fatih extends TestBaseRapor {
 
-    PackagePage packagePage = new PackagePage();
+    PackagePage packagePage;
 
-    Random random= new Random();
+    Random random;
 
-    SoftAssert softAssert= new SoftAssert();
+    SoftAssert softAssert;
 
     @BeforeMethod
     public void setup(){
+
+        packagePage = new PackagePage();
+        random= new Random();
+        softAssert= new SoftAssert();
 
         extentTest= extentReports.createTest("US_23_24_25");
 
         // Go to user url
         Driver.getDriver().get(ConfigReader.getProperty("userUrl"));
+
 
         // Click Login button
         packagePage.userLogInButton.click();
@@ -60,6 +66,7 @@ public class US_23_24_25_Fatih extends TestBaseRapor {
     }
     @Test
     public void us23Logout_TC_01(){
+
 
         // Click Logout button
         packagePage.userLogoutButton.click();
@@ -78,7 +85,7 @@ public class US_23_24_25_Fatih extends TestBaseRapor {
         // Click Packages
         packagePage.userPackages.click();
         // Click 7 Days In Istanbul
-        packagePage.user7daysInIstanbul.click();
+        packagePage.userIstanbul.click();
         extentTest.info("User was able to choose tour package");
 
         // Click Total Person Dropdown menu
@@ -202,6 +209,9 @@ public class US_23_24_25_Fatih extends TestBaseRapor {
         extentTest.pass("The invoice details of the last purchase were displayed.");
 
     }
+
+
+
     @Test
     public static int tutarHesaplama(int kisiSayisi){
 
