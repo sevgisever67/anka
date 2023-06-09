@@ -9,8 +9,10 @@ import java.security.PublicKey;
 
 public class PackagePage extends MainPage{
 
-    @FindBy (xpath = "(//div[@class='photo-title'])[3]")
+    @FindBy (xpath = "(//div[@class='col-md-4 col-xs-6 clear-three wow fadeIn'])[3]")
     public WebElement user7daysInIstanbul;
+
+
 
     @FindBy (xpath = "//select[@id='numberPerson']")
     public WebElement userNumberPersonBox;
@@ -53,6 +55,8 @@ public class PackagePage extends MainPage{
 
     @FindBy (xpath = "(//div[.='Payment is successful!'])[3]")
     public WebElement alert;
+
+
 
 
 }

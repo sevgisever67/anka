@@ -1,8 +1,14 @@
 package tests;
 
+
 import com.github.javafaker.Faker;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
+
+import com.github.dockerjava.api.model.Reachability;
+import com.github.javafaker.Faker;
+import org.openqa.selenium.*;
+
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -11,7 +17,13 @@ import org.testng.asserts.SoftAssert;
 import pages.PackagePage;
 import utilities.ConfigReader;
 import utilities.Driver;
+
 import utilities.TestBaseRapor;
+
+import utilities.ReusableMethods;
+
+import java.util.Random;
+
 
 import java.util.Arrays;
 import java.util.Random;
@@ -21,11 +33,10 @@ import java.util.Random;
 public class US_23_24_25_Fatih extends TestBaseRapor {
 
     PackagePage packagePage = new PackagePage();
+
     Random random= new Random();
 
     SoftAssert softAssert= new SoftAssert();
-
-
 
     @BeforeMethod
     public void setup(){
@@ -46,12 +57,9 @@ public class US_23_24_25_Fatih extends TestBaseRapor {
         packagePage.userLogin2.click();
         extentTest.info("Log in as an user");
 
-
-
-
     }
     @Test
-    public void us23Logout(){
+    public void us23Logout_TC_01(){
 
         // Click Logout button
         packagePage.userLogoutButton.click();
@@ -62,17 +70,17 @@ public class US_23_24_25_Fatih extends TestBaseRapor {
         Assert.assertEquals(actualTitle,expectTitle);
         extentTest.pass("Logout in as an user");
 
-
     }
 
     @Test
-    public  void us24_25PackageAndPaysandPaymentHistory_TC_01() throws InterruptedException {
+    public  void us24_25PackageAndPays_TC_01() throws InterruptedException {
 
         // Click Packages
         packagePage.userPackages.click();
         // Click 7 Days In Istanbul
         packagePage.user7daysInIstanbul.click();
         extentTest.info("User was able to choose tour package");
+
         // Click Total Person Dropdown menu
         packagePage.userNumberPersonBox.click();
         // Choose number of person
@@ -96,9 +104,7 @@ public class US_23_24_25_Fatih extends TestBaseRapor {
         // Verify the amount payable
         Driver.getDriver().switchTo().frame(packagePage.iFrameBox);
 
-
         // Enter credit card information
-
         String cardNum= "4242424242424242";
         JavascriptExecutor js= (JavascriptExecutor) Driver.getDriver();
         js.executeScript("arguments[1].value = arguments[0]; ", cardNum, packagePage.userCardNumberBox );
@@ -127,6 +133,7 @@ public class US_23_24_25_Fatih extends TestBaseRapor {
         Thread.sleep(5000);
         extentTest.pass("The user has made the purchase");
 
+        // Click Dashboard Button
         packagePage.dashBoardElementi.click();
 
         // Click Payment History Button
@@ -149,24 +156,17 @@ public class US_23_24_25_Fatih extends TestBaseRapor {
 
         String actualPayAmount= packagePage.payAmountText.getText();
         System.out.println(packagePage.payAmountText.getText());
-
-
         extentTest.pass("User can view purchase history");
         String []tutar= actualPayAmount.split(" ");
-
         System.out.println(Arrays.toString(tutar));
-
-
         String tutarSdr= tutar[1];
         System.out.println(tutarSdr);
-
         tutarSdr= tutarSdr.replaceAll(",", "");
         System.out.println(tutarSdr);
 
         int noktaIndex= tutarSdr.indexOf(".");
         if (noktaIndex !=-1){
             tutarSdr= tutarSdr.substring(0,noktaIndex);
-
         }
 
         int tutarint= Integer.parseInt(tutarSdr);
@@ -174,20 +174,38 @@ public class US_23_24_25_Fatih extends TestBaseRapor {
         System.out.println(actualTotalPrice);
 
         Assert.assertEquals(actualTotalPrice,tutarint);
-        extentTest.fail("Odenen ücret farklı");
-
-
-
+        extentTest.fail("The fee paid and the invoice amount are different");
 
     }
 
+    @Test
+    public void us25PaymentHistory_TC_01(){
 
+        // Click Payment History Button
+        packagePage.userPaymentHistoryButon.click();
+        extentTest.info("User was able to view payment history");
+
+        // Verify View All Payments
+        String expectIcerik= "View All Payments";
+        String actualSayfaIcerigi= packagePage.orderYazisi.getText();
+        Assert.assertTrue(actualSayfaIcerigi.contains(expectIcerik));;
+
+        // Click Action (Eye icon) Button
+        packagePage.userPaymentHistoryActionButton.click();
+        extentTest.info("User was able to view the last payment details");
+
+        // Verify Order Detail
+        String expectOrder= "Order Detail";
+        String actualOrder= packagePage.orderDetailText.getText();
+        Assert.assertTrue(actualOrder.contains(expectOrder));
+
+        extentTest.pass("The invoice details of the last purchase were displayed.");
+
+    }
     @Test
     public static int tutarHesaplama(int kisiSayisi){
 
     return kisiSayisi*7000;
     }
-
-
 
 }
