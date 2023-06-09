@@ -20,8 +20,6 @@ public class US_33_34_35_41_Sumeyra extends TestBaseRapor{
 
         adminDashboard=new Admin_Dashboard();
 
-        extentTest= extentReports.createTest("US33_34_35_41");
-
         //Go to url as an admin
         Driver.getDriver().get(ConfigReader.getProperty("qaAdminUrl"));
 
@@ -40,19 +38,20 @@ public class US_33_34_35_41_Sumeyra extends TestBaseRapor{
     public void orderDetailDisplayTest_us33(){
 
         adminDashboard=new Admin_Dashboard();
+        extentTest= extentReports.createTest("orderDetailDisplayTest_us33");
 
         // click the order menu from the admin panel
         adminDashboard.adminOrderButton.click();
-        extentTest.info("Kullanıcı admin olarak giriş yaptıktan sonra Admin Panel'den 'Order' menüsünü tıklar.");
+        extentTest.info("After logging in as admin, the user clicks on the 'Order' menu from the Admin Panel.");
 
         // click the detail button of the first order
         adminDashboard.adminOrderDetailButton.click();
-        extentTest.info("Acılan Orders sayfasında, detayını görüntülemek için ilk siparişin 'Detail' butonunu tıklar.");
+        extentTest.info("On the opened Orders page, click the 'Detail' button of the first order to view its detail.");
 
         // verify order detail is displayed
         softAssert.assertTrue(adminDashboard.adminOrderDetailPageText.isDisplayed());
         softAssert.assertAll();
-        extentTest.pass("Siparişin 'Detail' butonu tıklandığında sipariş detaylarının görüntülendiği dogrulandı.");
+        extentTest.pass("It has been verified that the order details are displayed when the 'Detail' button of the order is clicked.");
 
 
 
@@ -62,20 +61,21 @@ public class US_33_34_35_41_Sumeyra extends TestBaseRapor{
     public void orderInvoiceDisplayTest_us34(){
 
         adminDashboard=new Admin_Dashboard();
+        extentTest= extentReports.createTest("orderInvoiceDisplayTest_us34");
 
         // click the order menu from the admin panel
         adminDashboard.adminOrderButton.click();
-        extentTest.info("Kullanıcı admin olarak giriş yaptıktan sonra Admin Panel'den 'Order' menüsünü tıklar.");
+        extentTest.info("After logging in as admin, the user clicks on the 'Order' menu from the Admin Panel.");
 
         // click the invoice button of the first order
         adminDashboard.adminOrderInvoiceButton.click();
-        extentTest.info("Acılan Orders sayfasında, faturayı görüntülemek için ilk siparişin 'Invoice' butonunu tıklar.");
+        extentTest.info("On the Opened Orders page, click the 'Invoice' button of the first order to view the invoice.");
 
 
         // verify that the order invoice is displayed
         softAssert.assertTrue(adminDashboard.adminOrderInvoicePageText.isDisplayed());
         softAssert.assertAll();
-        extentTest.pass("Siparişin 'Invoice' butonu tıklandığında sipariş fatura detaylarının görüntülendiği dogrulandı.");
+        extentTest.pass("It has been verified that the order invoice details are displayed when the 'Invoice' button of the order is clicked.");
 
 
     }
@@ -85,20 +85,21 @@ public class US_33_34_35_41_Sumeyra extends TestBaseRapor{
     public void whereAllNewsListMembersAreDisplayed_us35() {
 
         adminDashboard=new Admin_Dashboard();
+        extentTest= extentReports.createTest("whereAllNewsListMembersAreDisplayed_us35");
 
         // click on subscribe menu from admin panel
         adminDashboard.adminSubscriberButton.click();
-        extentTest.info("Kullanıcı admin olarak giriş yaptıktan sonra Admin Panel'den 'Subscriber' menüsünü tıklar.");
+        extentTest.info("After logging in as admin, the user clicks on the 'Subscriber' menu from the Admin Panel.");
 
         // click on the All Subscribers
         adminDashboard.adminAllSubscribersButton.click();
-        extentTest.info("Acılan menüden 'AllSubscribers' kategorisini tıklar.");
+        extentTest.info("Click on the 'All Subscribers' category from the drop-down menu.");
 
 
         // verify that all news list members are displayed
         softAssert.assertTrue(adminDashboard.adminViewSubscribersText.isDisplayed());
         softAssert.assertAll();
-        extentTest.pass("Tüm haber listesi üyelerinin görüntülendiği dogrulandı.");
+        extentTest.pass("Verified that all newslist members are viewed.");
 
 
 
@@ -110,9 +111,11 @@ public class US_33_34_35_41_Sumeyra extends TestBaseRapor{
 
 
         adminDashboard=new Admin_Dashboard();
+        extentTest= extentReports.createTest("returnHomeScreenTest_us41");
+
         adminDashboard.adminAdmin25Profile.click();
         adminDashboard.adminProfileLogout.click();
-        extentTest.info("Admin hesabından cıkıs yapar.");
+        extentTest.info("Logs out of the admin account.");
 
         String actualTitle=Driver.getDriver().getTitle();
         System.out.println(actualTitle);
@@ -121,8 +124,8 @@ public class US_33_34_35_41_Sumeyra extends TestBaseRapor{
         String expectedTitle=Driver.getDriver().getTitle();
         System.out.println(expectedTitle);
 
-        softAssert.assertEquals(actualTitle,expectedTitle,"site ekranına dönüs yapamadı.");
-        extentTest.fail("Site ekranına dönüş yapabildigi test edildi.");
+        softAssert.assertEquals(actualTitle,expectedTitle,"could not return to the site screen.");
+        extentTest.fail("It has been tested that it can return to the site screen.");
         softAssert.assertAll();
 
 
