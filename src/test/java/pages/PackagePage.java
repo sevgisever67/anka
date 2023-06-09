@@ -13,7 +13,6 @@ public class PackagePage extends MainPage{
     public WebElement user7daysInIstanbul;
 
 
-
     @FindBy (xpath = "//select[@id='numberPerson']")
     public WebElement userNumberPersonBox;
 
@@ -43,6 +42,61 @@ public class PackagePage extends MainPage{
 
     @FindBy (xpath= "//div[@class='col-md-9 col-sm-12 wow fadeIn']")
     public WebElement orderYazisi;
+
+    // Profile edit
+    @FindBy (xpath= "//a[text()='Update Profile']")
+    public WebElement profileUpdate;
+
+    @FindBy (xpath= "//input[@name='traveller_name']")
+    public WebElement profileName;
+
+    @FindBy (xpath= "//input[@name='traveller_phone']")
+    public WebElement profilePhone;
+
+    @FindBy (xpath= "//input[@name='traveller_country']")
+    public WebElement profileCountry;
+
+    @FindBy (xpath= "//input[@name='traveller_address']")
+    public WebElement profileAddress;
+
+    @FindBy (xpath= "//input[@name='traveller_city']")
+    public WebElement profileCity;
+
+    @FindBy (xpath = "//button[@class='btn btn-primary']")
+    public WebElement updateButton;
+
+    @FindBy (xpath = "//div[@class='toast-message']")
+    public WebElement updateSuccessMessage;
+
+    // Update password
+
+    @FindBy (xpath= "//a[text()='Update Password']")
+    public WebElement updatePassword;
+
+    @FindBy (xpath= "//input[@type='password']")
+    public WebElement newPassword;
+
+    @FindBy (xpath = "//button[@type='submit']")
+    public WebElement updatePasswordButton;
+
+    // Forget password
+
+    @FindBy (xpath= "//a[@class='forget-password-link']")
+    public WebElement forgetPassword;
+
+    @FindBy (xpath= "//input[@name='traveller_email']")
+    public WebElement forgetEmailField;
+
+    @FindBy (xpath = "//button[@class='btn btn-primary']")
+    public WebElement forgetSubmitButton;
+
+    @FindBy (xpath = "//div[@class='toast-message']")
+    public WebElement checkEmailMessage;
+
+
+
+
+
 
 
 
