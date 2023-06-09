@@ -12,6 +12,7 @@ public abstract class BasePage {
     // Pagelerimiz bu class'a extend olduğu için
     // bu classın child  classlarında (Locate aldığımız page ler) constructor oluşturmuyoruz;
     public BasePage() {
+
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
