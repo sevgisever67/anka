@@ -1,5 +1,6 @@
 package pages;
 
+import org.bouncycastle.jcajce.provider.asymmetric.X509;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -7,6 +8,7 @@ import org.testng.annotations.Test;
 import utilities.Driver;
 
 import java.util.List;
+import java.util.logging.XMLFormatter;
 
 public class Admin_Dashboard extends BasePage {
 
@@ -170,7 +172,14 @@ public class Admin_Dashboard extends BasePage {
     @FindBy (xpath = "//a[@class='btn btn-info btn-sm mt-3']")//admin olarak giriş yaptıktan sonra sayfada
     public WebElement adminVisitWebsiteButonu;               //görünen Visit Website butonu
 
+   @FindBy(xpath = "//h1[@class='h3 mb-3 text-gray-800']")
+    public WebElement DashboardYazisi;
 
+   @FindBy(xpath = "//span[.='Blog Section']")
+    public WebElement blogSectionButton;
+
+   @FindBy(xpath = "//a[.='Blogs']")
+    public WebElement blogButton;
 
 
 
