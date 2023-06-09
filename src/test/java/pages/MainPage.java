@@ -33,16 +33,14 @@ public class MainPage extends BasePage {
     public WebElement blogElementi;   //MainPage Blog sekmesi
 
     @FindBy(xpath = "(//a[text()='Contact'])[2]")
-<<<<<<< HEAD
-    public WebElement contactElementi;        //Main Page Contact sekm
-=======
+
     public WebElement contactElementi;        //Main Page Contact sekmesi
 
 
     @FindBy(xpath = "//img[@alt='Logo']")
     public WebElement SiteLogo;
 
->>>>>>> c37172838e969ce68d768d52e793472320c422fb
+
 
     @FindBy(xpath = "//*[text()='Terms and Conditions']")
     public WebElement termAndConditionsElementi;
@@ -251,31 +249,20 @@ public class MainPage extends BasePage {
 
     // Homepage >> Footer >> Social media icon's locaters
 
-    @FindBy(xpath = "(//a[@href='http://www.facebook.com'])[1]")
+    @FindBy(xpath = "(//i[@class='fab fa-facebook-f'])[13]")
     public WebElement footerFacebookIconElement;
 
-    @FindBy(xpath = "(//a[@href='http://www.facebook.com'])[2]")
+    @FindBy(xpath = "(//i[@class='fab fa-twitter'])[13]")
     public WebElement footerTwitterIconElement;
 
-    @FindBy(xpath = "//a[@href='http://www.linkedin.com']")
+    @FindBy(xpath = "(//i[@class='fab fa-linkedin-in'])[13]")
     public WebElement footerLinkedinIconElement;
 
-    @FindBy(xpath = "//a[@href='https://twitter.com']")
+    @FindBy(xpath = "//i[@class='fab fa-pinterest-p']")
     public WebElement footerPinterestIconElement;
 
-    @FindBy(xpath = "//a[@href='http://www.instagram.com']")
+    @FindBy(xpath = "//i[@class='fab fa-instagram']")
     public WebElement footerInstagramIconElement;
-
-<<<<<<< HEAD
-    @FindBy(xpath = "//img[@alt='Logo']")
-    public WebElement SiteLogo;
-=======
-
-
-
-
-
->>>>>>> c37172838e969ce68d768d52e793472320c422fb
 
 
     public WebElement iconDestinations;
@@ -291,5 +278,18 @@ public class MainPage extends BasePage {
 
     @FindBy(xpath = "(//div[@class='slider-item'])[4]")
     public WebElement mainSlider2;
+
+    @FindBy(xpath = "//input[@placeholder='Email Address']")
+    public WebElement newsletterYaziELementi; // >>Homepage >> Footer >>'NEWSLETTER' bolumu baslik yazisi
+
+    @FindBy(xpath = "//input[@placeholder='Email Address']")
+    public WebElement newsletterEmailKutusuELementi; // >>Homepage >> Footer >>'NEWSLETTER' bolumu email textbox
+
+    @FindBy(xpath = "//input[@value='Submit']")
+    public WebElement newsletterSubmitButonuELementi; // // >>Homepage >> Footer >>'NEWSLETTER' bolumu Submit butonu
+
+
+
+
 
 }
