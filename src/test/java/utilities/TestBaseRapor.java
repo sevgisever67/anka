@@ -53,6 +53,7 @@ public abstract class TestBaseRapor {
 
 
         }
+        Driver.closeDriver();
 
         Driver.closeDriver();
 
