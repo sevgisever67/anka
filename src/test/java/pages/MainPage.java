@@ -56,7 +56,7 @@ public class MainPage extends BasePage {
     @FindBy (xpath = "//h4[text()='Culture Tour']")
     public WebElement iconCultureTour;
 
-    @FindBy (xpath = "//h4[text()='Bussiness Tour']")
+    @FindBy (xpath = "(//*[@class='col-md-4 col-xs-6 clear-three wow fadeIn'])[4]")
     public WebElement iconBussinessTour;
 
     @FindBy (xpath = "//h4[text()='Health Tour']")
