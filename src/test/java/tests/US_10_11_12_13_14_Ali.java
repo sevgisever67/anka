@@ -277,7 +277,7 @@ public class US_10_11_12_13_14_Ali extends TestBaseRapor {
         mainPage.acceptButonu.click();
 
         //3. Header alanın'da "DESTINATIONS" butonuna tıklayınız
-        mainPage.iconDestinations.click();
+        mainPage.DestinationsElementi.click();
 
         //4. Açılan sayfada title'ın "DESTINATIONS" text'i içerdiği test edilmelidir
         expectedIcerik = "Destinations";
