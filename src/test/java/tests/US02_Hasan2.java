@@ -119,6 +119,4 @@ public class US02_Hasan2 extends TestBaseRapor{
 
     }
     */
-
-
 }
