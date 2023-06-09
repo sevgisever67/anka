@@ -1,33 +1,28 @@
 package tests;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
 import pages.Admin_Dashboard;
 import pages.ContactPage;
-import pages.HomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 import utilities.TestBaseRapor;
 
-import java.sql.Array;
-import java.util.ArrayList;
 import java.util.List;
 
 public class US_36_37_38_Sevgi extends TestBaseRapor {
 
-    Admin_Dashboard adminDashboard = new Admin_Dashboard();
-    ContactPage contactPage=new ContactPage();
-    SoftAssert softAssert = new SoftAssert();
+    Admin_Dashboard adminDashboard;
+
+
 
     @BeforeMethod
     public void setUp() {
-        extentTest = extentReports.createTest("US36_37_38");
 
+        adminDashboard=new Admin_Dashboard();
+        extentTest = extentReports.createTest("US36_37_38");
 
         //Go to url as an admin
         Driver.getDriver().get(ConfigReader.getProperty("qaAdminUrl"));
@@ -58,7 +53,7 @@ public class US_36_37_38_Sevgi extends TestBaseRapor {
         //Click the "Send Email" button
         adminDashboard.adminSendEmailButton.click();
         //Verify the message is sent to the all subscriber
-        softAssert.assertTrue(contactPage.toastmessage.isDisplayed());
+        Assert.assertTrue(adminDashboard.adminSonenAlert.isDisplayed());
         extentTest.pass("Sending email to the all subscriber");
 
     }
@@ -81,9 +76,9 @@ public class US_36_37_38_Sevgi extends TestBaseRapor {
             }
         }
 
-        softAssert.assertEquals(actualIcerik, expecteIcerik + "! Verify the Edit profile button is accessible");
-        extentTest.pass("Verify the edit profile is accessible");
-        softAssert.assertAll();
+        Assert.assertEquals(actualIcerik, expecteIcerik + "! Verify the Edit profile button is accessible");
+        extentTest.fail("Verify the edit profile is accessible");
+
 
     }
 
@@ -92,7 +87,6 @@ public class US_36_37_38_Sevgi extends TestBaseRapor {
         //Go to url as an admin
         Driver.getDriver().get(ConfigReader.getProperty("qaAdminUrl"));
         //Send keys the name and password
-        Admin_Dashboard adminDashboard = new Admin_Dashboard();
         adminDashboard.adminEmailButton.sendKeys(ConfigReader.getProperty("qaAdminEmail"));
         adminDashboard.adminPasswordButton.sendKeys(ConfigReader.getProperty("qaAdminPassword"));
         //Click on the Login
@@ -105,17 +99,14 @@ public class US_36_37_38_Sevgi extends TestBaseRapor {
         //Verify the page is Change Profile .
         String expectedIcerik = "Change Password";
         String actualIcerik = adminDashboard.adminChangePassword.getText();
-        softAssert.assertEquals(actualIcerik, expectedIcerik + " ! Verify the page is Change Password");
-        extentTest.pass("Verify the page is Change Password");
-        softAssert.assertAll();
+        Assert.assertEquals(actualIcerik, expectedIcerik + " ! Verify the page is Change Password");
+        extentTest.fail("Verify the page is Change Password");
+
 
 
     }
 
-    @AfterClass
-    public void tearDown(){
-        Driver.getDriver().close();
-    }
+
 }
 
 

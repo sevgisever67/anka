@@ -269,6 +269,9 @@ public class Admin_Dashboard extends BasePage {
     @FindBy(xpath = "//textarea[@name='d_short_description']")
     public WebElement adminShortdescriptionLocate;           //short descriptionLocate;
 
+    @FindBy(xpath = "//div[@class='toast-message']")
+    public WebElement adminSonenAlert;
+
 
 
 
