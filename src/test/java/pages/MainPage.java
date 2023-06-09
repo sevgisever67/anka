@@ -33,16 +33,16 @@ public class MainPage extends BasePage {
     public WebElement blogElementi;   //MainPage Blog sekmesi
 
     @FindBy(xpath = "(//a[text()='Contact'])[2]")
-<<<<<<< HEAD
+
     public WebElement contactElementi;        //Main Page Contact sekm
-=======
-    public WebElement contactElementi;        //Main Page Contact sekmesi
+
+   // public WebElement contactElementi;        //Main Page Contact sekmesi
 
 
     @FindBy(xpath = "//img[@alt='Logo']")
     public WebElement SiteLogo;
 
->>>>>>> c37172838e969ce68d768d52e793472320c422fb
+
 
     @FindBy(xpath = "//*[text()='Terms and Conditions']")
     public WebElement termAndConditionsElementi;
@@ -266,16 +266,16 @@ public class MainPage extends BasePage {
     @FindBy(xpath = "//a[@href='http://www.instagram.com']")
     public WebElement FooterInstagramIconElement;
 
-<<<<<<< HEAD
+
     @FindBy(xpath = "//img[@alt='Logo']")
-    public WebElement SiteLogo;
-=======
 
 
 
 
 
->>>>>>> c37172838e969ce68d768d52e793472320c422fb
+
+
+
 
 
     public WebElement iconDestinations;
