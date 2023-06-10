@@ -29,10 +29,7 @@ public class MainPage extends BasePage {
     public WebElement blogElementi;   //MainPage Blog sekmesi
 
     @FindBy(xpath = "(//a[text()='Contact'])[2]")
-
-    public WebElement contactElementi;        //Main Page Contact sekm
-
-   // public WebElement contactElementi;        //Main Page Contact sekmesi
+    public WebElement contactElementi;        //Main Page Contact sekmesi
 
 
     @FindBy(xpath = "//img[@alt='Logo']")
@@ -248,6 +245,10 @@ public class MainPage extends BasePage {
 
     // Homepage >> Footer >> Social media icon's locaters
 
+
+    @FindBy(xpath = "(//i[@class='fab fa-facebook-f'])[13]")
+    public WebElement footerFacebookIconElement;
+
     @FindBy(xpath = "(//a[@href='http://www.facebook.com'])[1]")
     public WebElement FooterFacebookIconElement;
 
@@ -265,14 +266,18 @@ public class MainPage extends BasePage {
 
     @FindBy(xpath = "//img[@alt='Logo']")
 
+    @FindBy(xpath = "(//i[@class='fab fa-twitter'])[13]")
+    public WebElement footerTwitterIconElement;
+
+    @FindBy(xpath = "(//i[@class='fab fa-linkedin-in'])[13]")
+    public WebElement footerLinkedinIconElement;
+
+    @FindBy(xpath = "//i[@class='fab fa-pinterest-p']")
+    public WebElement footerPinterestIconElement;
 
 
-
-
-
-
-
-
+    @FindBy(xpath = "//i[@class='fab fa-instagram']")
+    public WebElement footerInstagramIconElement;
 
     public WebElement iconDestinations;
 
@@ -287,6 +292,15 @@ public class MainPage extends BasePage {
 
     @FindBy(xpath = "//i[@class='fas fa-caret-right']")
     public WebElement nextSliderButton;
+
+    @FindBy(xpath = "//input[@placeholder='Email Address']")
+    public WebElement newsletterYaziELementi; // >>Homepage >> Footer >>'NEWSLETTER' bolumu baslik yazisi
+
+    @FindBy(xpath = "//input[@placeholder='Email Address']")
+    public WebElement newsletterEmailKutusuELementi; // >>Homepage >> Footer >>'NEWSLETTER' bolumu email textbox
+
+    @FindBy(xpath = "//input[@value='Submit']")
+    public WebElement newsletterSubmitButonuELementi; // // >>Homepage >> Footer >>'NEWSLETTER' bolumu Submit butonu
 
     @FindBy(xpath = "(//div[@class='slider-bg'])[4]")
     public WebElement mainSlider2;
@@ -311,6 +325,7 @@ public class MainPage extends BasePage {
     public WebElement healthText;
     @FindBy (xpath = "//a[@href='https://qa.tripandway.com/service/religious-tour']")
     public WebElement religiousText;
+
 }
 
 
