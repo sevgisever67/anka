@@ -19,20 +19,25 @@ import utilities.TestBaseRapor;
 import javax.swing.*;
 
 public class US_01_02_03_hasancan extends TestBaseRapor {
-    PackagePage packagePage = new PackagePage();
-    MainPage mainPage = new MainPage();
+    PackagePage packagePage;
+    MainPage mainPage;
 
-       Actions actions = new Actions(Driver.getDriver());
-    SoftAssert softAssert = new SoftAssert();
+    Actions actions;
+    SoftAssert softAssert;
     String expectedTitle;
     String actualTitle;
 
 
     @BeforeMethod
     public void setup() {
+        packagePage = new PackagePage();
+        mainPage = new MainPage();
+        actions = new Actions(Driver.getDriver());
+        softAssert = new SoftAssert();
 
         extentTest = extentReports.createTest("US_01_02_03");
         Driver.getDriver().get(ConfigReader.getProperty("userUrl"));
+
 
     }
 
@@ -79,6 +84,7 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
     @Test
     public void us02registrationGorundugunuDogrula_TC_05() {
         Assert.assertTrue(mainPage.registrationIcon.isDisplayed());
+        mainPage = new MainPage();
         extentTest.info("Registration butonu görünür");
         mainPage.registrationButton.click();
 
@@ -95,6 +101,7 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
     public void us02registrationTextiGorundugunuDogrula_TC_06() {
         Assert.assertTrue(mainPage.registrationButton.isDisplayed());
         extentTest.info("Registration yazısının olduğu görünür");
+        mainPage = new MainPage();
         mainPage.registrationButton.click();
         mainPage.registrationCookies.click();
         String expectedTitle = "Registration";
@@ -111,6 +118,7 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
 
         Assert.assertTrue(mainPage.loginIcon.isDisplayed());
         extentTest.info("Login iconu görünür");
+        mainPage = new MainPage();
         mainPage.loginIcon.click();
         mainPage.registrationCookies.click();
 
@@ -125,6 +133,7 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
     public void us02loginTextGorundugunuDogrula_TC_08() {
         Assert.assertTrue(mainPage.loginButton.isDisplayed());
         extentTest.info("Login butonu görünür");
+        mainPage = new MainPage();
         mainPage.loginButton.click();
         mainPage.registrationCookies.click();
 
@@ -135,9 +144,10 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
 
     }
 
-      @Test
+    @Test
 
     public void us03Logo_TC_01() {
+        packagePage = new PackagePage();
         packagePage.SiteLogo.isDisplayed();
 
     }
@@ -146,6 +156,7 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
     public void us03HomePage_TC_02() {
         Assert.assertTrue(mainPage.homeElementi.isDisplayed());
         extentTest.info("HOME sekmesi görünür");
+        mainPage = new MainPage();
         mainPage.homeElementi.click();
         //mainPage.registrationCookies.click();
 
@@ -160,6 +171,7 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
     public void us03Services_TC_03() {
         Assert.assertTrue(mainPage.servicesElementi.isDisplayed());
         extentTest.info("Services sekmesi görünür");
+        mainPage = new MainPage();
         mainPage.servicesElementi.click();
         //mainPage.registrationCookies.click();
 
@@ -174,6 +186,7 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
     public void us03Destinations_TC_04() {
         Assert.assertTrue(mainPage.destinationElementi.isDisplayed());
         extentTest.info("Destinations sekmesi görünür");
+        mainPage = new MainPage();
         mainPage.destinationElementi.click();
         //mainPage.registrationCookies.click();
 
@@ -188,6 +201,7 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
     public void us03Packages_TC_05() {
         Assert.assertTrue(mainPage.packageElementi.isDisplayed());
         extentTest.info("Packages sekmesi görünür");
+        mainPage = new MainPage();
         mainPage.packageElementi.click();
         //mainPage.registrationCookies.click();
 
@@ -202,6 +216,7 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
     public void us03AboutUs_TC_06() {
         Assert.assertTrue(mainPage.aboutUsElemnti.isDisplayed());
         extentTest.info("AboutUs sekmesi görünür");
+        mainPage = new MainPage();
         mainPage.aboutUsElemnti.click();
         //mainPage.registrationCookies.click();
 
@@ -216,6 +231,7 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
     public void us03Faq_TC_07() {
         Assert.assertTrue(mainPage.fqaElementi.isDisplayed());
         extentTest.info("FAQ sekmesi görünür");
+        mainPage = new MainPage();
         mainPage.fqaElementi.click();
         //mainPage.registrationCookies.click();
 
@@ -230,6 +246,7 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
     public void us03BlogTC_08() {
         Assert.assertTrue(mainPage.blogElementi.isDisplayed());
         extentTest.info("Blog sekmesi görünür");
+        mainPage = new MainPage();
         mainPage.blogElementi.click();
         //mainPage.registrationCookies.click();
 
@@ -244,6 +261,7 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
     public void us03ContactTC_09() {
         Assert.assertTrue(mainPage.contactElementi.isDisplayed());
         extentTest.info("Contact sekmesi görünür");
+        mainPage = new MainPage();
         mainPage.contactElementi.click();
         //mainPage.registrationCookies.click();
 
@@ -258,7 +276,9 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
     public void us03mainSlider1_TC_10() {
         Assert.assertTrue(mainPage.mainSlider1.isDisplayed());
         extentTest.info("mainSlider1 resmi görünür");
+        packagePage = new PackagePage();
         packagePage.cookiesAcceptButton.click();
+        mainPage = new MainPage();
         mainPage.readMore1.click();
         extentTest.fail("Read More butonu çalışmıyor");
 
@@ -266,6 +286,8 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
 
     @Test
     public void us03mainSlider2_TC_11() {
+        mainPage = new MainPage();
+        packagePage = new PackagePage();
         packagePage.cookiesAcceptButton.click();
         mainPage.nextSliderButton.click();
         Assert.assertTrue(mainPage.mainSlider2.isDisplayed());
@@ -280,7 +302,9 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
 
     @Test
     public void us03mainSlider3_TC_12() {
+        packagePage = new PackagePage();
         packagePage.cookiesAcceptButton.click();
+        mainPage = new MainPage();
         mainPage.nextSliderButton.click();
         mainPage.nextSliderButton.click();
         Assert.assertTrue(mainPage.mainSlider3.isDisplayed());
@@ -292,12 +316,13 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
         extentTest.pass("Salina Island sayfasının olduğu görünür");
 
 
-
     }
 
     @Test
     public void us03internationalTourResim_TC_13() throws InterruptedException {
+        packagePage = new PackagePage();
         packagePage.cookiesAcceptButton.click();
+        mainPage = new MainPage();
         Assert.assertTrue(mainPage.iconInternationalTour.isDisplayed());
         extentTest.info("İnternatinol Tour ikonu görünür");
         //JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
@@ -312,7 +337,9 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
 
     @Test
     public void us03adventureTourResim_TC_14() throws InterruptedException {
+        packagePage = new PackagePage();
         packagePage.cookiesAcceptButton.click();
+        mainPage = new MainPage();
         Assert.assertTrue(mainPage.iconAdventureTour.isDisplayed());
         extentTest.info("Adventure Tour ikonu görünür");
         //JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
@@ -326,7 +353,11 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
 
     @Test
     public void us03cultureTourResim_TC_15() throws InterruptedException {
+        packagePage = new PackagePage();
+        packagePage = new PackagePage();
+        packagePage = new PackagePage();
         packagePage.cookiesAcceptButton.click();
+        mainPage = new MainPage();
         Assert.assertTrue(mainPage.iconCultureTour.isDisplayed());
         extentTest.info("Culture Tour ikonu görünür");
         //JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
@@ -337,9 +368,12 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
         mainPage.cultureText.click();
         extentTest.pass("Culture Tour resmi tıklanabilir ve içeriği görüntülenir.");
     }
+
     @Test
     public void us03businessTourResim_TC_16() throws InterruptedException {
+        packagePage = new PackagePage();
         packagePage.cookiesAcceptButton.click();
+        mainPage = new MainPage();
         Assert.assertTrue(mainPage.iconBussinessTour.isDisplayed());
         extentTest.info("Business Tour ikonu görünür");
         //JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
@@ -351,9 +385,12 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
         extentTest.pass("Business Tour resmi tıklanabilir ve içeriği görüntülenir.");
 
     }
+
     @Test
     public void us03healthTourResim_TC_17() throws InterruptedException {
+        packagePage = new PackagePage();
         packagePage.cookiesAcceptButton.click();
+        mainPage = new MainPage();
         Assert.assertTrue(mainPage.iconHealthTour.isDisplayed());
         extentTest.info("Health Tour ikonu görünür");
         //JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
@@ -364,8 +401,11 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
         mainPage.healthText.click();
         extentTest.pass("Health Tour resmi tıklanabilir ve içeriği görüntülenir.");
     }
+
     @Test
     public void us03religiousTourResim_TC_18() throws InterruptedException {
+        mainPage = new MainPage();
+        packagePage = new PackagePage();
         packagePage.cookiesAcceptButton.click();
         Assert.assertTrue(mainPage.iconReligiousTour.isDisplayed());
         extentTest.info("Religious Tour ikonu görünür");
@@ -378,13 +418,7 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
         extentTest.pass("Religious Tour resmi tıklanabilir ve içeriği görüntülenir.");
 
     }
-    @BeforeMethod
-    public void setUp() {
 
-        Driver.getDriver().get(ConfigReader.getProperty("userUrl"));
-        ReusableMethods.waitFor(2);
-        mainPage.cookiesAcceptButton.click();
-    }
     @Test
     public void LatestBlogTest_TC_39() {
 
@@ -396,7 +430,6 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
         mainPage.LatesBlogGreenvillePhotoElement.click();
 
 
-
         softAssert.assertTrue(mainPage.LatesBlogIstanbulPhotoElement.isDisplayed());
         softAssert.assertTrue(mainPage.LatesBlogIstanbulPhotoElement.isEnabled());
         softAssert.assertAll();
@@ -406,15 +439,15 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
         Driver.getDriver().navigate().back();
         mainPage.LatesBlogIstanbulReadMoreButton.click();
 
-        actualTitle=Driver.getDriver().getTitle();
-        expectedTitle="Istanbul:A Fusion of East and West";
-        softAssert.assertEquals(actualTitle,expectedTitle);
+        actualTitle = Driver.getDriver().getTitle();
+        expectedTitle = "Istanbul:A Fusion of East and West";
+        softAssert.assertEquals(actualTitle, expectedTitle);
         softAssert.assertAll();
 
     }
 
     @Test
-    public void LatestBlogTest_TC_40(){
+    public void LatestBlogTest_TC_40() {
 
         softAssert.assertTrue(mainPage.LatesBlogHittitesPhotoElement.isDisplayed());
         softAssert.assertTrue(mainPage.LatesBlogHittitesPhotoElement.isEnabled());
@@ -425,15 +458,15 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
         Driver.getDriver().navigate().back();
         mainPage.LatesBlogHittitesReadMoreButton.click();
 
-        actualTitle=Driver.getDriver().getTitle();
-        expectedTitle="Discovering the Ancient Capital of the Hittites:Bogazkale and Hattusas";
-        softAssert.assertEquals(actualTitle,expectedTitle);
+        actualTitle = Driver.getDriver().getTitle();
+        expectedTitle = "Discovering the Ancient Capital of the Hittites:Bogazkale and Hattusas";
+        softAssert.assertEquals(actualTitle, expectedTitle);
         softAssert.assertAll();
 
     }
 
     @Test
-    public void LatestBlogTest_TC_41(){
+    public void LatestBlogTest_TC_41() {
 
         softAssert.assertTrue(mainPage.LatesBlogSalinaIslandPhotoElement.isDisplayed());
         softAssert.assertTrue(mainPage.LatesBlogSalinaIslandPhotoElement.isEnabled());
@@ -444,15 +477,15 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
         Driver.getDriver().navigate().back();
         mainPage.LatesBlogSalinaIslandReadMoreButton.click();
 
-        actualTitle=Driver.getDriver().getTitle();
-        expectedTitle="Salina Island: A perfect Family Getaway";
-        softAssert.assertEquals(actualTitle,expectedTitle);
+        actualTitle = Driver.getDriver().getTitle();
+        expectedTitle = "Salina Island: A perfect Family Getaway";
+        softAssert.assertEquals(actualTitle, expectedTitle);
         softAssert.assertAll();
 
     }
 
     @Test
-    public void LatestBlogTest_TC_42(){
+    public void LatestBlogTest_TC_42() {
 
         softAssert.assertTrue(mainPage.LatesBlogBangkokPhotoElement.isDisplayed());
         softAssert.assertTrue(mainPage.LatesBlogBangkokPhotoElement.isEnabled());
@@ -463,15 +496,15 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
         Driver.getDriver().navigate().back();
         mainPage.LatesBlogBangkokReadMoreButton.click();
 
-        actualTitle=Driver.getDriver().getTitle();
-        expectedTitle="Bangkok: A city of Contrasts";
-        softAssert.assertEquals(actualTitle,expectedTitle);
+        actualTitle = Driver.getDriver().getTitle();
+        expectedTitle = "Bangkok: A city of Contrasts";
+        softAssert.assertEquals(actualTitle, expectedTitle);
         softAssert.assertAll();
 
     }
 
     @Test
-    public void LatestBlogTest_TC_43(){
+    public void LatestBlogTest_TC_43() {
 
         softAssert.assertTrue(mainPage.LatesBlogBuenosAiresPhotoElement.isDisplayed());
         softAssert.assertTrue(mainPage.LatesBlogBuenosAiresPhotoElement.isEnabled());
@@ -482,15 +515,15 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
         Driver.getDriver().navigate().back();
         mainPage.LatesBlogBuenosAiresReadMoreButton.click();
 
-        actualTitle=Driver.getDriver().getTitle();
-        expectedTitle="Buenos Aires:The Paris of South America";
-        softAssert.assertEquals(actualTitle,expectedTitle);
+        actualTitle = Driver.getDriver().getTitle();
+        expectedTitle = "Buenos Aires:The Paris of South America";
+        softAssert.assertEquals(actualTitle, expectedTitle);
         softAssert.assertAll();
 
     }
 
     @Test
-    public void LatestBlogTest_TC_44(){
+    public void LatestBlogTest_TC_44() {
 
         softAssert.assertTrue(mainPage.LatesBlogGreenvillePhotoElement.isDisplayed());
         softAssert.assertTrue(mainPage.LatesBlogGreenvillePhotoElement.isEnabled());
@@ -501,81 +534,79 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
         Driver.getDriver().navigate().back();
         mainPage.LatesBlogGreenvilleReadMoreButton.click();
 
-        actualTitle=Driver.getDriver().getTitle();
-        expectedTitle="Discovering Greenville: A Hidden Gem in South Carolina";
-        softAssert.assertEquals(actualTitle,expectedTitle);
+        actualTitle = Driver.getDriver().getTitle();
+        expectedTitle = "Discovering Greenville: A Hidden Gem in South Carolina";
+        softAssert.assertEquals(actualTitle, expectedTitle);
         softAssert.assertAll();
 
     }
 
     @Test
-    public void OurClientEasyTicketTest_TC_45(){
+    public void OurClientEasyTicketTest_TC_45() {
 
-        actions.scrollToElement(mainPage.OurClientEasyTicketPhotoElement).perform();
 
-        softAssert.assertTrue(mainPage.OurClientEasyTicketPhotoElement.isDisplayed());
-        softAssert.assertAll();
-
-    }
-    @Test
-    public void OurClientPassportTest_TC_46(){
-
-        actions.scrollToElement(mainPage.OurClientPassportPhotoElement).perform();
-
-        softAssert.assertTrue(mainPage.OurClientPassportPhotoElement.isDisplayed());
-        softAssert.assertAll();
+        actions.sendKeys(Keys.END).sendKeys(Keys.PAGE_UP).perform();
+        ReusableMethods.waitFor(2);
+        Assert.assertTrue(mainPage.OurClientEasyTicketPhotoElement.isDisplayed());
 
     }
 
     @Test
-    public void OurClientIcanActivitiesTest_TC_47(){
+    public void OurClientPassportTest_TC_46() {
 
-        actions.scrollToElement(mainPage.OurClientIcanActivitiesPhotoElement).perform();
-
-        softAssert.assertTrue(mainPage.OurClientIcanActivitiesPhotoElement.isDisplayed());
-        softAssert.assertAll();
-
-    }
-
-    @Test
-    public void OurClientParkmapTest_TC_48(){
-
-        actions.scrollToElement(mainPage.OurClientParkmapPhotoElement).perform();
-
-        softAssert.assertTrue(mainPage.OurClientParkmapPhotoElement.isDisplayed());
-        softAssert.assertAll();
+        actions.sendKeys(Keys.END).sendKeys(Keys.PAGE_UP).perform();
+        ReusableMethods.waitFor(2);
+        Assert.assertTrue(mainPage.OurClientPassportPhotoElement.isDisplayed());
 
     }
 
     @Test
-    public void OurClientEasyFlyTest_TC_49(){
+    public void OurClientIcanActivitiesTest_TC_47() {
 
-        actions.scrollToElement(mainPage.OurClientEasyFlyPhotoElement).perform();
-
-        softAssert.assertTrue(mainPage.OurClientEasyFlyPhotoElement.isDisplayed());
-        softAssert.assertAll();
-
-    }
-
-    @Test
-    public void OurClientBussinesIncreaseTest_TC_50(){
-
-        actions.scrollToElement(mainPage.OurClientBussinesIncreasePhotoElement).perform();
-
-        softAssert.assertTrue(mainPage.OurClientBussinesIncreasePhotoElement.isDisplayed());
-        softAssert.assertAll();
+        actions.sendKeys(Keys.END).sendKeys(Keys.PAGE_UP).perform();
+        ReusableMethods.waitFor(2);
+        Assert.assertTrue(mainPage.OurClientIcanActivitiesPhotoElement.isDisplayed());
 
     }
 
     @Test
-    public void OurClientYachtseaITest_TC_51(){
+    public void OurClientParkmapTest_TC_48() {
 
-        actions.scrollToElement(mainPage.OurClientYachtseaPhotoElement).perform();
+        actions.sendKeys(Keys.END).sendKeys(Keys.PAGE_UP).perform();
+        ReusableMethods.waitFor(2);
+        Assert.assertTrue(mainPage.OurClientParkmapPhotoElement.isDisplayed());
 
-        softAssert.assertTrue(mainPage.OurClientYachtseaPhotoElement.isDisplayed());
-        softAssert.assertAll();
 
     }
+
+    @Test
+    public void OurClientEasyFlyTest_TC_49() {
+        actions.sendKeys(Keys.END).sendKeys(Keys.PAGE_UP).perform();
+        ReusableMethods.waitFor(2);
+        Assert.assertTrue(mainPage.OurClientEasyFlyPhotoElement.isDisplayed());
+
+
+    }
+
+    @Test
+    public void OurClientBussinesIncreaseTest_TC_50() {
+
+        actions.sendKeys(Keys.END).sendKeys(Keys.PAGE_UP).perform();
+        ReusableMethods.waitFor(2);
+        Assert.assertTrue(mainPage.OurClientBussinesIncreasePhotoElement.isDisplayed());
+
+
+    }
+
+    @Test
+    public void OurClientYachtseaITest_TC_51() {
+
+        actions.sendKeys(Keys.END).sendKeys(Keys.PAGE_UP).perform();
+        ReusableMethods.waitFor(5);
+        Assert.assertTrue(mainPage.OurClientYachtseaPhotoElement.isDisplayed());
+
+    }
+
 }
 
 
