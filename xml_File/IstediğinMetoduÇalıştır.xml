@@ -17,17 +17,21 @@
     <test name="pozitiftestler">
 
         <classes>
-            <class name="tests.US_36_37_38_Sevgi">
+            <class name="tests.US_15_16_17_18_19_Ebru">
+                <methods>
+                    <include name="conTactUS_17_TC03"></include>
+                </methods>
+            </class>
+            <class name="tests.US_23_24_25_Fatih">
                 <methods>
                     <!-- sadece verilen method'lari calistirmasi icin include -->
-                    <include name="verifySendingEmail_36"></include>
+                    <include name="us25PaymentHistory_TC_01"></include>
 
                 </methods>
             </class>
-            <class name="tests.US_15_16_17_18_19_Ebru">
+            <class name="tests.US_29_30_Abdullah_K">
                 <methods>
-                    <include name="travellerLoginUS_19_TC05"></include>
-                    <include name="travellerRegistrationUS_18_TC04"></include>
+                    <include name="us29_test03"></include>
                 </methods>
             </class>
 

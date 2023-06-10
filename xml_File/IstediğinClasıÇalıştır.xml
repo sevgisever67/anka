@@ -19,8 +19,19 @@
     <test name="smokeTest">
 
         <classes>
-            <class name="tests.US_26_27_28_Gulsum"></class>
+            <class name="tests.US_01_02_03_hasancan"></class>
+            <class name="tests.US_04_05_06_Melike"></class>
+            <class name="tests.US_10_11_12_13_14_Ali"></class>
             <class name="tests.US_15_16_17_18_19_Ebru"></class>
+            <class name="tests.US_20_21_22_Emrah"></class>
+            <class name="tests.US_23_24_25_Fatih"></class>
+            <class name="tests.US_26_27_28_Gulsum"></class>
+            <class name="tests.US_29_30_Abdullah_K"></class>
+            <class name="tests.US_31_32"></class>
+            <class name="tests.US_33_34_35_41_Sumeyra"></class>
+            <class name="tests.US_36_37_38_Sevgi"></class>
+            <class name="tests.US_39_40_Nursen"></class>
+
         </classes>
 
     </test>
