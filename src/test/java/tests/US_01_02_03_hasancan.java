@@ -84,7 +84,6 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
     @Test
     public void us02registrationGorundugunuDogrula_TC_05() {
         Assert.assertTrue(mainPage.registrationIcon.isDisplayed());
-        mainPage = new MainPage();
         extentTest.info("Registration butonu görünür");
         mainPage.registrationButton.click();
 
@@ -101,7 +100,6 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
     public void us02registrationTextiGorundugunuDogrula_TC_06() {
         Assert.assertTrue(mainPage.registrationButton.isDisplayed());
         extentTest.info("Registration yazısının olduğu görünür");
-        mainPage = new MainPage();
         mainPage.registrationButton.click();
         mainPage.registrationCookies.click();
         String expectedTitle = "Registration";
@@ -118,7 +116,6 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
 
         Assert.assertTrue(mainPage.loginIcon.isDisplayed());
         extentTest.info("Login iconu görünür");
-        mainPage = new MainPage();
         mainPage.loginIcon.click();
         mainPage.registrationCookies.click();
 
@@ -133,7 +130,6 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
     public void us02loginTextGorundugunuDogrula_TC_08() {
         Assert.assertTrue(mainPage.loginButton.isDisplayed());
         extentTest.info("Login butonu görünür");
-        mainPage = new MainPage();
         mainPage.loginButton.click();
         mainPage.registrationCookies.click();
 
@@ -156,7 +152,6 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
     public void us03HomePage_TC_02() {
         Assert.assertTrue(mainPage.homeElementi.isDisplayed());
         extentTest.info("HOME sekmesi görünür");
-        mainPage = new MainPage();
         mainPage.homeElementi.click();
         //mainPage.registrationCookies.click();
 
@@ -171,7 +166,6 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
     public void us03Services_TC_03() {
         Assert.assertTrue(mainPage.servicesElementi.isDisplayed());
         extentTest.info("Services sekmesi görünür");
-        mainPage = new MainPage();
         mainPage.servicesElementi.click();
         //mainPage.registrationCookies.click();
 
@@ -186,7 +180,6 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
     public void us03Destinations_TC_04() {
         Assert.assertTrue(mainPage.destinationElementi.isDisplayed());
         extentTest.info("Destinations sekmesi görünür");
-        mainPage = new MainPage();
         mainPage.destinationElementi.click();
         //mainPage.registrationCookies.click();
 
@@ -201,7 +194,6 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
     public void us03Packages_TC_05() {
         Assert.assertTrue(mainPage.packageElementi.isDisplayed());
         extentTest.info("Packages sekmesi görünür");
-        mainPage = new MainPage();
         mainPage.packageElementi.click();
         //mainPage.registrationCookies.click();
 
@@ -216,7 +208,6 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
     public void us03AboutUs_TC_06() {
         Assert.assertTrue(mainPage.aboutUsElemnti.isDisplayed());
         extentTest.info("AboutUs sekmesi görünür");
-        mainPage = new MainPage();
         mainPage.aboutUsElemnti.click();
         //mainPage.registrationCookies.click();
 
@@ -231,7 +222,6 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
     public void us03Faq_TC_07() {
         Assert.assertTrue(mainPage.fqaElementi.isDisplayed());
         extentTest.info("FAQ sekmesi görünür");
-        mainPage = new MainPage();
         mainPage.fqaElementi.click();
         //mainPage.registrationCookies.click();
 
@@ -246,7 +236,6 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
     public void us03BlogTC_08() {
         Assert.assertTrue(mainPage.blogElementi.isDisplayed());
         extentTest.info("Blog sekmesi görünür");
-        mainPage = new MainPage();
         mainPage.blogElementi.click();
         //mainPage.registrationCookies.click();
 
@@ -261,7 +250,6 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
     public void us03ContactTC_09() {
         Assert.assertTrue(mainPage.contactElementi.isDisplayed());
         extentTest.info("Contact sekmesi görünür");
-        mainPage = new MainPage();
         mainPage.contactElementi.click();
         //mainPage.registrationCookies.click();
 
@@ -276,9 +264,7 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
     public void us03mainSlider1_TC_10() {
         Assert.assertTrue(mainPage.mainSlider1.isDisplayed());
         extentTest.info("mainSlider1 resmi görünür");
-        packagePage = new PackagePage();
         packagePage.cookiesAcceptButton.click();
-        mainPage = new MainPage();
         mainPage.readMore1.click();
         extentTest.fail("Read More butonu çalışmıyor");
 
@@ -286,8 +272,6 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
 
     @Test
     public void us03mainSlider2_TC_11() {
-        mainPage = new MainPage();
-        packagePage = new PackagePage();
         packagePage.cookiesAcceptButton.click();
         mainPage.nextSliderButton.click();
         Assert.assertTrue(mainPage.mainSlider2.isDisplayed());
@@ -302,9 +286,7 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
 
     @Test
     public void us03mainSlider3_TC_12() {
-        packagePage = new PackagePage();
         packagePage.cookiesAcceptButton.click();
-        mainPage = new MainPage();
         mainPage.nextSliderButton.click();
         mainPage.nextSliderButton.click();
         Assert.assertTrue(mainPage.mainSlider3.isDisplayed());
@@ -315,14 +297,11 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
         Assert.assertEquals(actualTitle, expectedTitle);
         extentTest.pass("Salina Island sayfasının olduğu görünür");
 
-
     }
 
     @Test
     public void us03internationalTourResim_TC_13() throws InterruptedException {
-        packagePage = new PackagePage();
         packagePage.cookiesAcceptButton.click();
-        mainPage = new MainPage();
         Assert.assertTrue(mainPage.iconInternationalTour.isDisplayed());
         extentTest.info("İnternatinol Tour ikonu görünür");
         //JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
@@ -337,9 +316,7 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
 
     @Test
     public void us03adventureTourResim_TC_14() throws InterruptedException {
-        packagePage = new PackagePage();
         packagePage.cookiesAcceptButton.click();
-        mainPage = new MainPage();
         Assert.assertTrue(mainPage.iconAdventureTour.isDisplayed());
         extentTest.info("Adventure Tour ikonu görünür");
         //JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
@@ -353,11 +330,7 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
 
     @Test
     public void us03cultureTourResim_TC_15() throws InterruptedException {
-        packagePage = new PackagePage();
-        packagePage = new PackagePage();
-        packagePage = new PackagePage();
         packagePage.cookiesAcceptButton.click();
-        mainPage = new MainPage();
         Assert.assertTrue(mainPage.iconCultureTour.isDisplayed());
         extentTest.info("Culture Tour ikonu görünür");
         //JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
@@ -371,9 +344,7 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
 
     @Test
     public void us03businessTourResim_TC_16() throws InterruptedException {
-        packagePage = new PackagePage();
         packagePage.cookiesAcceptButton.click();
-        mainPage = new MainPage();
         Assert.assertTrue(mainPage.iconBussinessTour.isDisplayed());
         extentTest.info("Business Tour ikonu görünür");
         //JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
@@ -388,9 +359,7 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
 
     @Test
     public void us03healthTourResim_TC_17() throws InterruptedException {
-        packagePage = new PackagePage();
         packagePage.cookiesAcceptButton.click();
-        mainPage = new MainPage();
         Assert.assertTrue(mainPage.iconHealthTour.isDisplayed());
         extentTest.info("Health Tour ikonu görünür");
         //JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
@@ -404,8 +373,6 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
 
     @Test
     public void us03religiousTourResim_TC_18() throws InterruptedException {
-        mainPage = new MainPage();
-        packagePage = new PackagePage();
         packagePage.cookiesAcceptButton.click();
         Assert.assertTrue(mainPage.iconReligiousTour.isDisplayed());
         extentTest.info("Religious Tour ikonu görünür");
