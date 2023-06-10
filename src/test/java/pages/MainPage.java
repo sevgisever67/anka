@@ -126,26 +126,26 @@ public class MainPage extends BasePage {
 
     @FindBy(xpath ="//a[normalize-space()='3 Days Yorkville']")
     public WebElement latestPackagesFirstElement;
-    @FindBy(xpath = "//a[normalize-space()='7 days in Esenyurt']")
-    public WebElement latesPackagesSecondElement;
     @FindBy(xpath = "//a[normalize-space()='5 Day California']")
-    public WebElement latesPackagesThirdElement;
+    public WebElement latesPackagesSecondElement;
     @FindBy(xpath = "//div[@class='col-md-3 col-sm-6 wow fadeIn']//a[contains(text(),'7 days in Salina Island')]")
+    public WebElement latesPackagesThirdElement;
+    @FindBy(xpath = "//div[@class='col-md-3 col-sm-6 wow fadeIn']//a[contains(text(),'3 days in Bangkok')]")
 
     public WebElement latesPackagesFourthElement;
-    @FindBy(xpath = "//div[@class='col-md-3 col-sm-6 wow fadeIn']//a[contains(text(),'3 days in Bangkok')]")
+    @FindBy(xpath = "//a[normalize-space()='7 days in Istanbul']")
     public WebElement latesPackagesFifthElement;
 
-    @FindBy(xpath = "//div[@class='footer-item mt_30']//a[normalize-space()='ANKA']")
+    @FindBy(xpath = "//div[@class='footer-item mt_30']//a[contains(text(),'Discovering Greenville: A Hidden Gem in South Caro')]")
     public WebElement recentPostFirstElement;
 
-    @FindBy(xpath = "//div[@class='footer-item mt_30']//a[contains(text(),'Discovering Greenville: A Hidden Gem in South Caro')]")
-    public WebElement recentPostSecondElement;
     @FindBy(xpath = "//div[@class='footer-item mt_30']//a[normalize-space()='Buenos Aires: The Paris of South America']")
-    public WebElement recentPostThirdElement;
+    public WebElement recentPostSecondElement;
     @FindBy(xpath = "//div[@class='footer-item mt_30']//a[normalize-space()='Bangkok: A City of Contrasts']")
-    public WebElement recentPostFourthElement;
+    public WebElement recentPostThirdElement;
     @FindBy(xpath = "//div[@class='footer-item mt_30']//a[normalize-space()='Salina Island: A Perfect Family Getaway']")
+    public WebElement recentPostFourthElement;
+    @FindBy(xpath = "//div[@class='footer-item mt_30']//a[contains(text(),'Discovering the Ancient Capital of the Hittites: B')]")
     public WebElement recentPostFifthElement;
 
     @FindBy(xpath = "(//img[@alt='Blog Image'])[4]")
