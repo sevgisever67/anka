@@ -262,7 +262,120 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
         mainPage.readMore1.click();
         extentTest.fail("Read More butonu çalışmıyor");
 
+    }
 
+    @Test
+    public void us03mainSlider2_TC_11() {
+        packagePage.cookiesAcceptButton.click();
+        mainPage.nextSliderButton.click();
+        Assert.assertTrue(mainPage.mainSlider2.isDisplayed());
+        extentTest.info("mainSlider2 resmi görünür");
+        mainPage.readMore2.click();
+        String expectedTitle = "7 days in Istanbul";
+        String actualTitle = Driver.getDriver().getTitle();
+        Assert.assertEquals(actualTitle, expectedTitle);
+        extentTest.pass("İstanbul sayfasının olduğu görünür");
+
+    }
+
+    @Test
+    public void us03mainSlider3_TC_12() {
+        packagePage.cookiesAcceptButton.click();
+        mainPage.nextSliderButton.click();
+        mainPage.nextSliderButton.click();
+        Assert.assertTrue(mainPage.mainSlider3.isDisplayed());
+        extentTest.info("mainSlider3 resmi görünür");
+        mainPage.readMore3.click();
+        String expectedTitle = "7 days in Salina Island";
+        String actualTitle = Driver.getDriver().getTitle();
+        Assert.assertEquals(actualTitle, expectedTitle);
+        extentTest.pass("Salina Island sayfasının olduğu görünür");
+
+
+
+    }
+
+    @Test
+    public void us03internationalTourResim_TC_13() throws InterruptedException {
+        packagePage.cookiesAcceptButton.click();
+        Assert.assertTrue(mainPage.iconInternationalTour.isDisplayed());
+        extentTest.info("İnternatinol Tour ikonu görünür");
+        //JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        //js.executeScript("window.scrollBy(500, 750)");
+        //actions.scrollToElement(mainPage.intTourText).perform();
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+        Thread.sleep(2000);
+        mainPage.intTourText.click();
+        extentTest.pass("İnternational Tour resmi tıklanabilir ve içeriği görüntülenir.");
+
+    }
+
+    @Test
+    public void us03adventureTourResim_TC_14() throws InterruptedException {
+        packagePage.cookiesAcceptButton.click();
+        Assert.assertTrue(mainPage.iconAdventureTour.isDisplayed());
+        extentTest.info("Adventure Tour ikonu görünür");
+        //JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        //js.executeScript("window.scrollBy(500, 750)");
+        //actions.scrollToElement(mainPage.intTourText).perform();
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+        Thread.sleep(2000);
+        mainPage.advantureText.click();
+        extentTest.pass("Adventure Tour resmi tıklanabilir ve içeriği görüntülenir.");
+    }
+
+    @Test
+    public void us03cultureTourResim_TC_15() throws InterruptedException {
+        packagePage.cookiesAcceptButton.click();
+        Assert.assertTrue(mainPage.iconCultureTour.isDisplayed());
+        extentTest.info("Culture Tour ikonu görünür");
+        //JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        //js.executeScript("window.scrollBy(500, 750)");
+        //actions.scrollToElement(mainPage.intTourText).perform();
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+        Thread.sleep(2000);
+        mainPage.cultureText.click();
+        extentTest.pass("Culture Tour resmi tıklanabilir ve içeriği görüntülenir.");
+    }
+    @Test
+    public void us03businessTourResim_TC_16() throws InterruptedException {
+        packagePage.cookiesAcceptButton.click();
+        Assert.assertTrue(mainPage.iconBussinessTour.isDisplayed());
+        extentTest.info("Business Tour ikonu görünür");
+        //JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        //js.executeScript("window.scrollBy(500, 750)");
+        //actions.scrollToElement(mainPage.intTourText).perform();
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+        Thread.sleep(2000);
+        mainPage.businessText.click();
+        extentTest.pass("Business Tour resmi tıklanabilir ve içeriği görüntülenir.");
+
+    }
+    @Test
+    public void us03healthTourResim_TC_17() throws InterruptedException {
+        packagePage.cookiesAcceptButton.click();
+        Assert.assertTrue(mainPage.iconHealthTour.isDisplayed());
+        extentTest.info("Health Tour ikonu görünür");
+        //JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        //js.executeScript("window.scrollBy(500, 750)");
+        //actions.scrollToElement(mainPage.intTourText).perform();
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+        Thread.sleep(2000);
+        mainPage.healthText.click();
+        extentTest.pass("Health Tour resmi tıklanabilir ve içeriği görüntülenir.");
+    }
+    @Test
+    public void us03religiousTourResim_TC_18() throws InterruptedException {
+        packagePage.cookiesAcceptButton.click();
+        Assert.assertTrue(mainPage.iconReligiousTour.isDisplayed());
+        extentTest.info("Religious Tour ikonu görünür");
+        //JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        //js.executeScript("window.scrollBy(500, 750)");
+        //actions.scrollToElement(mainPage.intTourText).perform();
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+        Thread.sleep(2000);
+        mainPage.religiousText.click();
+        extentTest.pass("Religious Tour resmi tıklanabilir ve içeriği görüntülenir.");
 
     }
     @BeforeMethod
@@ -272,7 +385,6 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
         ReusableMethods.waitFor(2);
         mainPage.cookiesAcceptButton.click();
     }
-
     @Test
     public void LatestBlogTest_TC_39() {
 
@@ -462,122 +574,6 @@ public class US_01_02_03_hasancan extends TestBaseRapor {
 
         softAssert.assertTrue(mainPage.OurClientYachtseaPhotoElement.isDisplayed());
         softAssert.assertAll();
-
-
-    }
-
-    @Test
-    public void us03mainSlider2_TC_11() {
-        packagePage.cookiesAcceptButton.click();
-        mainPage.nextSliderButton.click();
-        Assert.assertTrue(mainPage.mainSlider2.isDisplayed());
-        extentTest.info("mainSlider2 resmi görünür");
-        mainPage.readMore2.click();
-        String expectedTitle = "7 days in Istanbul";
-        String actualTitle = Driver.getDriver().getTitle();
-        Assert.assertEquals(actualTitle, expectedTitle);
-        extentTest.pass("İstanbul sayfasının olduğu görünür");
-
-    }
-
-    @Test
-    public void us03mainSlider3_TC_12() {
-        packagePage.cookiesAcceptButton.click();
-        mainPage.nextSliderButton.click();
-        mainPage.nextSliderButton.click();
-        Assert.assertTrue(mainPage.mainSlider3.isDisplayed());
-        extentTest.info("mainSlider3 resmi görünür");
-        mainPage.readMore3.click();
-        String expectedTitle = "7 days in Salina Island";
-        String actualTitle = Driver.getDriver().getTitle();
-        Assert.assertEquals(actualTitle, expectedTitle);
-        extentTest.pass("Salina Island sayfasının olduğu görünür");
-
-
-
-    }
-
-    @Test
-    public void us03internationalTourResim_TC_13() throws InterruptedException {
-        packagePage.cookiesAcceptButton.click();
-        Assert.assertTrue(mainPage.iconInternationalTour.isDisplayed());
-        extentTest.info("İnternatinol Tour ikonu görünür");
-        //JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
-        //js.executeScript("window.scrollBy(500, 750)");
-        //actions.scrollToElement(mainPage.intTourText).perform();
-        actions.sendKeys(Keys.PAGE_DOWN).perform();
-        Thread.sleep(2000);
-        mainPage.intTourText.click();
-        extentTest.pass("İnternational Tour resmi tıklanabilir ve içeriği görüntülenir.");
-
-    }
-
-    @Test
-    public void us03adventureTourResim_TC_14() throws InterruptedException {
-        packagePage.cookiesAcceptButton.click();
-        Assert.assertTrue(mainPage.iconAdventureTour.isDisplayed());
-        extentTest.info("Adventure Tour ikonu görünür");
-        //JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
-        //js.executeScript("window.scrollBy(500, 750)");
-        //actions.scrollToElement(mainPage.intTourText).perform();
-        actions.sendKeys(Keys.PAGE_DOWN).perform();
-        Thread.sleep(2000);
-        mainPage.advantureText.click();
-        extentTest.pass("Adventure Tour resmi tıklanabilir ve içeriği görüntülenir.");
-    }
-
-    @Test
-    public void us03cultureTourResim_TC_15() throws InterruptedException {
-        packagePage.cookiesAcceptButton.click();
-        Assert.assertTrue(mainPage.iconCultureTour.isDisplayed());
-        extentTest.info("Culture Tour ikonu görünür");
-        //JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
-        //js.executeScript("window.scrollBy(500, 750)");
-        //actions.scrollToElement(mainPage.intTourText).perform();
-        actions.sendKeys(Keys.PAGE_DOWN).perform();
-        Thread.sleep(2000);
-        mainPage.cultureText.click();
-        extentTest.pass("Culture Tour resmi tıklanabilir ve içeriği görüntülenir.");
-    }
-    @Test
-    public void us03businessTourResim_TC_16() throws InterruptedException {
-        packagePage.cookiesAcceptButton.click();
-        Assert.assertTrue(mainPage.iconBussinessTour.isDisplayed());
-        extentTest.info("Business Tour ikonu görünür");
-        //JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
-        //js.executeScript("window.scrollBy(500, 750)");
-        //actions.scrollToElement(mainPage.intTourText).perform();
-        actions.sendKeys(Keys.PAGE_DOWN).perform();
-        Thread.sleep(2000);
-        mainPage.businessText.click();
-        extentTest.pass("Business Tour resmi tıklanabilir ve içeriği görüntülenir.");
-
-    }
-    @Test
-    public void us03healthTourResim_TC_17() throws InterruptedException {
-        packagePage.cookiesAcceptButton.click();
-        Assert.assertTrue(mainPage.iconHealthTour.isDisplayed());
-        extentTest.info("Health Tour ikonu görünür");
-        //JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
-        //js.executeScript("window.scrollBy(500, 750)");
-        //actions.scrollToElement(mainPage.intTourText).perform();
-        actions.sendKeys(Keys.PAGE_DOWN).perform();
-        Thread.sleep(2000);
-        mainPage.healthText.click();
-        extentTest.pass("Health Tour resmi tıklanabilir ve içeriği görüntülenir.");
-    }
-    @Test
-    public void us03religiousTourResim_TC_18() throws InterruptedException {
-        packagePage.cookiesAcceptButton.click();
-        Assert.assertTrue(mainPage.iconReligiousTour.isDisplayed());
-        extentTest.info("Religious Tour ikonu görünür");
-        //JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
-        //js.executeScript("window.scrollBy(500, 750)");
-        //actions.scrollToElement(mainPage.intTourText).perform();
-        actions.sendKeys(Keys.PAGE_DOWN).perform();
-        Thread.sleep(2000);
-        mainPage.religiousText.click();
-        extentTest.pass("Religious Tour resmi tıklanabilir ve içeriği görüntülenir.");
 
     }
 }
