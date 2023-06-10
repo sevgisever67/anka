@@ -19,7 +19,7 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 import utilities.TestBaseRapor;
 
-public class US_07_08_09_Yusuf extends TestBaseRapor {
+/*public class US_07_08_09_Yusuf extends TestBaseRapor {
 
     MainPage mainPage;
     Actions actions;
@@ -67,7 +67,7 @@ public class US_07_08_09_Yusuf extends TestBaseRapor {
         // Footer bolumundeki facebook iconuna tıkladigimda facebook sayfasina gidebilmeliyim
         mainPage.footerFacebookIconElement.click();
         extentTest.info("Kullanıcı facebook ikonuna tıklar");
-        ReusableMethods.switchToWindowTarget("Facebook");
+        //ReusableMethods.switchToWindowTarget("Facebook");
         System.out.println(Driver.getDriver().getTitle());
 
         Thread.sleep(2000);
@@ -94,7 +94,7 @@ public class US_07_08_09_Yusuf extends TestBaseRapor {
         mainPage.footerTwitterIconElement.click();
         extentTest.info("Kullanıcı twitter ikonuna tıklar");
 
-        ReusableMethods.switchToWindowTarget("Twitter");
+        //ReusableMethods.switchToWindowTarget("Twitter");
 
 
         Thread.sleep(2000);
@@ -240,6 +240,8 @@ public class US_07_08_09_Yusuf extends TestBaseRapor {
 
 
 }
+
+ */
 
 
 

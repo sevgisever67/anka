@@ -264,8 +264,6 @@ public class MainPage extends BasePage {
     @FindBy(xpath = "//a[@href='http://www.instagram.com']")
     public WebElement FooterInstagramIconElement;
 
-    @FindBy(xpath = "//img[@alt='Logo']")
-
     @FindBy(xpath = "(//i[@class='fab fa-twitter'])[13]")
     public WebElement footerTwitterIconElement;
 
