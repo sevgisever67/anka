@@ -10,10 +10,10 @@ import java.time.Duration;
 public class Driver {
     static WebDriver driver;
 
-    public static WebDriver getDriver(){
+    public static WebDriver getDriver() {
 
 
-        if(driver == null){
+        if (driver == null) {
 
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
@@ -26,7 +26,13 @@ public class Driver {
     }
 
 
-    public static void closeDriver(){
-        driver.close();
+    public static void closeDriver() {
+        if (driver!=null){
+            driver.close();
+            driver.quit();
+            driver=null;
+
+        }
     }
+
 }

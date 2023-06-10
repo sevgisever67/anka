@@ -10,14 +10,11 @@ public class MainPage extends BasePage {
     @FindBy(xpath = "(//a[text()='Home'])[2]")
     public WebElement homeElementi;    //main page Home sekmesi
 
-
     @FindBy(xpath = "(//a[text()='Services'])[2]")
     public WebElement servicesElementi;  //Main Page Services sekmesi
 
-
     @FindBy(xpath = "(//a[text()='Destinations'])[2]")
     public WebElement destinationElementi;  //Main Page Destination sekmesi
-
 
     @FindBy(xpath = "(//a[text()='Packages'])[2]")
     public WebElement packageElementi;      //Main page Package sekmesi
@@ -28,23 +25,19 @@ public class MainPage extends BasePage {
     @FindBy(xpath = "(//a[text()='FAQ'])[2]")
     public WebElement fqaElementi;    //Main page FQA sekmesi
 
-
     @FindBy(xpath = "(//a[text()='Blog'])[2]")
     public WebElement blogElementi;   //MainPage Blog sekmesi
 
     @FindBy(xpath = "(//a[text()='Contact'])[2]")
-
     public WebElement contactElementi;        //Main Page Contact sekmesi
 
 
     @FindBy(xpath = "//img[@alt='Logo']")
     public WebElement SiteLogo;
 
-
-
     @FindBy(xpath = "//*[text()='Terms and Conditions']")
     public WebElement termAndConditionsElementi;
-
+  
     @FindBy(xpath = "//*[@type='button']")
     public WebElement acceptButonu;
 
@@ -53,7 +46,6 @@ public class MainPage extends BasePage {
 
     @FindBy(xpath = "//*[@id=\"menu\"]/li[2]/a")
     public WebElement iconServices;
-
 
     @FindBy(xpath = "//h4[text()='International Tour']")
     public WebElement iconInternationalTour;
@@ -76,7 +68,7 @@ public class MainPage extends BasePage {
     @FindBy(xpath = "//i[@class='fas fa-user-plus']")
     public WebElement registrationIcon;
 
-    @FindBy(xpath = "//a[.='Registration']")
+    @FindBy(xpath = "//i[@class='fas fa-user-plus']")
     public WebElement registrationButton; // Main Page Registration sekmesi
 
 
@@ -132,9 +124,9 @@ public class MainPage extends BasePage {
     @FindBy(xpath = "//div[@class='col-md-3 col-sm-6 wow fadeInLeft']//a[contains(text(),'7 days in Salina Island')]")
     public WebElement featuredPackagesFourthElement;
 
-    @FindBy(xpath = "//div[@class='col-md-3 col-sm-6 wow fadeIn']//a[contains(text(),'New Test Packages')]")
+    @FindBy(xpath ="//a[normalize-space()='3 Days Yorkville']")
     public WebElement latestPackagesFirstElement;
-    @FindBy(xpath = "//a[normalize-space()='test04']")
+    @FindBy(xpath = "//a[normalize-space()='7 days in Esenyurt']")
     public WebElement latesPackagesSecondElement;
     @FindBy(xpath = "//a[normalize-space()='5 Day California']")
     public WebElement latesPackagesThirdElement;
@@ -144,7 +136,7 @@ public class MainPage extends BasePage {
     @FindBy(xpath = "//div[@class='col-md-3 col-sm-6 wow fadeIn']//a[contains(text(),'3 days in Bangkok')]")
     public WebElement latesPackagesFifthElement;
 
-    @FindBy(xpath = "//div[@class='footer-item mt_30']//a[normalize-space()='Amazing Place'])")
+    @FindBy(xpath = "//div[@class='footer-item mt_30']//a[normalize-space()='ANKA']")
     public WebElement recentPostFirstElement;
 
     @FindBy(xpath = "//div[@class='footer-item mt_30']//a[contains(text(),'Discovering Greenville: A Hidden Gem in South Caro')]")
@@ -155,9 +147,10 @@ public class MainPage extends BasePage {
     public WebElement recentPostFourthElement;
     @FindBy(xpath = "//div[@class='footer-item mt_30']//a[normalize-space()='Salina Island: A Perfect Family Getaway']")
     public WebElement recentPostFifthElement;
+
     @FindBy(xpath = "(//img[@alt='Blog Image'])[4]")
     public WebElement LatesBlogIstanbulPhotoElement;   // "LATEST BLOG" alanında "ISTANBUL: A FUSION OF EAST AND WEST" blog fotosu
-
+    //img[@alt='Blog Image'])[4]
     @FindBy(xpath = "(//img[@alt='Blog Image'])[5]")
     public WebElement LatesBlogHittitesPhotoElement;   // "LATEST BLOG" alanında "DISCOVERING THE ANCIENT CAPITAL OF THE HITTITES: BOGAZKALE AND HATTUSAS" blog fotosu
 
@@ -234,6 +227,9 @@ public class MainPage extends BasePage {
     @FindBy(xpath = "(//div[@class='brand-item wow fadeIn'])[7]")
     public WebElement OurClientYachtseaPhotoElement;
 
+    @FindBy(xpath = "//h2[text()='OUR CLIENT']")
+    public WebElement ourclientYazisi;
+
     @FindBy(xpath = "//h3[text()='Address']")
     public WebElement footerAdressHeader; // >>Homepage >> Footer >>'Adress' section
 
@@ -249,8 +245,26 @@ public class MainPage extends BasePage {
 
     // Homepage >> Footer >> Social media icon's locaters
 
+
     @FindBy(xpath = "(//i[@class='fab fa-facebook-f'])[13]")
     public WebElement footerFacebookIconElement;
+
+    @FindBy(xpath = "(//a[@href='http://www.facebook.com'])[1]")
+    public WebElement FooterFacebookIconElement;
+
+    @FindBy(xpath = "(//a[@href='http://www.facebook.com'])[2]")
+    public WebElement FooterTwitterIconElement;
+
+    @FindBy(xpath = "//a[@href='http://www.linkedin.com']")
+    public WebElement FooterLinkedinIconElement;
+
+    @FindBy(xpath = "//a[@href='https://twitter.com']")
+    public WebElement FooterPinterestIconElement;
+
+    @FindBy(xpath = "//a[@href='http://www.instagram.com']")
+    public WebElement FooterInstagramIconElement;
+
+    @FindBy(xpath = "//img[@alt='Logo']")
 
     @FindBy(xpath = "(//i[@class='fab fa-twitter'])[13]")
     public WebElement footerTwitterIconElement;
@@ -261,9 +275,9 @@ public class MainPage extends BasePage {
     @FindBy(xpath = "//i[@class='fab fa-pinterest-p']")
     public WebElement footerPinterestIconElement;
 
+
     @FindBy(xpath = "//i[@class='fab fa-instagram']")
     public WebElement footerInstagramIconElement;
-
 
     public WebElement iconDestinations;
 
@@ -276,8 +290,8 @@ public class MainPage extends BasePage {
     @FindBy(xpath = "(//div[@class='owl-next'])[1]")
     public WebElement mainSliderNextButton;
 
-    @FindBy(xpath = "(//div[@class='slider-item'])[4]")
-    public WebElement mainSlider2;
+    @FindBy(xpath = "//i[@class='fas fa-caret-right']")
+    public WebElement nextSliderButton;
 
     @FindBy(xpath = "//input[@placeholder='Email Address']")
     public WebElement newsletterYaziELementi; // >>Homepage >> Footer >>'NEWSLETTER' bolumu baslik yazisi
@@ -288,8 +302,30 @@ public class MainPage extends BasePage {
     @FindBy(xpath = "//input[@value='Submit']")
     public WebElement newsletterSubmitButonuELementi; // // >>Homepage >> Footer >>'NEWSLETTER' bolumu Submit butonu
 
+    @FindBy(xpath = "(//div[@class='slider-bg'])[4]")
+    public WebElement mainSlider2;
+    @FindBy(xpath = "(//a[text()='Read More'])[4]")
+    public WebElement readMore2;
 
+    @FindBy(xpath = "(//div[@class='container'])[7]")
+    public WebElement mainSlider3;
 
+    @FindBy(xpath = "(//a[text()='Read More'])[5]")
+    public WebElement readMore3;
+    @FindBy(xpath = "//a[@href='https://qa.tripandway.com/service/international-tour']")
+    public WebElement intTourText;
 
+    @FindBy (xpath = "//a[@href='https://qa.tripandway.com/service/adventure-tour']")
+    public WebElement advantureText;
+    @FindBy (xpath = "//a[@href='https://qa.tripandway.com/service/culture-tour']")
+    public WebElement cultureText;
+    @FindBy (xpath = "//a[@href='https://qa.tripandway.com/service/bussiness-tour']")
+    public WebElement businessText;
+    @FindBy (xpath = "//a[@href='https://qa.tripandway.com/service/health-tour']")
+    public WebElement healthText;
+    @FindBy (xpath = "//a[@href='https://qa.tripandway.com/service/religious-tour']")
+    public WebElement religiousText;
 
 }
+
+
