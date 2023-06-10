@@ -13,12 +13,14 @@ import utilities.TestBaseRapor;
 
 public class US_39_40_Nursen extends TestBaseRapor {
 
-    Admin_Dashboard adminDashboard = new Admin_Dashboard();
+    Admin_Dashboard adminDashboard;
     SoftAssert softAssert = new SoftAssert();
+
 
     @BeforeMethod
     public void setUp() {
 
+        adminDashboard= new Admin_Dashboard();
         extentTest= extentReports.createTest("US39_40");
 
         //1. Yönetici olarak herhangi bir browser'a "https://qa.tripandway.com/admin/login URL'sini yazınız
@@ -53,13 +55,13 @@ public class US_39_40_Nursen extends TestBaseRapor {
         softAssert.assertEquals(actualURL,expectedURL," Change Photo sayfası görünür");
         extentTest.info("Soft assert ile Change Photo görünürlüğü test edilir ");
         extentTest.pass("Change Photo sayfasının görünür olduğu test edildi");
+        Driver.closeDriver();
         softAssert.assertAll();
 
     }
 
     @Test
     public  void daraltmaOkIsaretiTesti_40_01(){
-
 
         //5. Admin sayfasının altındaki ok işaretine basınız
         adminDashboard.adminOkIsareti.click();
@@ -69,13 +71,13 @@ public class US_39_40_Nursen extends TestBaseRapor {
         softAssert.assertFalse(adminDashboard.adminADMINPANELYazisi.isDisplayed());
         extentTest.info("Soft assert ile ADMIN PANEL yazısının görünmediği test edilir");
         extentTest.pass("Daraltma ok işaretinin çalıştığı test edildi");
+        Driver.closeDriver();
         softAssert.assertAll();
 
     }
 
     @Test
     public void visitWebsiteButonuTesti_40_02(){
-
 
         //5. Sayfasının üst kısmında bulunan "Visit Website" butonuna tıklayınız
         adminDashboard.adminVisitWebsiteButonu.click();
@@ -89,6 +91,7 @@ public class US_39_40_Nursen extends TestBaseRapor {
         softAssert.assertEquals(actualTitle, expectedTitle, "2. sayfanın title texti Tripandway içerir");
         extentTest.info("Soft assert ile sayfanın title textinin Tripandway içerdiğini test eder");
         extentTest.pass(" Visit Website butonu test edildi");
+        Driver.closeDriver();
         softAssert.assertAll();
 
     }
