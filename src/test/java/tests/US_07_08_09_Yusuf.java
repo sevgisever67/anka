@@ -19,7 +19,7 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 import utilities.TestBaseRapor;
 
-public class US_07_08_09_Yusuf extends TestBaseRapor {
+ public class US_07_08_09_Yusuf extends TestBaseRapor {
 
     MainPage mainPage;
     Actions actions;
@@ -43,22 +43,19 @@ public class US_07_08_09_Yusuf extends TestBaseRapor {
 
         // Siteye qa kısmından üye girişi yaptıktan sonra testleri yapıyoruz
         Driver.getDriver().get(ConfigReader.getProperty("userUrl"));
-
-
-    }
-
-    @Test
-    public void verifyFooterSocialMediaFacebookIconsIsVisibleAndClickable_US07_TC01() throws InterruptedException {
-
         mainPage.loginButton.click();
         mainPage.userEmailAddrsess.sendKeys(ConfigReader.getProperty("userUsername"));
         mainPage.userPasswordButton.sendKeys(ConfigReader.getProperty("userPassword"));
-        mainPage.cookiesAcceptButton.click();
         mainPage.loginSubmitButton.click();
         mainPage.cookiesAcceptButton.click();
         mainPage.homeElementi.click();
         actions.sendKeys(Keys.END).perform();
         ReusableMethods.wait(2);
+
+    }
+
+    @Test
+    public void verifyFooterSocialMediaFacebookIconsIsVisibleAndClickable_US07_TC01() throws InterruptedException {
 
         // Footer bolumundeki facebook iconunun görünür ve tıklanabilir oldugunu dogrulayın
         softAssert.assertTrue(mainPage.footerFacebookIconElement.isDisplayed());
@@ -70,7 +67,7 @@ public class US_07_08_09_Yusuf extends TestBaseRapor {
         // Footer bolumundeki facebook iconuna tıkladigimda facebook sayfasina gidebilmeliyim
         mainPage.footerFacebookIconElement.click();
         extentTest.info("Kullanıcı facebook ikonuna tıklar");
-        ReusableMethods.switchToWindow2("Facebook");
+        //ReusableMethods.switchToWindowTarget("Facebook");
         System.out.println(Driver.getDriver().getTitle());
 
         Thread.sleep(2000);
@@ -97,7 +94,7 @@ public class US_07_08_09_Yusuf extends TestBaseRapor {
         mainPage.footerTwitterIconElement.click();
         extentTest.info("Kullanıcı twitter ikonuna tıklar");
 
-        ReusableMethods.switchToWindow2("Twitter");
+        //ReusableMethods.switchToWindowTarget("Twitter");
 
 
         Thread.sleep(2000);
@@ -129,7 +126,7 @@ public class US_07_08_09_Yusuf extends TestBaseRapor {
         mainPage.footerLinkedinIconElement.click();
         extentTest.info("Kullanıcı Linkedin ikonuna tıklar");
 
-        ReusableMethods.switchToWindow2("Linkedin");
+        ReusableMethods.switchToWindowTarget("Linkedin");
         System.out.println(Driver.getDriver().getTitle());
 
         Thread.sleep(2000);
@@ -155,7 +152,7 @@ public class US_07_08_09_Yusuf extends TestBaseRapor {
 
         // Footer bolumundeki Pinterest iconuna tıkladigimda Pinterest sayfasina gidebilmeliyim
         mainPage.footerPinterestIconElement.click();
-        ReusableMethods.switchToWindow2("Pinterest");
+        ReusableMethods.switchToWindowTarget("Pinterest");
         System.out.println(Driver.getDriver().getTitle());
 
         Thread.sleep(5000);
@@ -181,7 +178,7 @@ public class US_07_08_09_Yusuf extends TestBaseRapor {
 
         // Footer bolumundeki instagram iconuna tıkladigimda instagram sayfasina gidebilmeliyim
         mainPage.footerInstagramIconElement.click();
-        ReusableMethods.switchToWindow2("Instagram");
+        ReusableMethods.switchToWindowTarget("Instagram");
         System.out.println(Driver.getDriver().getTitle());
 
         Thread.sleep(3000);
@@ -243,3 +240,7 @@ public class US_07_08_09_Yusuf extends TestBaseRapor {
 
 
 }
+
+
+
+

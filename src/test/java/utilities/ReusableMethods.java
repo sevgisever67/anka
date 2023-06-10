@@ -393,7 +393,7 @@ public class ReusableMethods {
         }
         return stringList;
     }
-    public static void switchToWindow2(String targetTitle) {
+    public static void switchToWindowTarget(String targetTitle) {
         String origin = Driver.getDriver().getWindowHandle();
         for (String handle : Driver.getDriver().getWindowHandles()) {
             Driver.getDriver().switchTo().window(handle);
