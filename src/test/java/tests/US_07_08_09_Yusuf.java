@@ -19,7 +19,7 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 import utilities.TestBaseRapor;
 
- public class US_07_08_09_Yusuf extends TestBaseRapor {
+public class US_07_08_09_Yusuf extends TestBaseRapor {
 
     MainPage mainPage;
     Actions actions;
@@ -240,7 +240,4 @@ import utilities.TestBaseRapor;
 
 
 }
-
-
-
 
