@@ -194,5 +194,83 @@ public class Admin_Dashboard extends BasePage {
     public WebElement adminDeleteToastMessage;                     //admin giris yaptıktan sonra "Blog Section" menusunden
                                                                   // "Category" ekledikten sonra "Delete" butonuna tıklayip
                                                                  // delete 'den sonra cikan pop up yazisi
+
+    @FindBy (xpath="//span[text()='Packages']")
+    public  WebElement adminPackagesButton;                       // admin panelindeki "Packages" menu butonu
+
+    @FindBy (xpath = "//div[@class = 'float-right d-inline']")
+    public  WebElement packagesAddNewButton;                      // admin panelindeki "Packages" bolumundeki
+    // "+Add New" butonu
+
+    @FindBy (xpath = "//input[@name ='p_name']")
+    public WebElement packagesAddNameBox;                        //admin giris yaptıktan sonra "Packages" menusunden
+    //"+Add New" butonuna tıkladiktan sonra "Name" kutusu
+
+    @FindBy (xpath = "//input[@name='p_slug']")
+    public WebElement packagesAddSlugBox;                          //admin giris yaptıktan sonra "Packages" menusunden
+    //"+Add New" butonuna tıkladiktan sonra "Name" kutusu
+
+    @FindBy (xpath = "//input[@name='p_photo']")
+    public WebElement packagesDosyaSecButton;                         //admin giris yaptıktan sonra "Packages" menusunden
+    //"+Add New" butonuna tıkladiktan sonra "Dosya Sec" butonu
+
+
+    @FindBy (xpath = "//input[@name ='p_start_date']")
+    public WebElement packagesStartDateBox;                              //admin giris yaptıktan sonra "Packages" menusunden
+    //"+Add New" butonuna tıkladiktan sonra "Start Date" kutusu
+
+    @FindBy (xpath = "//input[@name ='p_end_date']")
+    public WebElement packagesEndDateBox;                               //admin giris yaptıktan sonra "Packages" menusunden
+    //"+Add New" butonuna tıkladiktan sonra "End Date" kutusu
+
+    @FindBy (xpath = "//span[@class = 'select2-selection__rendered']")
+    public WebElement packagesDestinationBox;                            //admin giris yaptıktan sonra "Packages" menusunden
+    //"+Add New" butonuna tıkladiktan sonra "Destination" secenegi
+
+    @FindBy (xpath = "//textarea[@name ='seo_meta_description']")
+    public WebElement packagesMetaDescriptionBox;
+
+    @FindBy (xpath = "//input[@name ='p_last_booking_date']")
+    public WebElement adminPackageslastBookingDateBox;              //admin giris yaptıktan sonra "Packages" menusunden
+    //"+Add New" butonuna tıkladiktan sonra "Last Booking Date" kutusu
+
+    @FindBy (xpath = "//input[@name ='p_price']")
+    public WebElement adminPackagesPriceBox;                         //admin giris yaptıktan sonra "Packages" menusunden
+    //"+Add New" butonuna tıkladiktan sonra "Last Booking Date" kutusu
+
+    @FindBy (xpath = "//button[@type ='submit']")
+    public WebElement adminPackagesSubmitButton;                //admin giris yaptıktan sonra "Packages" menusunden
+    //"+Add New" butonuna tıkladiktan sonra "Submit" butonu
+
+
+    @FindBy (xpath = "//*[@id=\"toast-container\"]")
+    public WebElement packageIsAddedSuccessfully;           //admin giris yaptıktan sonra "Packages" menusunden
+    //"+Add New" butonuna tikladiktan sonra olusturulan yeni Package'in basari ile olusturuldugu mesaji
+
+
+    @FindBy(xpath = "(//a[@class='btn btn-warning btn-sm'])[8]")
+    public WebElement editButton;                       // olusturulan yeni package'in degistirilebilir oldugunu
+                                                        //   gosteren edit butonu
+    @FindBy(xpath = "(//a[@class='btn btn-danger btn-sm'])[8]") //
+    public WebElement deleteButton;                      // olusturulan yeni package'in degistirilebilir oldugunu
+                                                        //   gosteren delete butonu
+
+    @FindBy(xpath = "(//a[@class='page-link'])[3]")        //Package listesinin ikinci sayfasına gonderirir
+    public WebElement adminPackageSecondPage;
+
+    @FindBy (xpath = "//button[@type='submit']")
+    public WebElement adminPackagesUpdateButton;   //Package'i edit yaptıgımızda kaydetmek icin basılmasi gereken buton
+
+    @FindBy(xpath = "//div[@class='toast-message']")
+    public WebElement packageIsUpdateSuccessfully;      //Package'in guncellenmesinin ardından gorulen mesaj
+
+
+    @FindBy(xpath = "//div[@class='toast-message']")
+    public WebElement packageIsDeletedSuccessfully; //Eklenen package'in silinmesinin ardından gorulen mesaj
+
+
+
+
+//
 }
   ////h6[text()='View Subscribers']
