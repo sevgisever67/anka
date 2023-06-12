@@ -43,14 +43,17 @@ public class US_07_08_09_Yusuf extends TestBaseRapor {
 
         // Siteye qa kısmından üye girişi yaptıktan sonra testleri yapıyoruz
         Driver.getDriver().get(ConfigReader.getProperty("userUrl"));
-        mainPage.loginButton.click();
-        mainPage.userEmailAddrsess.sendKeys(ConfigReader.getProperty("userUsername"));
-        mainPage.userPasswordButton.sendKeys(ConfigReader.getProperty("userPassword"));
-        mainPage.loginSubmitButton.click();
+        // Click Login button
+        mainPage.userLogInButton.click();
+        // Enter email and password
+        mainPage.userEmailAddrsess.sendKeys("ebru@gmail.com");
+        mainPage.userPasswordButton.sendKeys("Ebru.1234");
+        // Accept cookies
         mainPage.cookiesAcceptButton.click();
-        mainPage.homeElementi.click();
-        actions.sendKeys(Keys.END).perform();
-        ReusableMethods.wait(2);
+        // Click Login button
+        mainPage.userLogin2.click();
+        extentTest.info("Log in as an user");
+
 
     }
 
@@ -67,7 +70,7 @@ public class US_07_08_09_Yusuf extends TestBaseRapor {
         // Footer bolumundeki facebook iconuna tıkladigimda facebook sayfasina gidebilmeliyim
         mainPage.footerFacebookIconElement.click();
         extentTest.info("Kullanıcı facebook ikonuna tıklar");
-        //ReusableMethods.switchToWindowTarget("Facebook");
+        ReusableMethods.switchToWindowTarget("Facebook");
         System.out.println(Driver.getDriver().getTitle());
 
         Thread.sleep(2000);
@@ -240,11 +243,4 @@ public class US_07_08_09_Yusuf extends TestBaseRapor {
 
 
 }
-
-
-
-
-
-
-
 

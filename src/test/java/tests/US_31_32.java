@@ -18,11 +18,12 @@ import utilities.TestBaseRapor;
 
 public class US_31_32 extends TestBaseRapor {
 
-    Admin_Dashboard adminDashboard = new Admin_Dashboard();
+    Admin_Dashboard adminDashboard;
 
 
     @BeforeMethod
     public void setup() {
+        adminDashboard = new Admin_Dashboard();
         extentTest = extentReports.createTest("US_31_32");
         extentTest.info("Login with admin information");
         //Go to url as an admin
@@ -33,7 +34,6 @@ public class US_31_32 extends TestBaseRapor {
     //US31 test case
     @Test
     public void verifyAdminPanelPackageUS31() {
-
 
 
         //Send keys the name and password
@@ -52,7 +52,6 @@ public class US_31_32 extends TestBaseRapor {
         extentTest.info("Packages generic is working.");
 
 
-
         //Click on the Packages
 
         adminDashboard.adminPackagesButton.click();
@@ -61,8 +60,6 @@ public class US_31_32 extends TestBaseRapor {
         ReusableMethods.waitFor(2);
         //Click on the  "+Add New"  button
         adminDashboard.blogSectionAddNewButton.click();
-
-
 
 
         // Click on the  "Name" box
@@ -81,11 +78,10 @@ public class US_31_32 extends TestBaseRapor {
         adminDashboard.adminPackageslastBookingDateBox.sendKeys(ConfigReader.getProperty("qaAdminPackagesLastBookingDateBox"));
 
 
-        String herkesteFarkliOlan=System.getProperty("user.dir");
-        String herkesteAyniOlan="/raporlar/Screenshots/canakkale.png";
-        String dosyaYolu= herkesteFarkliOlan+herkesteAyniOlan;
+        String herkesteFarkliOlan = System.getProperty("user.dir");
+        String herkesteAyniOlan = "/raporlar/Screenshots/canakkale.png";
+        String dosyaYolu = herkesteFarkliOlan + herkesteAyniOlan;
         adminDashboard.packagesDosyaSecButton.sendKeys(dosyaYolu);
-
 
 
         // Click on the  "Start Date" box
@@ -114,9 +110,8 @@ public class US_31_32 extends TestBaseRapor {
         extentTest.info("New package is added");
 
 
-
         //Second page in package list
-       // adminDashboard.adminPackageSecondPage.click();
+        // adminDashboard.adminPackageSecondPage.click();
 
 
         //Editing of the added package
@@ -172,7 +167,6 @@ public class US_31_32 extends TestBaseRapor {
         extentTest.pass("The package is successfully updated and deleted.");
 
 
-
     }
 
 
@@ -204,12 +198,6 @@ public class US_31_32 extends TestBaseRapor {
 
 
     }
-
-    @AfterMethod
-    public void setupFinish(){
-    //    Driver.closeDriver();
-    }
-
 
 }
 

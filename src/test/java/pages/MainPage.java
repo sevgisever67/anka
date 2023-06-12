@@ -37,7 +37,7 @@ public class MainPage extends BasePage {
 
     @FindBy(xpath = "//*[text()='Terms and Conditions']")
     public WebElement termAndConditionsElementi;
-  
+
     @FindBy(xpath = "//*[@type='button']")
     public WebElement acceptButonu;
 
@@ -325,5 +325,4 @@ public class MainPage extends BasePage {
     public WebElement religiousText;
 
 }
-
 

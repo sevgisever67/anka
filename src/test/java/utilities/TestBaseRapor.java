@@ -55,12 +55,11 @@ public abstract class TestBaseRapor {
         }
 
 
+        Driver.closeDriver();
 
-         Driver.closeDriver();
+    }
 
-        }
 
-     
     // Raporlandırmayı sonlandırmak icin
     @AfterTest(alwaysRun = true)
     public void tearDownTest() {
