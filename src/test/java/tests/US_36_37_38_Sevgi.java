@@ -85,11 +85,7 @@ public class US_36_37_38_Sevgi extends TestBaseRapor {
 
     @Test
     public void verifyTheChangePasswordIsAccessible_38() {
-        //Go to url as an admin
-        Driver.getDriver().get(ConfigReader.getProperty("qaAdminUrl"));
-        //Send keys the name and password
-        adminDashboard.adminEmailButton.sendKeys(ConfigReader.getProperty("qaAdminEmail"));
-        adminDashboard.adminPasswordButton.sendKeys(ConfigReader.getProperty("qaAdminPassword"));
+
         //Click on the Login
         adminDashboard.adminLoginButton.click();
         //Click on the admin profile
